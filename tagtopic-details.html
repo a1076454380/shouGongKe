@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>教程专题丨橡皮章——二、三次元通吃的神奇手作-手工客官网</title>
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<!-- <div id="erweima"><img src="http://imgs.shougongke.comindex/images/common/erweima2.png" /></div><div class="ewm"></div> -->
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='教程专题丨橡皮章——二、三次元通吃的神奇手作-手工客官网' id='title'>
+		<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="" /></a>
+		</p>
+		<link href="css/fairs.css" rel="stylesheet" type="text/css">
+		<link href="css/topic_details.css" rel="stylesheet" type="text/css">
+			<div><span><a href="/coursehome.html" class="font-black" target="_blank" >教程</a></span><span>&gt;</span><span><a href="/TagTopic/" class="font-black" target="_blank" >专题</a></span><span>&gt;</span><span><a href="/TagTopic/?tag_id=1" class="font-black" target="_blank" >小编推荐</a></span><span>&gt;</span><span class="pink">教程专题丨橡皮章——二、三次元通吃的神奇手作</span></div>
+		</div>
+		<div class="width980  topic_content ">
+			<div class="topic_content-left">
+				<!-- 头部 -->
+				<!--   <div class="topic_content_top">教程专题丨橡皮章——二、三次元通吃的神奇手作</div> -->
+				<div style="background:#fff;">
+					<div class="topic_content-head ">
+						<div class="topic_right_name">教程专题丨橡皮章——二、三次元通吃的神奇手作</div>
+						<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2634/main/1511859786_n57t55kx82.jpg" alt=""></div>
+						<div class="topic_content-text">橡皮章火了这么多年，<br /> 不但玩儿法越来越多
+							<br /> 困难程度也越来越高
+							<br /> 从一开始的简单文字、图案
+							<br /> 到如今的复杂纹理，甚至是人物肖像
+							<br /> 橡皮章在达人们的不断创新下蓬勃发展
+							<br /> 因为热爱，所以改变
+							<br /> 今天就随小编来看看大神们的橡皮章教程吧
+						</div>
+					</div>
+					<!--序号标题-->
+					<div class="type1" style="">
+						<div class="details_buy_title"><span class="left_title">1</span><span class="details_buy_title_content">二次元橡皮章教程</span></div>
+					</div>
+					<!--分段标题-->
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<!--商品集-->
+					<div class="hand_courses">
+						<div class="hand_course">
+							<a href="/course/433062.html" target="_blank">
+								<div class=""><img title="橡皮章" alt="橡皮章" class="img_hover" src="http://imgs.shougongke.com/course/1150150/433062/170807053706_cover.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">橡皮章</p>
+										<p class="course_user_name"><span>闪耀的boy✨</span></p>
+										<p class="course_total"><span class="fense">8K</span> 人气 /
+											<span class="fense">34</span> 评论 /
+											<span class="fense">78</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="hand_course">
+							<a href="/course/418531.html" target="_blank">
+								<div class=""><img title="如何制作一个橡皮章" alt="如何制作一个橡皮章" class="img_hover" src="http://imgs.shougongke.com/course/cover/201705/30/17925522_1496127424_azm25s6a2f.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">如何制作一个橡皮章</p>
+										<p class="course_user_name"><span>sgk_m_1495442968427</span></p>
+										<p class="course_total"><span class="fense">4K</span> 人气 /
+											<span class="fense">8</span> 评论 /
+											<span class="fense">78</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="hand_course">
+							<a href="/course/387305.html" target="_blank">
+								<div class=""><img title="橡皮章" alt="橡皮章" class="img_hover" src="http://imgs.shougongke.com/course/17596192/387305/161223152707_cover.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">橡皮章</p>
+										<p class="course_user_name"><span>Camille</span></p>
+										<p class="course_total"><span class="fense">5K</span> 人气 /
+											<span class="fense">1</span> 评论 /
+											<span class="fense">21</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="hand_course">
+							<a href="/course/344018.html" target="_blank">
+								<div class=""><img title="路飞通缉令" alt="路飞通缉令" class="img_hover" src="http://imgs.shougongke.comdata/hand/201607/21/host/146903122660303_593.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">路飞通缉令</p>
+										<p class="course_user_name"><span>木小棉</span></p>
+										<p class="course_total"><span class="fense">2K</span> 人气 /
+											<span class="fense">7</span> 评论 /
+											<span class="fense">26</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					<!--序号标题-->
+					<div class="type1" style="">
+						<div class="details_buy_title"><span class="left_title">2</span><span class="details_buy_title_content">三次元橡皮章教程</span></div>
+					</div>
+					<!--分段标题-->
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<!--商品集-->
+					<div class="hand_courses">
+						<div class="hand_course">
+							<a href="/course/402494.html" target="_blank">
+								<div class=""><img title="把爱豆带在身边！" alt="把爱豆带在身边！" class="img_hover" src="http://imgs.shougongke.com/course/916456/402494/170310084144_cover.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">把爱豆带在身边！</p>
+										<p class="course_user_name"><span>我姓李名Whistle。</span></p>
+										<p class="course_total"><span class="fense">1K</span> 人气 /
+											<span class="fense">1</span> 评论 /
+											<span class="fense">5</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="hand_course">
+							<a href="/course/382145.html" target="_blank">
+								<div class=""><img title="情侣人像橡皮章+转换" alt="情侣人像橡皮章+转换" class="img_hover" src="http://imgs.shougongke.com/course/17536428/382145/161120151710_cover.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">情侣人像橡皮章+转换</p>
+										<p class="course_user_name"><span>sirika</span></p>
+										<p class="course_total"><span class="fense">1K</span> 人气 /
+											<span class="fense">6</span> 评论 /
+											<span class="fense">15</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="hand_course">
+							<a href="/course/293898.html" target="_blank">
+								<div class=""><img title="来做个帅气的橡皮章，BIGBANG的TOP" alt="来做个帅气的橡皮章，BIGBANG的TOP" class="img_hover" src="http://imgs.shougongke.comdata/hand/201603/07/host/145733433021015_593.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">来做个帅气的橡皮章，BIGBANG的TOP</p>
+										<p class="course_user_name"><span>萌柠橡皮章</span></p>
+										<p class="course_total"><span class="fense">4K</span> 人气 /
+											<span class="fense">12</span> 评论 /
+											<span class="fense">35</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="hand_course">
+							<a href="/course/146078.html" target="_blank">
+								<div class=""><img title="橡皮章卷福" alt="橡皮章卷福" class="img_hover" src="http://imgs.shougongke.comdata/hand/201411/09/main/1415530188108639186481_593.jpg@!web_course_312" style="width:270px;height:272px;"></div>
+								<div class="course_introduce" style="background:#f5f5f5;">
+									<div class="course_content">
+										<p class="course_title font-black">橡皮章卷福</p>
+										<p class="course_user_name"><span>bibi--(・ω・)ノ</span></p>
+										<p class="course_total"><span class="fense">2K</span> 人气 /
+											<span class="fense">2</span> 评论 /
+											<span class="fense">17</span> 收藏
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					<!--序号标题-->
+					<div class="type1" style="">
+						<div class="details_buy_title"><span class="left_title">3</span><span class="details_buy_title_content">橡皮章视频教程</span></div>
+					</div>
+					<!--分段标题-->
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<!--商品集-->
+					<div class="hand_class" style="postion:relative;">
+						<a href="/index.php?m=HandVideo&a=detail&id=4133" target="_blank"><img title="【橡皮章】橡皮章的细节刻法，以茨木为例" alt="【橡皮章】橡皮章的细节刻法，以茨木为例" class="img_hover" src="http://imgs.shougongke.comdata/hand_class/201705/26/main/17925522/1495803116_z33452y6bw.jpg@!web_course_312" style="width:270px;height:272px;position:relative;"><img src="images/icon_neirong.png" class="video_play_button">
+							<div class="class_introduce">
+								<div class="course_content">
+									<p class="course_title font-black">【橡皮章】橡皮章的细节刻法，以茨木为例</p>
+									<p class="course_user_name" style="border-bottom:0px solid #D4D4D4;"><span>墨弄</span></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="hand_class" style="postion:relative;">
+						<a href="/index.php?m=HandVideo&a=detail&id=4132" target="_blank"><img title="【橡皮章】刻一组刀剑男神团" alt="【橡皮章】刻一组刀剑男神团" class="img_hover" src="http://imgs.shougongke.comdata/hand_class/201705/26/main/17925522/1495802693_3pjxptp8xt.jpg@!web_course_312" style="width:270px;height:272px;position:relative;"><img src="images/icon_neirong.png" class="video_play_button">
+							<div class="class_introduce">
+								<div class="course_content">
+									<p class="course_title font-black">【橡皮章】刻一组刀剑男神团</p>
+									<p class="course_user_name" style="border-bottom:0px solid #D4D4D4;"><span>墨弄</span></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="hand_class" style="postion:relative;">
+						<a href="/index.php?m=HandVideo&a=detail&id=4524" target="_blank"><img title="橡皮章雕刻之猫咪" alt="橡皮章雕刻之猫咪" class="img_hover" src="http://imgs.shougongke.comdata/hand_class/201709/04/main/1268452/1504520864_dhbjz28nby.jpg@!web_course_312" style="width:270px;height:272px;position:relative;"><img src="images/icon_neirong.png" class="video_play_button">
+							<div class="class_introduce">
+								<div class="course_content">
+									<p class="course_title font-black">橡皮章雕刻之猫咪</p>
+									<p class="course_user_name" style="border-bottom:0px solid #D4D4D4;"><span>是婷子不是提子</span></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="hand_class" style="postion:relative;">
+						<a href="/index.php?m=HandVideo&a=detail&id=4224" target="_blank"><img title="人物橡皮章雕刻" alt="人物橡皮章雕刻" class="img_hover" src="http://imgs.shougongke.comdata/hand_class/201706/26/main/1268452/1498479947_yptizmrz8f.jpg@!web_course_312" style="width:270px;height:272px;position:relative;"><img src="images/icon_neirong.png" class="video_play_button">
+							<div class="class_introduce">
+								<div class="course_content">
+									<p class="course_title font-black">人物橡皮章雕刻</p>
+									<p class="course_user_name" style="border-bottom:0px solid #D4D4D4;"><span>是婷子不是提子</span></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="hand_class" style="postion:relative;">
+						<a href="/index.php?m=HandVideo&a=detail&id=4410" target="_blank"><img title="牛头橡皮章雕刻教程+短训班宣传" alt="牛头橡皮章雕刻教程+短训班宣传" class="img_hover" src="http://imgs.shougongke.comdata/hand_class/201708/08/main/1268452/1502180315_stjhrii62t.jpeg@!web_course_312" style="width:270px;height:272px;position:relative;"><img src="images/icon_neirong.png" class="video_play_button">
+							<div class="class_introduce">
+								<div class="course_content">
+									<p class="course_title font-black">牛头橡皮章雕刻教程+短训班宣传</p>
+									<p class="course_user_name" style="border-bottom:0px solid #D4D4D4;"><span>是婷子不是提子</span></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="hand_class" style="postion:relative;">
+						<a href="/index.php?m=HandVideo&a=detail&id=4608" target="_blank"><img title="橡皮章教程——唱出青花瓷" alt="橡皮章教程——唱出青花瓷" class="img_hover" src="http://imgs.shougongke.comdata/hand_class/201709/22/main/16726319/1506082400_2firzeczdj.jpg@!web_course_312" style="width:270px;height:272px;position:relative;"><img src="images/icon_neirong.png" class="video_play_button">
+							<div class="class_introduce">
+								<div class="course_content">
+									<p class="course_title font-black">橡皮章教程——唱出青花瓷</p>
+									<p class="course_user_name" style="border-bottom:0px solid #D4D4D4;"><span>娟刻生活</span></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type3">
+						<div class="topic_content-text">看完这么多超赞的教程，小白们是不是有想入坑的冲动呢？小编来个一条龙服务，搬来材料市场小姐姐码好的橡皮章入门工具专题，你……懂我意思吧（挠头）。想入坑的客客们快戳下图↓</div>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1348">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2634/1511858332_yr6xd32zfx.png" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type3">
+						<div class="topic_content-text">看教程不过瘾?橡皮章人气导师婷子带你从小白进阶角虫</div>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=2007">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2634/1511858382_sb4c8emcjr.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--用户个人主页-->
+						<a href="/user/1268452.html">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2634/1511858492_5mtabdjp2n.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="topic_content_title type2">
+						<div class="children " style="">
+							<div style="float: right;font-size:14px;">|</div>
+							<div class="right-border"></div>
+						</div>
+						<div class="children" style="position:relative;top:-3px;width:auto;padding:0 6px;">END</div>
+						<div class="children" style="">
+							<div style="float:left;font-size:14px;">|</div>
+							<div class="left-border"></div>
+						</div>
+					</div>
+					<!--商品集-->
+					<div class="clear"></div>
+				</div>
+				<!-- 分享 -->
+				<div class="details_share">
+					<div class="share_list fixed">
+						<a class="share_qzone" title="分享到QQ空间"></a>
+						<a class="share_weibo" title="分享到新浪微博"></a>
+						<a class="share_weixin" title="分享到微信"></a>
+						<a class="share_qq" title="分享到QQ好友"></a>
+					</div>
+					<div style="float:right;position:relative;margin:13px 6px 0 0 ;">
+						分享到:
+					</div>
+				</div>
+			</div>
+			<div class="topic_content-right">
+				<div class="topic_right_top">
+					其他热门专题
+				</div>
+				<div class="topic_right_content">
+					<a href="/TagTopic/2624/?tag_id=1">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2624/main/1511341251_32kjhb2nk7.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨当滴胶碰上脑洞大开</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2592/?tag_id=1">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2592/main/1510222000_dmenhxtmsr.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨手账——记录生活的点滴美好</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2556/?tag_id=1">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2556/main/1509005482_88wnwbykad.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨做一只超萌的皮卡丘！！！</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2548/?tag_id=1">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2548/main/1508825661_r4di2jfbyb.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨神奇的马赛克手工——拼豆</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2527/?tag_id=1">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2527/main/1507702414_szrjk27hbk.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨自古红蓝出cp，盘点红蓝配色的手工作品</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both "></div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="/copyright/about_us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="/copyright/contact_us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="/copyright/guide.html" target="_blank">新手攻略</a>
+					<a href="/map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/category/3.html" target="_blank">旧物改造</a>、
+					<a href="/category/60.html" target="_blank">折纸</a>和
+					<a href="/category/27.html" target="_blank">美容护肤</a>等精彩
+					<a href="/coursehome.html" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

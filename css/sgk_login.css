@@ -1,0 +1,44 @@
+@charset utf-8;
+/**ç™»å½•é¡µé¢æ ·å¼***/
+.login-bg{ width:100%; height:auto; position:absolute; top:0; left:0; z-index:1;}
+.login-bg img{ width:100%; height:auto}
+/*#sgk-warp{ position:relative; z-index:2;}*/
+.login-box{ width:502px; height:235px; padding:30px; background:#f2f2f2; position:absolute; top:128px; right:50px; z-index:2;}
+.other-login{ width:194px; float:left;}
+.other-login a{ margin:0 0 24px 0; display:block;}
+.login-form{ width:275px; float:right; position:relative;}
+.login-form label{ height:39px; width:40px; display:block; float:left; line-height:35px;}
+.login-pwd{ margin:35px 0 0 0;}
+.input-text{ width:223px; height:37px; background:#fff; border:1px solid #d8d8d8; line-height:37px; padding:0 0 0 10px;}
+.auto-login{ width:235px; margin:45px 0 0 40px; position:relative;}
+.auto-login a{ position:absolute; right:0; top:2px;}
+.button-login{ margin:20px 0 0 40px;}
+.login-btn{ width:87px; height:36px; display:block; background-color:#ff6699; color:white; text-align:center; border:1px solid #ea316e; background-image:linear-gradient(#f95d91, #ff6699); line-height:36px; border-radius:5px; float:left;}
+.login-register-tishi{ height:38px; line-height:38px; float:left; margin:0 0 0 10px;}
+.msg{ color:red; position:absolute;}
+.email-msg{ top:42px; left:40px;}
+.pwd-msg{ top:116px; *top:119px; left:40px;}
+.new-login-btn{width: 87px;height: 36px; display: block; background-color: #A09D9D; color: white; text-align: center; border: 1px solid #A09D9D; background-image: linear-gradient(#A09D9D, #A09D9D); line-height: 36px; border-radius: 5px; float: left; cursor:default;}
+
+/**æ³¨å†Œé¡µé¢æ ·å¼***/
+.register-tit{ text-align:center; font-size:24px;}
+.register-box{ margin:60px 0 0 0;}
+.register-box-l{ width:253px; height:393px; float:left; padding:0 0 0 184px; border-right:1px solid #e2e2e2;}
+.register-box-r{ width:483px; float:left; padding:0 0 0 59px;}
+.register-box-r label{ display:block; height:38px; line-height:38px; width:65px; float:left;}
+.register-box-r .input-text{ float:left;}
+.register-msg{ width:173px; height:38px; line-height:38px; float:left; padding:0 0 0 10px; color:red;}
+.input-list{ margin-bottom:24px; position:relative;}
+.input-tishi{ font-size:12px; position:absolute; left:65px; top:42px;}
+
+.register-success-layer{ width:671px; height:285px; padding:8px; background:rgba(208,208,208,0.5); *background:#d0d0d0; border-radius:5px; position:absolute; display:none; z-index:4;}
+.register-success-body{ width:454px; padding:45px 10px 0 207px; height:240px; background:url(http://imgs.shougongke.com/Public/images/common/icon2.jpg) 5px 50px no-repeat #F5F6F0;}
+.register-success-tit{ color:#66cc99; margin:0 0 30px 0;}
+.register-success-tit i{ width:26px; height:20px; display:block; background-position:0 -190px; float:left; margin:7px 12px 0 0;}
+.register-success-text{ font-size:14px; color:#555; line-height:30px;}
+
+.login-layer{ width:620px; height:382px; padding:8px; background:rgba(208,208,208,0.5); *background:#d0d0d0; border-radius:5px; position:absolute; display:none; z-index:400;}
+.login-body{ width:620px; height:382px; background:#f2f2f2;}
+.login-tit{ width:570px; height:50px; padding:0 25px; background:#e6e1e1; line-height:50px;}
+.login-close{ width:13px; height:13px; display:block; background-position:-72px -114px; float:right; margin-top:22px; cursor:pointer;}
+.login-area{ width:595px; height:316px; padding:15px 0 0 25px;}

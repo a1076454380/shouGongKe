@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>第一步 - 创建手工教程 - 手工客</title>
+		<link rel="canonical" href="http://www.shougongke.com/" />
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<!-- <div id="erweima"><img src="http://imgs.shougongke.comindex/images/common/erweima2.png" /></div><div class="ewm"></div> -->
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='第一步 - 创建手工教程 - 手工客' id='title'>
+				<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="" /></a>
+		</p>
+		<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+		<link href="css/jiaocheng.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			.scjc-tit {
+				margin: 0 0 40px 0;
+			}
+			
+			.scjc-tit a {
+				float: right;
+				margin-right: 20px;
+			}
+			
+			.scjc-tit a:hover {
+				background: #ff6699;
+				color: #fff;
+			}
+		</style>
+		<div id="over"></div>
+		<div id="sgk-warp">
+			<div class="sgk-jc-upload" name="#error_title">
+				<div class="scjc-tit" style="margin-bottom:40px;">
+					<a href="/index.php?m=Copyright&a=guide" target="_blank" class="fense">新手攻略</a>
+					<h2 class="size24">上传教程</h2></div>
+				<p class="jc-upload-msg" id="error_title"></p>
+				<div class="jc-name fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">教程名称:</span><span class="jc-upload-text2 hui-one">必填</span></p><input type="text" id="jc-name" autofocus="autofocus" placeholder="请输入教程的名称" onkeyup="calcCount('#jc-name',30,'.jc-name-msg')" value="" /><span class="jc-name-msg">还可以输入<font color="red">30</font>个字符</span></div>
+				<!--<div class="jc-cate fixed jc-upload-list"><p class="jc-upload-text"><span class="jc-upload-text1 size14">主分类:</span><span class="jc-upload-text2 hui-one">必选</span></p><select class="gcate"><option value="0" selected="selected">选择分类...
+                   </select></div>-->
+				<div class="jc-cate fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">分类:</span><span class="jc-upload-text2 hui-one">必选</span></p>
+					<select class="ogcate" id="ogcate">
+						<option value="0" selected="selected">选择分类...
+							<option value="1">布艺
+								<option value="2">皮艺
+									<option value="3">纸艺
+										<option value="4">木艺
+											<option value="5">饰品
+												<option value="6">编织
+													<option value="7">刺绣
+														<option value="8">雕塑雕刻
+															<option value="9">模型
+																<option value="10">橡皮章
+																	<option value="11">羊毛毡
+																		<option value="12">旧物改造
+																			<option value="13">美食烘焙
+																				<option value="14">粘土陶艺
+																					<option value="15">手绘印染
+																						<option value="16">滴胶热缩
+																							<option value="17">金属工艺
+																								<option value="18">电子科技
+																									<option value="19">手工护肤
+																										<option value="20">园艺多肉
+																											<option value="21">其他</select>
+				</div>
+				<div class="jc-fengmian fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">教程封面:</span><span class="jc-upload-text2 hui-one">必填</span></p>
+					<a href="javascript:void(0)" class="upload-pic-btn"><i class="icon icon-fenmian"></i>上传封面图</a>
+					<div class="clear"></div>
+					<div class="fengmian_img"></div><input type="hidden" id="host_pic" value="" /></div>
+				<div class="jc-desc fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">作品简介:</span><span class="jc-upload-text2 hui-one">必填</span></p><textarea id="textarea" placeholder="请输入教程的描述" onkeyup="calcCount('#textarea',300,'.jc-des-msg')"></textarea><span class="jc-des-msg">还可以输入<font color="red">300</font>个字符</span></div>
+				<div class="jc-cailiao fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">主要材料:</span><span class="jc-upload-text2 hui-one">必填</span></p>
+					<div class="jc-liebiao-right fixed">
+						<div class="jc-list-input">
+							<div class="jc-list-rows fixed"><span class="jc-list-name">材料名称</span><span class="jc-list-num">用量（可不填）</span></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="material_name" /><input type="text" class="num-input" id="material_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="material_name" /><input type="text" class="num-input" id="material_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="material_name" /><input type="text" class="num-input" id="material_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="material_name" /><input type="text" class="num-input" id="material_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="material_name" /><input type="text" class="num-input" id="material_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="material_name" /><input type="text" class="num-input" id="material_num" /></div>
+							<div class="jc-list-rows fixed">
+								<a href="javascript:void(0)" class="add-rows size14" id="add_material"><i class="icon icon-jia2"></i>增加一行</a>
+							</div>
+						</div>
+						<div class="jc-list-choice">
+							<p>您可以在这里点选材料：</p>
+							<ul class="tag-list fixed" id="material_tag">
+								<li>羊毛毡</li>
+								<li>不织布</li>
+								<li>银</li>
+								<li>黄铜</li>
+								<li>铝</li>
+								<li>焊丝</li>
+								<li>焊锡浆</li>
+								<li>橡皮砖</li>
+								<li>硫酸纸</li>
+								<li>染料</li>
+								<li>印台</li>
+								<li>卡纸</li>
+								<li>木柄</li>
+								<li>软木垫</li>
+								<li>热缩片</li>
+								<li>光油</li>
+								<li>砂纸</li>
+								<li>橡皮</li>
+								<li>滴胶</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="jc-tools fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">主要工具:</span><span class="jc-upload-text2 hui-one">必填</span></p>
+					<div class="jc-liebiao-right fixed">
+						<div class="jc-list-input">
+							<div class="jc-list-rows fixed"><span class="jc-list-name">所需工具</span><span class="jc-list-num">用量（可不填）</span></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="tools_name" /><input type="text" class="num-input" id="tools_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="tools_name" /><input type="text" class="num-input" id="tools_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="tools_name" /><input type="text" class="num-input" id="tools_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="tools_name" /><input type="text" class="num-input" id="tools_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="tools_name" /><input type="text" class="num-input" id="tools_num" /></div>
+							<div class="jc-list-rows fixed"><input type="text" class="name-input" id="tools_name" /><input type="text" class="num-input" id="tools_num" /></div>
+							<div class="jc-list-rows fixed">
+								<a href="javascript:" class="add-rows size14" id="add_tools"><i class="icon icon-jia2"></i>增加一行</a>
+							</div>
+						</div>
+						<div class="jc-list-choice">
+							<p>您可以在这里点选常用工具：</p>
+							<ul class="tag-list fixed" id="tools_tag">
+								<li>剪刀</li>
+								<li>打孔器</li>
+								<li>直尺</li>
+								<li>刻刀</li>
+								<li>美工刀</li>
+								<li>水消笔</li>
+								<li>定位针</li>
+								<li>划粉</li>
+								<li>铅笔</li>
+								<li>刷子</li>
+								<li>马克笔</li>
+								<li>水彩笔</li>
+								<li>热胶枪</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="jc-hard fixed jc-upload-list">
+					<p class="jc-upload-text"><span class="jc-upload-text1 size14">难度系数:</span><span class="jc-upload-text2 hui-one">必填</span></p>
+					<div class="jd-hard-right">
+						<ul class="nanduzhishu" flag='0'>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li style="margin-right:0">5</li>
+						</ul><input type="hidden" id="difficulty" value="" /><input type="hidden" value="" id="nanduzhishu" name="nanduzhishu" /><input type="text" style="margin-top:5px;text-align:center;width:50px;" id="made_time" value="" />小时
+						<span class="hui-one" style="margin-top:5px;">制作时间</span></div>
+				</div>
+				<a href="javascript:hand_next()" class="jc-upload-button"><i class="icon icon-public"></i> 开始上传步骤图</a><input type="hidden" id="hand_id" value="" /></div>
+		</div>
+		<div class="sgk-upload-layer">
+			<div class="sgk-upload-area">
+				<p class="sgk-upload-tit"><i class="icon icon-close"></i>上传封面图
+				</p><iframe id="upload_load" style="width:844px;height:371px;border:0px;" frameborder="0"></iframe></div>
+		</div>
+		<script type="text/javascript" src="js/Countable.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			function error_messages(num, type) {
+				var arr = new Array(
+					"名称", "分类", "封面图", "作品简介", "风格", "场景", "人物", "节日", "材料", "工具", "难易程度", "制作时间", "教程名称不能大于30个字符", "教程简介不能大于300个字符"
+				);
+				if(type == 1) {
+					$("#error_title").html(arr[num]);
+				} else {
+					if(num == 12) {
+						$("#error_title").html("创建一个教程,制作时间必须是数字");
+					} else {
+						$("#error_title").html("创建一个教程," + arr[num] + "必须是填写的");
+					}
+				}
+				location.href = "#error_title";
+			}
+
+			function hand_next() {
+				//教程的标题
+				var subject = $("#jc-name").val();
+				if(subject == "") {
+					error_messages(0, 0);
+					return;
+				}
+				if(subject.length > 30) {
+					error_messages(12, 1);
+					return;
+				}
+				//教程的分类
+				var ogcate_id = $('#ogcate').val();
+				if(ogcate_id < 1) {
+					error_messages(1, 0);
+					return;
+				}
+				var host_pic = $("#host_pic").val();
+				if(host_pic == "") {
+					error_messages(2, 0);
+					return;
+				}
+				var summary = $("#textarea").val();
+				if(summary == "") {
+					error_messages(3, 0);
+					return;
+				}
+				if(summary.length > 300) {
+					error_messages(13, 1);
+					return;
+				}
+				var material = material_name();
+				if(material == "") {
+					error_messages(8, 0);
+					return;
+				}
+				var tools = tools_name();
+				if(tools == "") {
+					error_messages(9, 0);
+					return;
+				}
+				var difficulty = $("#difficulty").val();
+				if(difficulty == "") {
+					error_messages(10, 0);
+					return;
+				}
+				var made_time = $("#made_time").val();
+				if(made_time == "") {
+					error_messages(11, 0);
+					return;
+				}
+				if(Number(made_time) > 0) {} else {
+					error_messages(12, 0);
+					return;
+				}
+				var hand_id = $("#hand_id").val();
+				var www = "/index.php?m=Handmade&a=add";
+				if(hand_id != "") {
+					www = "/index.php?m=Handmade&a=edit";
+				}
+				var data = {
+					"subject": subject,
+					"ogcate_id": ogcate_id,
+					"host_pic": host_pic,
+					"summary": summary,
+					"material": material,
+					"tools": tools,
+					"difficulty": difficulty,
+					"made_time": made_time,
+					"id": hand_id
+				};
+				$.ajax({
+					type: "POST",
+					url: www,
+					data: data,
+					async: false,
+					dataType: 'json',
+					error: function(request) {
+						alert("服务器连接错误");
+					},
+					success: function(data) {
+						if(data.r == "2") {
+							location.href = "/index.php?m=Handmade&a=step&id=" + data.hand_id;
+						} else {
+							$("#error_title").html(data.msg);
+							location.href = "#error_title";
+						}
+					}
+				});
+			}
+			/**难度等级鼠标滑过的效果**/
+			$(".jd-hard-right ul li").hover(function() {
+				var difficulty = $("#difficulty").val();
+				if(difficulty == "" || difficulty == "0") {
+					var i = $(this).index(".jd-hard-right ul li");
+					$(this).parent().removeClass().addClass("nanduzhishu").addClass("nanduzhishu" + "-" + (i + 1)).attr('flag', '0');
+				}
+			}, function() {
+				var difficulty = $("#difficulty").val();
+				if(difficulty == "" || difficulty == "0") {
+					var flag = $(this).parent().attr('flag');
+					if(flag == 0) {
+						$(this).parent().removeClass().addClass("nanduzhishu");
+						$('#nanduzhishu').val(0);
+					}
+				}
+			});
+			/**点击选中难度等级**/
+			$(".jd-hard-right ul li").click(function() {
+				var i = $(this).index(".jd-hard-right ul li");
+				$("#difficulty").val((i + 1));
+				$(this).parent().removeClass().addClass("nanduzhishu").addClass("nanduzhishu" + "-" + (i + 1)).attr("flag", '1');
+				$('#nanduzhishu').val(i + 1);
+			})
+			/**点击增加一行**/
+			$("#add_material").click(function() {
+				$(this).parent().before("<div class='jc-list-rows fixed'><input type='text' class='name-input' id='material_name'/><input type='text' class='num-input' id='material_num'/></div>");
+				return false;
+			});
+			$("#add_tools").click(function() {
+				$(this).parent().before("<div class='jc-list-rows fixed'><input type='text' class='name-input' id='tools_name'/><input type='text' class='num-input' id='tools_num'/></div>");
+				return false;
+			});
+			/**限制输入**/
+			function calcCount(objName, length, msgName) {
+				var value = $(objName).val();
+				var len = value.length;
+				if(len <= length) {
+					$(msgName).html("还可以输入<font color='red'>" + (length - len) + "</font>个字符");
+				} else {
+					$(msgName).html("<font color='red'>已经超出" + (len - length) + "个字符</font>");
+				}
+			}
+			/*start----筛选*/
+			function gcategoryChange() {
+				$(this).nextAll("select").remove();
+				var id = $(this).val();
+				var classes = $(this).attr("class");
+				if(id != "0") {
+					var _self = this;
+					$.getJSON('/index.php?m=Handmade&a=get_gcate', {
+						'id': id,
+						"cs": classes
+					}, function(data) {
+						if(data.done) {
+							if(Number(data.leng) > 0) {
+								$("<select class='" + classes + "'><option value='0'>请选择...</option></select>").change(gcategoryChange).insertAfter($(_self));
+								var datas = data.data;
+								for(var key in datas) {
+
+									$(_self).next("select").append("<option value='" + datas[key].cate_id + "'>" + datas[key].cate_name + "</option>");
+								}
+							}
+						}
+					});
+
+				}
+			}
+
+			function close_layer(images) {
+				$(".sgk-upload-layer,#over").hide();
+				$(".fengmian_img").html("<img src='http://imgs.shougongke.com/" + images + "' width='228' height='172'>");
+				$("#host_pic").val(images);
+				$(".fengmian_img").show();
+			}
+			$(function() {
+				$(".upload-pic-btn").click(function() {
+					show_black_bg("#over");
+					$("#upload_load").attr("src", "/index.php?m=AliOss&a=upload&type=course");
+					var css_arr = top_div_css("sgk-upload-layer");
+					$(".sgk-upload-layer").css({
+						"left": css_arr[0],
+						"top": css_arr[1] + "px"
+					}).show();
+					$(".icon-close").click(function() {
+						$(".sgk-upload-layer,#over").hide();
+					});
+				});
+				//工具
+				$.each($("#tools_tag li"), function(n, m) {
+					$(m).click(function() {
+						var tag = $(m).html();
+						var suo = 0;
+						$.each($("input[id=tools_name]"), function(nn, obj) {
+							var word = $(obj).val();
+							if(word == "" && suo == 0) {
+								$(obj).val(tag);
+								suo = 1;
+							}
+						});
+					});
+				});
+				//材料
+				$.each($("#material_tag li"), function(n, m) {
+					$(m).click(function() {
+						var tag = $(m).html();
+						var suo = 0;
+						$.each($("input[id=material_name]"), function(nn, obj) {
+							var word = $(obj).val();
+							if(word == "" && suo == 0) {
+								$(obj).val(tag);
+								suo = 1;
+							}
+						});
+					});
+				});
+				//标签
+				select_tag("style");
+				select_tag("scene");
+				select_tag("crowd");
+				select_tag("festival");
+
+			});
+
+			function select_tag(tag) {
+				$.each($("#" + tag + "_tag li"), function(n, m) {
+					$(this).click(function() {
+						var tag_name = $(this).html();
+						var word = $("#" + tag).val();
+						var arr = word.split(" ");
+						var suo = 0;
+						for(var i = 0; i < arr.length; i++) {
+							if(arr[i] == tag_name) {
+								suo = 1;
+							}
+						}
+						if(suo == 0) {
+							if(word == "") {
+								word = tag_name;
+							} else {
+								word = word + " " + tag_name;
+							}
+							$("#" + tag).val(word);
+						}
+					});
+				});
+			}
+			/*end----筛选*/
+			function tools_name() {
+				var name = "";
+				$.each($("input[id=tools_name]"), function(n, m) {
+					var nm = $(this).val();
+					if(nm != "") {
+						var wd = $(this).val() + "," + $("input[id=tools_num]").eq(n).val();
+						if(name == "") {
+							name = wd
+						} else {
+							name = name + "|" + wd;
+						}
+					}
+				});
+				return name;
+			}
+
+			function material_name() {
+				var name = "";
+				$.each($("input[id=material_name]"), function(n, m) {
+					var nm = $(this).val();
+					if(nm != "") {
+						var wd = $(this).val() + "," + $("input[id=material_num]").eq(n).val();
+						if(name == "") {
+							name = wd
+						} else {
+							name = name + "|" + wd;
+						}
+					}
+				});
+				return name;
+			}
+
+			function checkNum(id) {
+				obj = $("#" + id);
+				num = $("#" + id).val();
+				maxNum = 1000000
+				if(formatFloat(num, 2) > 0 && isNaN(num)) {
+					alert("只允许输入数字！");
+					return false;
+				}
+				if(/^-?\d+(\.\d+)?$/.test(num)) {
+
+				}
+				if(parseInt(num) > parseInt(maxNum) || parseInt(num) < 0) {
+					alert("请输入一个0~1000000之间的价格数");
+					return false;
+				}
+				return true;
+			}
+
+			function checknumber() {
+				var tempValue = obj.val().replace(/(^\s+)|(\s+$)/g, '');
+				if(!tempValue) {
+					return;
+				}
+				if(/^-?\d+(\.\d+)?$/.test(tempValue)) {
+					obj.value = parseFloat(tempValue).toFixed(2);
+				} else {
+					alert('请输入合法的货币值！');
+					obj.select();
+					return;
+				}
+
+			}
+
+			function formatFloat(src, pos) {
+				return Math.round(src * Math.pow(10, pos)) / Math.pow(10, pos);
+			}
+
+			function checknumber(String) {
+				var Letters = "1234567890.";
+				var i;
+				var c;
+				for(i = 0; i < Letters.length(); i++) {
+					c = Letters.charAt(i);
+					if(Letters.indexOf(c) == -1) //在"Letters"中找不到"c"   见下面的此函数的返回值
+					{
+						return true;
+					}
+				}
+				return false;
+			}
+		</script>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

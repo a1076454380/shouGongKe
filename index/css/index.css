@@ -1,0 +1,148 @@
+@charset utf-8;
+#sgk-index-warp{ width:100%;}
+.width980{ width:980px; margin:0 auto;}
+.sgk-top{ height:321px; margin-bottom:40px;}
+.sgk-top-l{ width:624px; float:left; position:relative; overflow:hidden;}
+.sgk-top-l ul{position:relative; display:block; height:321px; overflow:hidden;}
+.sgk-top-l ul li{ width:624px; float:left; height:321px; overflow:hidden;}
+
+.scroll_btn{ width:32px; height:321px; background:url(http://imgs.shougongke.com/Public/index/images/common/opacity_bg.png) repeat; display:block; position:absolute; top:0;}
+.scroll_btn span{ width:14px; height:25px; display:block; background:url(http://imgs.shougongke.com/Public/index/images/common/pre_next.png) no-repeat; text-indent:-2000px;}
+.pre span{ background-position:0 0; margin:148px 0 0 9px;}
+.next span{ background-position:-18px 0; margin:148px 0 0 9px;}
+.pre{ left:-35px;}
+.next{ right:-35px;}
+
+.sgk-top-r{ width:356px; height:321px; float:right; background:#fff; position:relative;}
+.user-count{ margin:20px 0 14px 0; text-align:center;}
+.join-btn{ background-color:#ff6699; color:white; text-align:center; border:1px solid #ea316e; background-image:linear-gradient(#f95d91, #ff6699); width:116px; height:33px; line-height:33px; border-radius:5px 5px 5px 5px; display:block; margin:0 auto; }
+.join-btn:hover{ background:#ff6688;}
+.login-msg{ text-align:center; margin:18px 0 0 0;}
+.login-msg .login_qq{background: url('../images/login_qq.png') no-repeat center center; padding: 13px 21px 13px 13px;}
+.login-msg .login_weibo{background:  url('../images/login_weibo.png') no-repeat center center; padding: 13px 21px 13px 13px;}
+.login-msg .login_wowsai{background:  url('../images/login_wowsai.png') no-repeat center center; padding: 13px 21px 13px 13px;}
+.oster-login{ margin:20px 0 0px 0; text-align: center;}
+.oster-login a{display:inline-block;background:  url('../images/open_vip.png') no-repeat center center; width:121px; height:38px; line-height:38px; text-align:center; margin:0 0 0 8px;border-radius:5px;}
+/*.oster-login a:hover{ background:#e9e9e9;}*/
+.sgk-down{ width:221px; height:52px; padding:25px 0 0 96px; border-top:1px dashed #dfdfdf; margin:0 0 0 20px; background:url(http://imgs.shougongke.com/Public/images/index/mob_bg.gif) 56px 22px no-repeat; position:absolute; bottom:10px;}
+.app-download{ width:245px; height:65px; display:block; position:absolute; left:40px; top:15px;}
+
+.login-user{ width:66px; margin:33px auto 0; display:block; line-height:36px; text-align:center;}
+.login-user-shejiao{ width:207px; height:42px; margin:12px auto 0;}
+.login-user-shejiao li{ width:68px; height:42px; border-right:1px solid #cccccc; float:left;}
+.login-user-shejiao li.last{ border-right:none;}
+.login-user-shejiao li a{ text-align:center;}
+.login-user-shejiao li p{ text-align:center;}
+
+.jc-hot{ margin:50px auto 0;}
+.jc-hot-tit a{ float:right;}
+.jc-hot-tit{ width:978px; background:url(http://imgs.shougongke.com/Public/index/images/jc_bg.gif) no-repeat bottom; padding:0 0 10px 0; margin-bottom:9px;}
+.jc-hot-tit a:hover{ background:#FF6699; color:#fff;}
+
+.sg-daren{ width:1096px; margin:48px auto 0;}
+.daren-con{ height:296px; width:973px; margin:0 auto; overflow:hidden; position:relative;}
+.sg-daren ul{ position:absolute; left:0; margin:0; padding:0;}
+.sg-daren ul li{ float:left; width:973px;}
+.sg-daren-list{ width:133px; height:236px; float:left; background:#fff; padding:10px; margin:0 11px 0 0; box-shadow:1px 1px 5px #cccccc;}
+.sg-daren-name{ margin:13px 0 9px 0; display:block;}
+.sg-daren-btn{ width:127px; height:27px; display:block; border-radius:5px; line-height:27px; background-color:#fff; color:#ff6699; text-align:center; background-image:linear-gradient(#ffffff,#ebebeb); border:1px solid #c8c8c8; margin:18px 0 0 0;}
+.daren-control div{ width:48px; height:256px; position:absolute; background:#fff; cursor:pointer; display:none;}
+.daren-control i{ width:14px; height:26px; margin:115px auto; display:block;}
+.control-l{ left:0;}
+.control-l i{ background:url(http://imgs.shougongke.com/Public/index/images/common/sgk-icon.png) no-repeat -64px -71px;}
+.control-r{ right:0;}
+.control-r i{ background:url(http://imgs.shougongke.com/Public/index/images/common/sgk-icon.png) no-repeat -47px -71px;}
+
+.sg-store{ margin:18px auto 0; position:relative;}
+.sg-store-list{ height:471px; background:#fff; margin:21px 0 0 0;}
+.sg-store-list dl{ width:170px; float:left; margin:21px 0 21px 21px;}
+.sg-store-name{ height:34px; line-height:34px; display:block; overflow:hidden; margin:4px 0 0 0;}
+.sg-store-nav{ width:auto; position:absolute; top:0; right:0;}
+.sg-store-nav li{ width:48px; height:31px; line-height:31px; text-align:center; float:left; margin-right:18px; font-size:14px; color:#222; cursor:pointer;}
+.sg-store-nav li:hover{ background:#e6e1e1; border-radius:5px;}
+.sg-store-nav li.selected{ background:#e6e1e1; border-radius:5px;}
+
+.icon-jia3{ width:10px; height:10px; display:inline-block; background-position:-48px -55px; margin-right:5px; *margin-top:-13px;}
+
+.btn{ position:absolute; right:11px; bottom:12px;}
+.btn span{ width:9px; height:9px; background-position:-61px -55px; float:left; margin-right:8px;}
+.btn span.on{ background-position:-72px -55px;}
+
+.sgk_ad li{ width:228px; height:180px; float:left; margin:0 0 0 22px;}
+
+.sgk_other{ width:100%; background:#fff; margin:63px 0 0 0; padding:35px 0 50px 0;}
+.sgk_other_con{ width:980px; margin:0 auto;}
+.sgk_other_left{ width:478px; float:left;}
+.sgk_other_tit{ font-size:16px; color:#222;}
+.sgk_other_info{ background:url(http://imgs.shougongke.com/Public/index/images/line_bg3.gif) no-repeat bottom; padding-bottom:15px; margin-top:15px; color:#999;}
+.sgk_other_ul{ margin:20px 0 0 0;}
+.sgk_other_ul li{ width:226px; float:left; height:60px; border:1px solid #fff; margin:0 0 4px 0;}
+.sgk_other_ul li:hover{ border-color:#ff94b7; cursor:pointer;}
+.sgk_other_ul li .sgk{ width:212px; height:46px; margin:7px 0 0 7px; display:block; cursor:pointer;}
+.sgk_other_ul li .sgk .other_avatar{ width:46px; float:left;}
+.sgk_other_ul li .sgk .other_info{ width:156px; float:right;}
+.sgk_other_ul li .sgk .other_info span{ display:block;}
+
+.sgk_other_right{ width:478px; float:left;}
+.sgk_other_info2{ background:url(http://imgs.shougongke.com/Public/index/images/line_bg3.gif) no-repeat bottom; padding-bottom:15px; margin-top:15px; color:#999;}
+.sgk_other_info2 a{ font-size:14px; float:right;}
+.sgk_other_ul2{ margin:20px 0 0 0;}
+.sgk_other_ul2 li{ width:476px; height:101px; border:1px solid #fff; margin:0 0 4px 0;}
+.sgk_other_ul2 li:hover{ border-color:#ff94b7; cursor:pointer;}
+.sgk_other_ul2 li a{ width:448px; height:87 px; margin:7px 0 0 7px; display:block; cursor:pointer;}
+.sgk_other_ul2 li a .league_pic{ width:87px; float:left;}
+.sgk_other_ul2 li a .league_info{ width:352px; float:right;}
+.sgk_other_ul2 li a .league_info span{ display:block;}
+.sgk_other_ul2 li a .league_pic img{ border-radius:43px;}
+
+.sgk_store{ width:980px; margin:50px auto 0;}
+.sgk_store .sgk_store_tit{ width:978px; background:url("http://imgs.shougongke.com/Public/index/images/jc_bg.gif") no-repeat scroll center bottom transparent; padding:0 0 10px 0;}
+.sgk_store .sgk_store_tit h2{ font-size:16px; float:left;}
+
+.sgk_store .sgk_store_con{ padding:0px;}
+.sgk_store .sgk_store_block{ padding: 20px 0 0 0;}
+.sgk_store .store_nav{ margin-bottom: 10px; color: #444; font-size: 16px;}
+.sgk_store .store_nav span{padding: 0 10px; color: #444; }
+.sgk_store .store_nav a{ font-size: 14px; padding: 4px 15px 0 15px; color: #444;}
+.sgk_store .store_nav a.on{ color: #f69; background:url("http://imgs.shougongke.com/Public/index/images/common/triangle.png") no-repeat scroll center top; }
+.sgk_store .store_list{ margin-right: -20px; }
+.sgk_store .store_li{ width: 440px; padding:20px; background: #FFF; margin-right: 20px; float: left; display: none;}
+.sgk_store .store_li_header{ border-bottom: 1px solid #eaeaea; height: 46px; padding-bottom: 10px; margin-bottom: 10px;}
+.sgk_store .store_li_header a{display: block;}
+.sgk_store .store_li_header img{height: 46px; width: 46px; float: left;}
+.sgk_store .store_li_header .name{ font-size: 16px; line-height: 16px; color: #000; padding-top: 15px;width: 386px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; float: right; }
+.sgk_store .store_li_header .desc{ font-size: 14px; font-weight: 100; color: #f69; float: right;width: 386px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; float: right; text-align: right; line-height: 14px; height: 16px;}
+.sgk_store .store_li_goods{margin-right:-10px; }
+.sgk_store .store_li_goods li{float: left; width: 140px; margin-right:10px; }
+.sgk_store .store_li_goods li img{ width: 140px; height: 140px; }
+.sgk_store .store_li_goods li .price{ text-align: center; display: block; padding-top: 10px; font-size: 16px; color: #444;}
+
+.sgk_h1{ color:#9d9d9d; text-align:center; margin-top:25px;}
+.zxjc_body{ background:#fff; margin-top:20px; padding:15px 0 15px 20px; width:960px;}
+.zxjc_body li{ line-height:30px; color:#a3a3a3; font-size:14px;}
+.zxjc_body .usernmae{ margin:0 10px; color:#222;}
+.zxjc_body h3{ display:inline-block;}
+
+.sgk_links{ margin-top:60px;}
+.links_body{ width:980px; background:#fff; padding:15px 0; border-top:1px solid #999999; margin-top:5px;}
+.links_body ul li{ width:138px; float:left; line-height:30px; text-align:center; border-right:1px dashed #d3d3d3;}
+.links_body ul li a{ color:#222;}
+.links_body ul li.links_none{ border:none;}
+
+
+.userBox{ height: 300px; background: #fff; margin-top: 20px;}
+.userBox li{ margin:10px 0 0 15px;}
+
+
+.sgk_topic{ width:980px; margin:50px auto 0;}
+.sgk_topic_tit{ width:978px; background:url("http://imgs.shougongke.com/Public/index/images/jc_bg.gif") no-repeat scroll center bottom transparent; padding:0 0 10px 0;}
+.sgk_topic_tit h2{ font-size:16px; display: inline;}
+.sgk_topic_con{margin-top: 12px;}
+.sgk_topic_con li{ width: 480px; float: left; position: relative; margin-top: 20px; border-radius: 4px;}
+.sgk_topic_con li .sgk_topic_img img{ width: 480px; height: 280px; border-radius: 4px;}
+.sgk_topic_con li .sgk_topic_text{ position: absolute; bottom: 0; width: 480px; height: 60px;
+    border-radius: 0 0 4px 4px;
+   background:linear-gradient(to bottom,rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.4) 200%)
+}
+.sgk_topic_con li .sgk_topic_text a{ font-size: 18px; padding-left:14px; color: #FFF; display: block; padding-top:27px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+

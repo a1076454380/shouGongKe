@@ -1,0 +1,67 @@
+/*浼氬憳寮€閫氶〉闈�*/
+#sgk_vip{ width: 980px; margin:0 auto;}
+#sgk_vip *{box-sizing: border-box;}
+#sgk_vip .header{line-height:58px;height:58px; text-align: center; font-size: 18px; color:#000; }
+#sgk_vip .content{border-top: 1px solid #F69; background: #FFF url('../../images/vip/rights.png') no-repeat center 40px; padding: 555px 62px 20px;}
+#sgk_vip .content ul{ margin-right: -14px;}
+#sgk_vip .content ul li{width: 275px; float: left; margin-right: 15px; margin-top: 15px;}
+#sgk_vip .content ul li .box{border: 1px solid #DCDCDC; height: 120px; cursor: pointer;}
+#sgk_vip .content ul li .box.on{border: 2px solid #F69;}
+#sgk_vip .content ul li .box.surprise{position: relative;}
+#sgk_vip .content ul li .box.surprise img{position: absolute; top: 0; right: 0;}
+#sgk_vip .content ul li .box .price{line-height: 20px; height: 20px; text-align:center; margin-top: 30px; font-size: 18px; color: #F69;}
+#sgk_vip .content ul li .box .price .icon{margin-right: 5px; padding-left: 20px;}
+#sgk_vip .content ul li .box .price .icon_1{background: url('../../images/vip/vip_1.png') no-repeat center center;}
+#sgk_vip .content ul li .box .price .icon_3{background: url('../../images/vip/vip_3.png') no-repeat center center;}
+#sgk_vip .content ul li .box .price .icon_6{background: url('../../images/vip/vip_6.png') no-repeat center center;}
+#sgk_vip .content ul li .box .price .icon_12{background: url('../../images/vip/vip_12.png') no-repeat center center;}
+#sgk_vip .content ul li .box .price .icon_24{background: url('../../images/vip/vip_24.png') no-repeat center center;}
+#sgk_vip .content ul li .box .price .icon_36{background: url('../../images/vip/vip_36.png') no-repeat center center;}
+#sgk_vip .content ul li .box .btn{line-height: 24px; width: 80px; border-radius: 12px; background: #AAA; height: 24px; text-align:center; margin: 15px auto 0;  font-size: 18px; color: #FFF;
+    position: relative; right: auto; bottom: auto;} /* 瑕嗙洊鏃ф牱寮� */
+#sgk_vip .content ul li .box input{z-index: -1; position: relative;}
+#sgk_vip .content ul li .box.on .btn{background: #F69;}
+#sgk_vip .content ul li .box .btn span{
+    width: auto; height: auto; float: none; margin-right: auto;}
+#sgk_vip .content ul li .box.on .price{margin-top: 29px;}
+#sgk_vip .content .pay{ margin-top: 50px;text-align: right;}
+#sgk_vip .content .pay .pay_box{ height: 156px; width: 294px; border:1px solid #F69; display: inline-block;}
+#sgk_vip .content .pay .sum{line-height: 80px;text-align: right; font-size: 24px; color: #222; padding-right: 30px; padding-top: 8px;}
+#sgk_vip .content .pay .sum span{color: #F69;}
+#sgk_vip .content .pay .type{padding-right: 30px;text-align: right;}
+#sgk_vip .content .pay .type span.alipay{float: right; line-height: 20px; }
+#sgk_vip .content .pay .type span.alipay img{height: 37px; padding-top: 1px;}
+#sgk_vip .content .pay .type input{float: right; line-height: 20px; }
+#sgk_vip .content .pay .type #sub_btn{float: right;width: 100px; height: 38px; background: #F69; border-radius: 3px; font-size: 14px; color: #FFF; border:0; }
+#sgk_vip .content .pay .type .line{height: 26px; border-right: 1px solid #999; width: 1px; float: right; margin: 6px 12px 0 8px; }
+#sgk_vip .content .pay .agreement a{font-size: 14px; color: #505050; line-height: 34px;}
+/*寮圭獥*/
+.pay_status *{box-sizing: border-box;}
+.pay_status{width: 390px; height: 256px; padding:0;}
+.pay_status h3{font-size: 18px; color: #000; height: 82px; padding-top: 64px; line-height: 18px;}
+.pay_status .hint{font-size: 14px; color: #aaa; height: 34px; line-height: 14px; padding-top: 20px; text-align: left; padding-left: 20px;}
+.pay_status .btn{font-size: 14px; color: #aaa; height: 34px; line-height: 14px; position: inherit; right:auto; bottom: auto; padding-top: 32px;}
+.pay_status .btn button{font-size: 14px; color: #FFF; width: 100px; height: 34px; line-height: 34px; background: #F69; border-radius: 5px;}
+.pay_status .btn button.remodal-confirm{ background: #F69; border:1px solid #E6316E; margin-left: 20px;}
+.pay_status .btn button.remodal-cancel{ background: #D2D2D2; border:1px solid #AAA;}
+
+.pay_again *{box-sizing: border-box;}
+.pay_again{width: 310px; height: 203px; padding:0;}
+.pay_again h3{font-size: 18px; color: #000; height: 58px; padding-top: 40px; line-height: 18px;}
+.pay_again .hint{font-size: 14px; color: #aaa; height: 34px; line-height: 14px; padding-top: 20px; text-align: left; padding-left: 20px;}
+.pay_again .align{font-size: 14px; color: #aaa; height: 34px; line-height: 34px; }
+.pay_again .align a{font-size: 16px; color: #0088DD; cursor: pointer;}
+.remodal-close{background: url('../../images/vip/close.png') no-repeat 5px 10px;}
+.remodal-close:before{display: none;}
+
+/*浼氬憳寮€閫氬崗璁�*/
+#agreement{ width: 980px; margin:0 auto;}
+#agreement *{box-sizing: border-box;}
+#agreement .header{line-height:58px;height:58px; text-align: center; font-size: 18px; color:#000; }
+#agreement .content{border-top: 1px solid #F69; background: #FFF; padding: 20px 62px;}
+#agreement .content { margin-right: -14px; margin-bottom: 20px;}
+#agreement .content p{line-height: 24px; text-indent: 2em;}
+#agreement .content h3{line-height: 36px; font-size: 14px;}
+#agreement .content h4{line-height: 30px; text-indent: 2em;}
+#agreement .content p.img{text-align: center; padding:10px 0;}
+#agreement .content p.desc{text-align: center; padding-bottom: 10px;}

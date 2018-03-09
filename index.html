@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="alternate" media="handheld" href="#" />
+		<title>手工diy制作大全,手工教程,免费视频,手工市集-手工客官网</title>
+		<link href="index/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.com/Public/images/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.com/Public/images/common/sina_login.jpg" /></a>
+							<a href='#'><img src="http://imgs.shougongke.com/Public/images/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='#' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='手工diy制作大全,手工教程,免费视频,手工市集-手工客官网' id='title'>
+		<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin" style="display:none;">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="user-circle.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="user-circle.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="user-circle.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="user-circle.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="user-circle.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="user-circle.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="user-circle.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="user-circle.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="user-circle.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="user-circle.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg"/></a>
+		</p>
+		<!--所有的集合-->
+		<!--头部-->
+		<!--首页头部广告-->
+		
+		<div class="sgk-top width980 fixed">
+			<div class="sgk-top-l">
+				<ul class="fixed">
+					<li>
+						<a href="/" target="_blank"><img src="http://imgs.shougongke.com//Public/data/lunbo/Z7EH4M5CQB.jpg" alt='' width="624" height="321" /></a>
+					</li>
+					<li>
+						<a href="/" target="_blank"><img src="http://imgs.shougongke.com//Public/data/lunbo/kK25HNAtP3.jpg" alt='' width="624" height="321" /></a>
+					</li>
+					<li>
+						<a href="" target="_blank"><img src="http://imgs.shougongke.com//Public/data/lunbo/ecccJyC3xh.jpg" alt='' width="624" height="321" /></a>
+					</li>
+				</ul>
+				<a href="javascript:void(0)" class="pre scroll_btn"><span>上一个</span></a>
+				<a href="javascript:void(0)" class="next scroll_btn"><span>下一个</span></a>
+			</div>
+			<div class="sgk-top-r">
+				<h1 class="sgk_h1">手工客&nbsp;&#8212;&nbsp;静下心来，发现手作的美好</h1>
+				<!--未登录-->
+				<div class="sgk-no-login" id='sgk_no_login'>
+					<div class="user-count hui-four size16">这里已有<span id='user_sgk'>143</span>位手工客入驻</div>
+					<a href="register.html" class="join-btn size14">立即加入</a>
+					<div class="login-msg size14">已有帐号？
+						<a href='login.html' class="fense">从这里登录</a>
+						<a href='#' class="login_qq"></a>
+						<a href='#' class="login_weibo"></a>
+						<a href='#' class="login_wowsai"></a>
+					</div>
+					<div class="oster-login fixed">
+						<a class="open_vip" href="vip.html"></a>
+					</div>
+				</div>
+				<div class="sgk-has-login" id='sgk_has_login' style="display: none;">
+					<div>
+						<a id='user_index' class="login-user size14 hui-three"><img id='index_avatar' width="66" height="66" /></a>
+						<p id='username_index' style="text-align:center; line-height:30px; font-size:14px; color:#999;"></p>
+					</div>
+					<ul class="login-user-shejiao fixed">
+						<li>
+							<a href="#" class="fixed fense size24" id='jiao'></a>
+							<p class="fixed hui-one">教程</p>
+						</li>
+						<li>
+							<a href="#" class="fixed fense size24" id='guan'></a>
+							<p class="fixed hui-one">关注</p>
+						</li>
+						<li class="last">
+							<a href="#" class="fixed fense size24" id='fen'></a>
+							<p class="fixed hui-one">粉丝</p>
+						</li>
+					</ul>
+				</div>
+				<h3 class="sgk-down"><p class="size14 hui-four"><span class="fense">手工客</span>客户端 <a href="/app/download.html" class="hui-four" target='_blank'>点击下载</a></p><p class="size14 hui-one" style="line-height:25px;">随时随地学手工</p><a href="/app/download.html" target="_blank" class="app-download"></a></h3></div>
+		</div>
+		<!--广告列表-->
+		<div class="sgk_ad width980 fixed">
+			<ul class="sgk_ad fixed">
+				<li style="margin-left:0;">
+					<a href="classes.html" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/WB7KjPcQaP.jpg@!web_course_228" alt="特训营" /></a>
+				</li>
+				<li>
+					<a href="tagTopic.html" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/bMHw8ZFnEm.jpg@!web_course_228" alt="" /></a>
+				</li>
+				<li>
+					<a href="tagTopic.html" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/xpcTHcDAAj.jpg@!web_course_228" alt="教程" /></a>
+				</li>
+				<li>
+					<a href="tagTopic.html" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/EfmGAKFRY5.jpg@!web_course_228" alt="拾艺学堂" /></a>
+				</li>
+			</ul>
+		</div>
+		<!--手工教程列表-->
+		<div class="jc-hot width980 fixed">
+			<div class="size16 jc-hot-tit fixed">热门
+				<h2 style="font-size:16px; display:inline;">手工教程</h2>&nbsp;&nbsp;Tutorial
+				<a href="coursehome.html" class="size14 fense" target="_blank">更多</a>
+			</div>
+			<div class="sgk-gerenzhuye-con">
+				<div id="sgk-gerenzhuye-jc" class="fixed">
+					<div class="sgk-gerenzhuye-list fixed">
+						<div class="sgk-gerenzhuye-jc-one">
+							<p>
+								<a href="details.html" title="翡翠水滴应用（一）心锁" target="_blank" rel="nofollow"><img src="http://imgs.shougongke.com/course/17169191/446611/171127103111_cover.jpg@!web_course_228" width="228" height="172" alt="翡翠水滴应用（一）心锁" title="翡翠水滴应用（一）心锁" /></a>
+							</p>
+							<div class="sgk-gerenzhuye-jc-one-info">
+								<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="翡翠水滴应用（一）心锁" target='_blank'>翡翠水滴应用（一）心锁</a></h3>
+								<p class="hui-one">1天前上传</p>
+								<p class="hui-one jc-pl-sc-num"><span class="fense">3816</span> 人气 / <span class="fense">18</span> 评论 / <span class="fense">293</span> 收藏</p>
+							</div>
+							<!--教程右下角用户头像-->
+							<div class="sgk-jc-writer fixed">
+								<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/16/91/91_avatar_big.jpg@!avatar_32?t=1475638563" width="32" height="32" /></a></dt>
+									<dd class="daren">
+										<a class="" href="user-circle.html" target="_blank" class="hui-three">手艺人不愁吃喝</a>
+								</dl>
+							</div><mark class="icon"></mark></div>
+						<div class="sgk-gerenzhuye-jc-one">
+							<p>
+								<a href="details.html" title="旧物改造 牛仔围裙" target="_blank" rel="nofollow"><img src="http://imgs.shougongke.com/course/13738830/446629/171127101033_cover.jpg@!web_course_228" width="228" height="172" alt="旧物改造 牛仔围裙" title="旧物改造 牛仔围裙" /></a>
+							</p>
+							<div class="sgk-gerenzhuye-jc-one-info">
+								<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="旧物改造 牛仔围裙" target='_blank'>旧物改造 牛仔围裙</a></h3>
+								<p class="hui-one">21小时前上传</p>
+								<p class="hui-one jc-pl-sc-num"><span class="fense">1013</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">18</span> 收藏</p>
+							</div>
+							<!--教程右下角用户头像-->
+							<div class="sgk-jc-writer fixed">
+								<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/013/73/88/30_avatar_big.jpg@!avatar_32?t=1482896049" width="32" height="32" /></a></dt>
+									<dd>
+										<a class="" href="user-circle.html" target="_blank" class="hui-three">DuoDUO创意手工坊</a>
+								</dl>
+							</div><mark class="icon"></mark></div>
+						<div class="sgk-gerenzhuye-jc-one">
+							<p>
+								<a href="details.html" title="光阴耳坠" target="_blank" rel="nofollow"><img src="http://imgs.shougongke.com/course/17315830/446590/171126202227_cover.jpg@!web_course_228" width="228" height="172" alt="光阴耳坠" title="光阴耳坠" /></a>
+							</p>
+							<div class="sgk-gerenzhuye-jc-one-info">
+								<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="光阴耳坠" target='_blank'>光阴耳坠</a></h3>
+								<p class="hui-one">1天前上传</p>
+								<p class="hui-one jc-pl-sc-num"><span class="fense">956</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">61</span> 收藏</p>
+							</div>
+							<!--教程右下角用户头像-->
+							<div class="sgk-jc-writer fixed">
+								<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/31/58/30_avatar_big.jpg@!avatar_32?t=1473861022" width="32" height="32" /></a></dt>
+									<dd>
+										<a class="" href="user-circle.html" target="_blank" class="hui-three">百合手作</a>
+								</dl>
+							</div><mark class="icon"></mark></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--精选专题-->
+		<div class="sgk_topic width980 fixed">
+			<div class="sgk_topic_tit size16">
+				<h2>精选专题 Selected topics</h2>
+				<a href="tagTopic.html" class="size14 fense" target="_blank" style="float:right;">更多</a>
+			</div>
+			<div class="sgk_topic_con">
+				<ul id="fixed">
+					<li style="margin-right:20px;">
+						<div class="sgk_topic_img">
+							<a title="每日门教程 | 2017.11.28" href="tagtopic-details.html" target="_blank"><img src="http://image.shougongke.com/topic/course/2632/main/1511762339_zbyjs42yki.jpg" alt="每日门教程 | 2017.11.28"></a>
+						</div>
+						<div class="sgk_topic_text">
+							<a alt="2632" href="tagtopic-details.html" target="_blank">每日门教程 | 2017.11.28</a>
+						</div>
+					</li>
+					<li style="">
+						<div class="sgk_topic_img">
+							<a title="每日门教程 | 2017.11.27" href="tagtopic-details.html" target="_blank"><img src="http://image.shougongke.com/topic/main/1511703093_ww45j63dp2.jpg" alt="每日门教程 | 2017.11.27"></a>
+						</div>
+						<div class="sgk_topic_text">
+							<a alt="2630" href="tagtopic-details.html" target="_blank">每日门教程 | 2017.11.27</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--手工好店-->
+		<div class="sgk_store">
+			<div class="sgk_store_tit fixed">
+				<h2>手工好店 Hot Store</h2></div>
+			<div class="sgk_store_con">
+				<div class="sgk_store_block">
+					<div class="store_nav">|<span>材料店铺</span>|
+						<a href="javascript:;" val='1' class="">布艺</a>
+						<a href="javascript:;" val='11' class="">羊毛毡</a>
+						<a href="javascript:;" val='10' class="">橡皮章</a>
+						<a href="javascript:;" val='6' class="">编织</a>
+						<a href="javascript:;" val='5' class="">饰品</a>
+						<a href="javascript:;" val='2' class="">皮艺</a>
+						<a href="javascript:;" val='16' class="">滴胶热缩</a>
+						<a href="javascript:;" val='4' class="">木艺</a>
+					</div>
+					<div class="store_list fixed">
+						<div class="store_li cate_id_2">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DhJac2P4lnx4cQipKwQzePDAVflQIoZepK7Vc7tFgwiFRAdhuF14FMfHHzHG%2FApOUJ1gyddu7kN839Yje0gnhZxy%2Big1O0twgsitKZI4trBDoGbmSeteRt5RSZG8tBoZNOYQwrhPE0iw%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1468569554.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">天下无竹旗舰店</span><span class="desc">新手入门必选店铺</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=535768731508" title="手工皮具diy工具套装皮艺皮雕菱斩牛皮革制作手缝基础套餐钱包" biz-itemid="535768731508" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i1/1750077882/TB1XGCVj2BNTKJjSszeXXcu2VXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥99.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=546829970157" title="手工钱包半成品疯马皮牛皮复古男士横款钱包自制作七夕礼物材料包" biz-itemid="546829970157" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i3/TB1lfR0QFXXXXc9XpXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥144.50</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=533865959642" title="植鞣革皮料 头层牛皮料可雕刻可染色植鞣皮皮料手工树膏皮diy钱包" biz-itemid="533865959642" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i3/TB17kPqRpXXXXcIaXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥15.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_4">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DQwRPIdSWDFscQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMdbmt80vRxd81aH1Hk3GeOg39Yje0gnhZxy%2Big1O0twgsitKZI4trBCP%2FjnS7xAhmxvC31%2Fz2tKaxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464339751.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">小熊红木</span><span class="desc">木艺工具，红木小料精选</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=15961450195" title="德国榉木榉木木料榉木木方DIY木料木托料DIY手工木料木料原料" biz-itemid="15961450195" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i1/TB17rWrIFXXXXXFXXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥2.50</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=550055692248" title="木工入门木工实习木工教学工具套装木工DIY套装木工diy木料工具" biz-itemid="550055692248" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i4/619189670/TB2lEJlrctnpuFjSZFKXXalFFXa_!!619189670.jpg_140x140.jpg"><span class="price">￥149.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=529708545541" title="木工DIYG夹G字夹G型 虾弓码C字夹木工夹铸铁夹 4/6寸" biz-itemid="529708545541" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i4/619189670/TB21RawnXXXXXa3XpXXXXXXXXXX_!!619189670.jpg_140x140.jpg"><span class="price">￥16.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_2">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DwcdImMVPWi4cQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMQA%2FBtQ%2FGHpTxq3IhSJN6GRSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU04k1gb52vWVFoLQiiMko9a4vRn9s5lIr3k%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1479101347_hj3wf6b8wj.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">匠心艺语</span><span class="desc">日本诚和中国唯一合作伙伴</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=548141178150" title="匠心艺语 封底剂 床面处理剂 肉面处理剂 封边皮边处理剂" biz-itemid="548141178150" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i1/2789853103/TB2p594rORnpuFjSZFCXXX2DXXa_!!2789853103.jpg_140x140.jpg"><span class="price">￥34.99</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=543321910884" title="匠心艺语 通体不锈钢铁笔 划线 皮雕 描边 描线 定位DIY 手工皮具" biz-itemid="543321910884" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i1/2789853103/TB2to4zoR0kpuFjSsziXXa.oVXa_!!2789853103.jpg_140x140.jpg"><span class="price">￥15.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=549354993753" title="匠心艺语 SPC冲子 圆冲 手工打孔工具 打圆孔皮革手工 0.5~10mm" biz-itemid="549354993753" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i3/2789853103/TB2cPzYBbBnpuFjSZFGXXX51pXa_!!2789853103.jpg_140x140.jpg"><span class="price">￥10.50</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_4">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3Dm0N3aUA6OxkcQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMXbLhGGPy7X979%2FTFaMDK6Q39Yje0gnhZxy%2Big1O0twgsitKZI4trBAo1rjxxwpBRA9rVZmvuvAIxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1467256734.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">中华名檀阁</span><span class="desc">适合新手，很多半成品材料</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=20804552618" title="雕刻刀 核雕刀 木雕刀  紫光檀   黄铜箍 58度白钢条" biz-itemid="20804552618" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i4/893744886/TB2F0vljFXXXXc5XpXXXXXXXXXX_!!893744886.jpg_140x140.jpg"><span class="price">￥18.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=26368004045" title="木工锯 手工锯 手锯 U型锯 木工锯子 钢丝锯 曲线锯 拉花锯" biz-itemid="26368004045" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i2/893744886/TB2vhFKtl8lpuFjy0FnXXcZyXXa_!!893744886.jpg_140x140.jpg"><span class="price">￥16.80</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=44619026900" title="红木木料 檀木梳子料半成品 已开好齿 DIY梳子木料半加工" biz-itemid="44619026900" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i3/893744886/TB2LoADs80kpuFjSsziXXa.oVXa_!!893744886.jpg_140x140.jpg"><span class="price">￥6.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_1">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DB8LQK%2FBFUhYcQipKwQzePDAVflQIoZepK7Vc7tFgwiFRAdhuF14FMScrJSerBUUa8sviUM61dt1SjqlL85x7Dkw4pjlbzzylArQ6Hpml8z1d6nabxCq3C8kUhgyfKHE3cSpj5qSCmbA%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/appIndexad_1464142632.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">brother缝纫机</span><span class="desc">世界缝纫机爱好者推荐品牌</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=14581839482" title="兄弟缝纫机旗舰店 兄弟牌GS2700电动家用缝纫机多功能带锁边吃厚" biz-itemid="14581839482" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i2/93133189/TB1V67FcvDH8KJjy1XcXXcpdXXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥1188.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=36371091409" title="兄弟缝纫机旗舰店 兄弟牌NV35P家用缝纫机多功能台式电子吃厚锁边" biz-itemid="36371091409" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i3/93133189/TB1vXEKcCYH8KJjSspdXXcRgVXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥3380.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=38011434335" title="旗舰店正品 兄弟缝纫机KITTY定制版GS2786K家用电动多功能缝纫机" biz-itemid="38011434335" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i3/93133189/TB13QMzcxPI8KJjSspoXXX6MFXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥1288.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_5">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/QFXjqXx" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464163854.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name"> 3Cdiy大杂兔发饰配件</span><span class="desc">最受欢迎的DIY饰品材料包</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=546466234850" title="合金几何极简材料包diy手工制作耳饰品耳钉耳钩耳夹耳环配件套装" biz-itemid="546466234850" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i1/60045548/TB2Sf_rnNRDOuFjSZFzXXcIipXa_!!60045548.jpg_140x140.jpg"><span class="price">￥36.80</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=542198907972" title="几何耳钉diy手工制作首饰材料包流苏珍珠串珠耳环耳夹耳饰品配件" biz-itemid="542198907972" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i3/60045548/TB2dqqHp9BjpuFjSsplXXa5MVXa_!!60045548.jpg_140x140.jpg"><span class="price">￥15.60</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=20401944220" title="手工DIY工具打孔钳多功能小尖嘴钳子斜嘴钳大力钳剪线钳钢丝钳" biz-itemid="20401944220" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i2/TB1PNEeQpXXXXXDXVXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥5.10</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_10">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DAOPggkymLjIcQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMXDEUrDXQdH%2FRitN3%2FurF3xSjqlL85x7Dkw4pjlbzzylArQ6Hpml8z1jKhu8g%2BlwuioMJVkoLpbdcSpj5qSCmbA%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464167273.gif?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name"> 澜冰手工橡皮印章材料</span><span class="desc">橡皮章四大家族之一</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=3874021910" title="合璧堂 橡皮章雕刻工具 三本组/三本组S型进阶版/单支装 印刀曲" biz-itemid="3874021910" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i2/41611742/TB2QrOFopXXXXc_XpXXXXXXXXXX_!!41611742.jpg_140x140.jpg"><span class="price">￥8.50</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=520801871653" title="BNC洗甲水 橡皮章转印 水果香味 激光打印图纸转印洗甲水" biz-itemid="520801871653" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i1/TB1_u7hIFXXXXbRaXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥6.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=35637139776" title="进口 Kaleidacolor 月猫配色彩虹印台 滑动式印台 KA-01~KA-27" biz-itemid="35637139776" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i3/TB1AkCWFVXXXXcfXFXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥51.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_1">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DbysMA1eeQDccQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMVdxvim158zQ5x%2BIUlGKNpVSjqlL85x7Dkw4pjlbzzylArQ6Hpml8z1d6nabxCq3C8JtYFsuO8JCcSpj5qSCmbA%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1476674994.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">老佛爷辅料铺</span><span class="desc">全网销量第一布艺辅料好店</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=544558302877" title="进口 烫金布头仙鹤 手工DIY 日式服装 纯棉 全棉面料 棉布料 包邮" biz-itemid="544558302877" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i1/99789496/TB2qW6Ec3JkpuFjSszcXXXfsFXa_!!99789496.jpg_140x140.jpg"><span class="price">￥3.96</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=534129362096" title="1米包邮彩色床单棉布头沙发布料棉麻面料纯色手工DIY窗帘麻布" biz-itemid="534129362096" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i2/99789496/TB2x_LgmhdkpuFjy0FbXXaNnpXa_!!99789496.jpg_140x140.jpg"><span class="price">￥2.48</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=546665146116" title="可爱女孩进口棉麻布料手染布纯棉帆布面料口金包材料手工DIY拼布" biz-itemid="546665146116" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i1/99789496/TB2PUTqiYlmpuFjSZFlXXbdQXXa_!!99789496.jpg_140x140.jpg"><span class="price">￥3.94</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_10">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DLvK%2FWdCsorscQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMZI%2FyVPQi1%2Bglovu%2FCElQOtSjqlL85x7Dkw4pjlbzzylArQ6Hpml8z1jKhu8g%2Blwusx1eXCjJKXBcSpj5qSCmbA%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464168030.gif?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name"> 佛小花橡皮章文具材料</span><span class="desc">橡皮章四大家族之一</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=540640936196" title="sandy双色手工DIY雕刻垫板 刻纸刻橡皮章专用 自修复划痕环保材料" biz-itemid="540640936196" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i4/48327622/TB25Ba.aRyN.eBjSZFgXXXmGXXa_!!48327622.jpg_140x140.jpg"><span class="price">￥9.80</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=521164294992" title="日本进口ESION 木刻版画橡皮章雕刻刀 精工造坦克钢 正品锋利刀刃" biz-itemid="521164294992" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i3/TB1GATNOFXXXXaQapXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥27.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=550339773479" title="日本正品NT CUTTER刻刀 金属笔刀 双头多用 精工笔刀 D-1000P/GP" biz-itemid="550339773479" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i3/48327622/TB2uxEjowJkpuFjSszcXXXfsFXa_!!48327622.jpg_140x140.jpg"><span class="price">￥62.40</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_11">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/Ek3bqXx" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464169941.gif?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">仟樱羊毛毡</span><span class="desc">手工客优秀羊毛毡店铺</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=40049625583" title="小猫爪仟樱羊毛毡戳戳乐材料包新手工DIY手机链防尘塞猫爪熊掌" biz-itemid="40049625583" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i1/276363165/TB1Qp9egdXXWeJjSZFvXXa6lpXa_!!2-item_pic.png_140x140.jpg"><span class="price">￥11.90</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=548475323617" title="羊毛毡 羊毛线蓬蓬球diy材料包成品可爱泰迪狗挂件手工制作礼物" biz-itemid="548475323617" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i4/276363165/TB21O4FoS0mpuFjSZPiXXbssVXa_!!276363165.jpg_140x140.jpg"><span class="price">￥32.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=36096703840" title="7针组 羊毛毡戳戳乐手工DIY工具 速毡化 7头戳针 刺绣拼布" biz-itemid="36096703840" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i2/13165032515071621/T1.uxXFA0cXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥26.90</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_16">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D1HMeNoNBJtkcQipKwQzePDAVflQIoZepK7Vc7tFgwiFRAdhuF14FMWFib3WPc4O%2B8sviUM61dt1SjqlL85x7Dkw4pjlbzzylArQ6Hpml8z2P64B4JLvB5gvhAHXAnE0bMzXmCitDxQQ%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1500291207_t5xyej8i8i.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">派喜</span><span class="desc">天猫品质保证</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=547443005422" title="派喜diy水晶滴胶套装新手入门材料包手工饰品ab胶干花戒指模具" biz-itemid="547443005422" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i1/3166444775/TB1_uMPajnD8KJjSspbXXbbEXXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥25.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=549050317746" title="派喜 滴胶干花满天星 水晶滴胶干花滴胶ab胶模具带枝花朵 多规格" biz-itemid="549050317746" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i3/3166444775/TB1oAQhcwLD8KJjSszeXXaGRpXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥3.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=551178399203" title="派喜DIY手工 uv宝石胶uv胶uv滴胶水晶滴胶uv紫外线固化树脂液速干" biz-itemid="551178399203" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i1/3166444775/TB1A3QocvDH8KJjy1XcXXcpdXXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥22.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_16">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dw8vCiQENycgcQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMS%2F7m6mlEJjExq3IhSJN6GRSjqlL85x7Dkw4pjlbzzylArQ6Hpml8z0UqSXhClC6NaFnv6o1xGKYxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1505200975_y5rbixpbpt.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">湖光石色</span><span class="desc"></span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=527409956580" title="超透明水晶滴胶AB胶宝石DIY滴胶模具材料包套装树脂金鱼画标本" biz-itemid="527409956580" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i3/664747120/TB2SsgrapHM8KJjSZJiXXbx3FXa_!!664747120.jpg_140x140.jpg"><span class="price">￥5.72</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=529805600125" title="DIY滴胶模具工具合集抛光打磨锉刀手捻钻量杯针筒滴管镊电子秤" biz-itemid="529805600125" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i3/664747120/TB2hVzNaeYyQeBjSszcXXbIRpXa_!!664747120.jpg_140x140.jpg"><span class="price">￥1.20</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=545549631763" title="优质珠光粉水晶滴胶DIY眼影超细珠光粉闪粉云母粉高光粉璀璨亮粉" biz-itemid="545549631763" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i1/664747120/TB1OmpEcYYI8KJjy0FaXXbAiVXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥3.49</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_11">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/UEyaqXx" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464170244.gif?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">三朵天津专卖店</span><span class="desc">Do it yourself！</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=533153955693" title="三朵麋鹿手机包包挂件diy羊毛毡戳戳乐手工diy制作材料包礼物套装" biz-itemid="533153955693" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i1/TB10tISKXXXXXXrapXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥25.90</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=530622886911" title="三朵多肉绿植盆栽羊毛毡戳戳乐手工制作材料手工diy材料包制作" biz-itemid="530622886911" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i4/TB1GhIXOXXXXXXLaFXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥9.90</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=538646835122" title="包邮羊毛毡戳戳乐手工diy制作成人生日礼物创意礼盒新手材料包" biz-itemid="538646835122" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i4/919777232/TB15v4PkoQIL1JjSZFhXXaDZFXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥32.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_5">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/EPwiqXx" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464166348.gif?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">蒂哩哩原创DIY饰品</span><span class="desc">原创DIY饰品材料包精品店</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=535638340612" title="原创绿野仙踪diy遮疤痕颈链南美蜡绳手工编织饰品配件项链材料包" biz-itemid="535638340612" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i3/577707718/TB2GVgPXNbxQeBjy1XdXXXVBFXa_!!577707718.jpg_140x140.jpg"><span class="price">￥26.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=531811626962" title="蒂哩哩MACRAME南美蜡绳手工编织冰雪奇缘项链DIY配件材料包含教程" biz-itemid="531811626962" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i2/577707718/TB2AQrVtXXXXXaoXXXXXXXXXXXX_!!577707718.jpg_140x140.jpg"><span class="price">￥43.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=531719961032" title="原创DIY欧美蜡绳编织玛瑙平安扣项链青金石锁骨遮疤痕颈链材料包" biz-itemid="531719961032" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i4/577707718/TB2m8RFtFXXXXbJXXXXXXXXXXXX_!!577707718.jpg_140x140.jpg"><span class="price">￥26.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_6">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/X0DUbXx" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464165225.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">新妈咪手作</span><span class="desc">编织材料包全网销量第一好店</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=521593799039" title="宝宝精梳棉细毛线 手工钩针diy编织毛衣围巾纯棉线婴儿全棉粗毛线" biz-itemid="521593799039" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i1/1763545505/TB2oJ_GXVHzQeBjSZFOXXcM9FXa_!!1763545505.jpg_140x140.jpg"><span class="price">￥5.90</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=522618419437" title="新妈咪手作编织围巾男女情侣棒针围脖中粗毛线diy材料包" biz-itemid="522618419437" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i4/TB1e0gEJFXXXXXFXXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥59.60</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=526316187761" title="新妈咪手作 雪花毯纯棉宝宝毛线休闲盖毯编织钩针材料包" biz-itemid="526316187761" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i4/1763545505/TB2uxPWjFXXXXciXpXXXXXXXXXX_!!1763545505.jpg_140x140.jpg"><span class="price">￥88.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_6">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/Ei0ObXx" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464165690.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">芭比巧巧</span><span class="desc">绳编线材最全好店之一</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=25672020096" title="72号线台湾玉线锦纶线整卷 珠宝线 DIY手绳手链材料包线 1-20色" biz-itemid="25672020096" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i1/552920034/TB2qiVEvgxlpuFjy0FoXXa.lXXa_!!552920034.jpg_140x140.jpg"><span class="price">￥8.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=537982883917" title="冰丝线流苏线亮光3股线 手工DIY编绳手绳材料包绕线车挂流苏线" biz-itemid="537982883917" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i2/552920034/TB2u1IhnCxjpuFjSszeXXaeMVXa_!!552920034.jpg_140x140.jpg"><span class="price">￥11.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=549203287526" title="手编人造真丝短胖流苏 手工DIY编绳材料包配件 钥匙扣挂件短穗子" biz-itemid="549203287526" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i4/552920034/TB2Bl1LmCBjpuFjy1XdXXaooVXa_!!552920034.jpg_140x140.jpg"><span class="price">￥4.00</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sgk_store_block">
+					<div class="store_nav">|<span>成品商店</span>|
+						<a href="javascript:;" val='2' class="">饰品</a>
+						<a href="javascript:;" val='49' class="">美食烘焙</a>
+						<a href="javascript:;" val='34' class="">美妆护肤</a>
+						<a href="javascript:;" val='10' class="">包包</a>
+					</div>
+					<div class="store_list fixed">
+						<div class="store_li cate_id_2">
+							<div class="store_li_header">
+								<a href="https://otee.taobao.com/shop/view_shop.htm?user_number_id=31920005&ali_trackid=2%3Amm_112697705_11882727_42104411%3A1464354852_261_1176518427" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/shop_logo_1464354938.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name"> 雨墨之森</span><span class="desc">文艺范原创首饰品牌</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=524537455334" title="陪你一起看雪山 雨墨之森原创设计首饰手工纯银檀木情侣项链吊坠" biz-itemid="524537455334" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i5/TB1Yfq2KFXXXXakXFXXYXGcGpXX_M2.SS2_140x140.jpg"><span class="price">￥229.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=521493935066" title="【遇无孔版】雨墨之森原创设计手工清新文艺闺蜜情侣手镯\可刻字" biz-itemid="521493935066" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i8/TB1nBAOKpXXXXbiXXXXYXGcGpXX_M2.SS2_140x140.jpg"><span class="price">￥50.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=532938937300" title="《莲》 处女座 雨墨之森原创设计十二星座系列手工复古纯银耳钉" biz-itemid="532938937300" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i2/31920005/TB2CtVtzYBmpuFjSZFAXXaQ0pXa_!!31920005.jpg_140x140.jpg"><span class="price">￥49.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_10">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DpsOUKlHll7UcQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMcb0jAh7WU3SJ1gyddu7kN9SjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU04Lpjt3N%2Frc86yESSp9b%2BbSxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1501147713_zbw23ka5cz.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">LINE ARTISANAL 匠线</span><span class="desc">原创皮具包袋知名品牌</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=18956082543" title="【匠线】LINE ARTISANAL复古 原创 手工 咖啡色 旅行帆布双肩背包" biz-itemid="18956082543" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i4/TB1_Vl.GXXXXXb4aXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥510.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=520291850049" title="匠线 LINE ARTISANAL植鞣头层牛皮 手缝 迷你 单肩信封包手抓挎包" biz-itemid="520291850049" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i2/TB158PsIpXXXXc6XXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥298.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=528599001232" title="【匠线】LINE ARTISANAL 全新植鞣牛皮 手缝蓝色 极简真皮钱包 夹" biz-itemid="528599001232" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i2/810983264/TB2zWCpmXXXXXaMXXXXXXXXXXXX_!!810983264.jpg_140x140.jpg"><span class="price">￥298.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_10">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DBTTmNEecw%2BwcQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMeMvbv3z%2FIE%2Fxq3IhSJN6GRSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU05tsYe7vslNU0QJjT1fk%2BSwxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1501149406_dypazh2ny5.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">FOSTYLE菩提说</span><span class="desc">禅意美学皮具店铺</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=520232307275" title="菩提說 FOSTYLE 植鞣牛皮 手工 W01短款钱包" biz-itemid="520232307275" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i4/TB1o6XhIFXXXXagapXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥360.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=520836216738" title="菩提說 FOSTYLE 防泼水系列双肩包" biz-itemid="520836216738" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i3/TB1DsQvIFXXXXcWaXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥550.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=530371663459" title="菩提說 FOSTYLE 头层植鞣羊皮 手工真皮包包 F98羊皮月牙单肩包" biz-itemid="530371663459" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i4/689430387/TB2EuVutXXXXXXeXpXXXXXXXXXX_!!689430387.jpg_140x140.jpg"><span class="price">￥780.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_2">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dkm5AYxX3UwwcQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMa1fij8PRdUqxq3IhSJN6GRSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU04k1gb52vWVFqJ8add7tpkEcSpj5qSCmbA%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1501149878_e3f88zk8fy.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">七月原创银饰设计</span><span class="desc">中式首饰定制店铺</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=549409421289" title="七月原创990纯银情侣对戒刻字食指戒男女尾戒 戒指 莫比乌斯" biz-itemid="549409421289" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i2/TB1Uy0iSFXXXXXxaXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥159.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=17075390158" title="七月原创设计耳钉925纯银珐琅手工礼饰品双飞蝴蝶女 耳饰 蝶之语" biz-itemid="17075390158" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i4/27513636/TB1PIrWcbsTMeJjSszdXXcEupXa_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥113.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=8716059538" title="七月原创设计990纯银情侣吊坠小叶紫檀定制名字礼物 项坠 源本" biz-itemid="8716059538" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i2/TB1sNFVSFXXXXXrXXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥249.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_49">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dr413bgfsUSscQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMSv4Pw1hW0Bn79%2FTFaMDK6RSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU04AMNKRXtIpr6XfnAihjl9PxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1501150369_jnb47tcith.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">南时</span><span class="desc">云南特色美食</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=536131493105" title="南时｜云南特产手工云腿酥云腿月饼 宣威火腿滇式月饼零食 买3送1" biz-itemid="536131493105" isconvert="1" target="_blank"><img src="http://img3.tbcdn.cn/tfscom/i3/764677380/TB2ywOBtpXXXXX1XXXXXXXXXXXX_!!764677380.jpg_140x140.jpg"><span class="price">￥25.80</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=539338677678" title="南时｜现烤手工玫瑰鲜花饼零食糕点 云南特产" biz-itemid="539338677678" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i2/764677380/TB2HkqnhpXXXXcpXpXXXXXXXXXX_!!764677380.jpg_140x140.jpg"><span class="price">￥42.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=541587486868" title="南时｜歪先森5.20度云南玫瑰酒 鲜花酒女生果酒甜酒低度七夕礼物" biz-itemid="541587486868" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i3/764677380/TB2hKqVd94mpuFjSZFOXXaUqpXa_!!764677380.jpg_140x140.jpg"><span class="price">￥52.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_49">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DUkm9jQdCvescQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMY5Lja3N%2FypH1aH1Hk3GeOhSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU05tsYe7vslNUyIhXoU%2F9MeJcSpj5qSCmbA%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1501150483_h5iyttaz82.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">Landy Wang</span><span class="desc">网红手工蜂蜜水果茶</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=38634990776" title="「LANDY WANG」手工蜂蜜水果茶 水果缤纷 青柠金桔西柚柠檬" biz-itemid="38634990776" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i2/63426753/TB20hRwoFXXXXXLXFXXXXXXXXXX_!!63426753.jpg_140x140.jpg"><span class="price">￥35.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=37863549971" title="任选4小罐mini试吃装礼盒蜂蜜柚子茶 蜂蜜柠檬茶 果酱果茶 伴手礼" biz-itemid="37863549971" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i3/63426753/TB2k6F0oVXXXXajXXXXXXXXXXXX_!!63426753.jpg_140x140.jpg"><span class="price">￥36.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=530613182197" title="「LANDY WANG」加工定制烘焙什锦坚果果干燕麦片 早餐代餐 谷物" biz-itemid="530613182197" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i4/63426753/TB2rw_4XMSFJuJjSszdXXbVgXXa_!!63426753.jpg_140x140.jpg"><span class="price">￥28.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_34">
+							<div class="store_li_header">
+								<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3Dy51RUYH3ulscQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMeCpK%2FP8fKFg79%2FTFaMDK6RSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU07eRmyuzeyxPQCxCgRfEahGvRn9s5lIr3k%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/appIndexad_1464144631.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name"> 未央宫 古代妆品手工定制店</span><span class="desc">古方美颜护肤手工定制好店</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=538012569263" title="未央宫 古典植物色粉椰子油古方唇膏胭脂 天然滋润 无铅汞孕妇可" biz-itemid="538012569263" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i1/1643719153/TB21iD6aX15V1Bjy1XbXXaNcVXa_!!1643719153.jpg_140x140.jpg"><span class="price">￥59.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=27483360702" title="【未央宫】明月珠 珍珠粉七子白面膜粉 美白去黄 淡斑净肤" biz-itemid="27483360702" isconvert="1" target="_blank"><img src="http://img4.tbcdn.cn/tfscom/i1/1643719153/TB2QcSpb9mK.eBjSZPfXXce2pXa_!!1643719153.jpg_140x140.jpg"><span class="price">￥78.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=521542184442" title="青涟露 金银花野菊花秘制纯露 收毛孔祛痘美白控油粉刺草本药露" biz-itemid="521542184442" isconvert="1" target="_blank"><img src="http://img2.tbcdn.cn/tfscom/i4/TB1hBEAJXXXXXbAXpXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥38.00</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="store_li cate_id_34">
+							<div class="store_li_header">
+								<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D78EWB6X3Gl0cQipKwQzePDAVflQIoZepLKpWJ%2Bin0XJRAdhuF14FMapoUqKxwHF5lovu%2FCElQOtSjqlL85x7DsdGl0m%2FQfpjt1juy7%2FMU04S%2BFNL2nF1kyat5Gr3BWJQxgxdTc00KD8%3D" target="_blank"><img src="http://image.shougongke.com/shiji/shop/logo/1501150801_2jtcpp7e2h.jpg?x-oss-process=image/resize,m_fill,w_50,h_50" /><span class="name">森林庭院</span><span class="desc">高品质有机手工皂</span></a>
+							</div>
+							<ul class="store_li_goods fixed">
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=15885879975" title="毛孔清道夫 经典紫草皂 豆印 湿气毛孔 森林庭院口碑皂 斐济水制" biz-itemid="15885879975" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i4/T12UviXhRcXXXtemUY_030546.jpg_140x140.jpg"><span class="price">￥68.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=522077376407" title="灵气 可容纳4块皂的火山石皂托 森林庭院诚意设计定制 配件不单发" biz-itemid="522077376407" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i4/TB1gaVoJFXXXXXpaXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥38.00</span></a>
+								</li>
+								<li>
+									<a href="http://item.taobao.com/item.htm?id=40678020602" title="白成日光灯 血糯米皂 惊艳白还水嫩 森林庭院灵感作品 全食料入皂" biz-itemid="40678020602" isconvert="1" target="_blank"><img src="http://img1.tbcdn.cn/tfscom/i1/TB1K7UtFVXXXXb4XXXXXXXXXXXX_!!0-item_pic.jpg_140x140.jpg"><span class="price">￥68.00</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 淘宝客
+			(function(win, doc) {
+				var s = doc.createElement("script"),
+					h = doc.getElementsByTagName("head")[0];
+				if(!win.alimamatk_show) {
+					s.charset = "gbk";
+					s.async = true;
+					s.src = "http://a.alimama.cn/tkapi.js";
+					h.insertBefore(s, h.firstChild);
+				};
+				var o = {
+					pid: "mm_112697705_11882727_52876599",
+					/*推广单元ID，用于区分不同的推广渠道*/
+					appkey: "",
+					/*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/
+					unid: "",
+					/*自定义统计字段*/
+					type: "click" /* click 组件的入口标志 （使用click组件必设）*/
+				};
+				win.alimamatk_onload = win.alimamatk_onload || [];
+				win.alimamatk_onload.push(o);
+			})(window, document);
+			$(function() {
+				function store(th) {
+					var cate = $(th).attr('val');
+					$(th).siblings('a').removeClass('on');
+					$(th).addClass('on');
+					$(th).parent('div').next('.store_list').children('.store_li').siblings('').hide().siblings('.cate_id_' + cate + ':lt(2)').show();
+				}
+				var len = $('.store_nav').length;
+				for(var i = len - 1; i >= 0; i--) {
+					th = $('.store_nav').eq(i).children('a').first();
+					store(th);
+				}
+				$('.store_nav').on('click', 'a', function() {
+					store(this);
+				})
+			})
+		</script>
+		<!---手工客,导师,社团---->
+		<div class="jc-hot width980 fixed">
+			<div class="size14 jc-hot-tit"><span class="size16">手工客</span> 已有<span class="fense">3270954</span>位手工客与您互动</div>
+			<div class="userBox">
+				<ul class="sgk_other_ul">
+					<li>
+						<a class="sgk" href="user-circle.html" target="_blank" class="fixed">
+							<p class="other_avatar"><img src="http://imgs.shougongker.com/bridge/data/avatar/000/00/00/01_avatar_big.jpg@!avatar_66?t=1480652833" width="46" height="46" alt="手工客达人:admin" /></p>
+							<p class="other_info"><span class="hui-four size14" style="color:#ee554d;">手工客管理员<img style="padding:2px 0;" src="images/vip/lv12.png" /></span><span class="hui-one" style="margin-top:7px;">8教程 / 12906粉丝</span></p>
+						</a>
+					</li>
+					<li>
+						<a class="sgk" href="user-circle.html" target="_blank" class="fixed">
+							<p class="other_avatar"><img src="http://imgs.shougongker.com/bridge/data/avatar/014/14/34/26_avatar_big.jpg@!avatar_66?t=1473754867" width="46" height="46" alt="手工客达人:sgk_2_1429766219765" /></p>
+							<p class="other_info"><span class="hui-four size14" style="color:;">龅牙懒兔子</span><span class="hui-one" style="margin-top:7px;">38教程 / 4298粉丝</span></p>
+						</a>
+					</li>
+					<li>
+						<a class="sgk" href="user-circle.html" target="_blank" class="fixed">
+							<p class="other_avatar"><img src="http://imgs.shougongker.com/bridge/data/avatar/001/02/09/41_avatar_big.jpg@!avatar_66?t=1473754457" width="46" height="46" alt="手工客达人:厨子阿树" /></p>
+							<p class="other_info"><span class="hui-four size14" style="color:;">树</span><span class="hui-one" style="margin-top:7px;">34教程 / 3986粉丝</span></p>
+						</a>
+					</li>
+					<li>
+						<a class="sgk" href="user-circle.html" target="_blank" class="fixed">
+							<p class="other_avatar"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/08/20/36_avatar_big.jpg@!avatar_66?t=1492418723" width="46" height="46" alt="手工客达人:sgk_m_1461743883986" /></p>
+							<p class="other_info"><span class="hui-four size14" style="color:;">红绳情手作</span><span class="hui-one" style="margin-top:7px;">42教程 / 10933粉丝</span></p>
+						</a>
+					</li>
+					<li>
+						<a class="sgk" href="user-circle.html" target="_blank" class="fixed">
+							<p class="other_avatar"><img src="http://imgs.shougongker.com/bridge/data/avatar/000/16/72/61_avatar_big.jpg@!avatar_66?t=1495024597" width="46" height="46" alt="手工客达人:獏獏" /></p>
+							<p class="other_info"><span class="hui-four size14" style="color:#ee554d;">JIE洁<img style="padding:2px 0;" src="images/vip/lv12.png" /></span><span class="hui-one" style="margin-top:7px;">20教程 / 8217粉丝</span></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<link rel="stylesheet" href="css/handCircle.css" />
+		<div class="jc-hot width980 fixed">
+			<div class="size16 jc-hot-tit">热门
+				<h2 style="font-size:16px; display:inline;">手工圈</h2>&nbsp;&nbsp;Circle
+				<a href="hangCircle.html" class="size14 fense" target="_blank">更多</a>
+			</div>
+			<div class="circleCon width980 fixed">
+				<div class="circleConL">
+					<div class="circleConLBox">
+						<div class="circleList fixed" id="circle_1244060_201711_8">
+							<div class="circleListL">
+								<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/08/12/68_avatar_big.jpg@!avatar_66?t=1504605441" width="42" height="42"></a>
+							</div>
+							<div class="circleListR" style="width: 500px;">
+								<a href="user-circle.html" class="cUname size14" style="color:#">青汀如黛</a>
+								<p class="cSubject size14">这个烫金纱带我挺喜欢的，就买了两个颜色，黑和粉。做蝴蝶结的时候才发现好坑啊！粉色的纱带还好有5个接头，黑色的足足有9个啊！费尽心思地把有接头的蝴蝶结放在最下面藏起来，不然丢掉好心痛啊！老板，你这纱带是按米做出来的吧？听到有人要一卷的就把1米的缝起来卖给我？当我冤大头啊？！</p>
+								<!-- 分享 -->
+								<div class="sCirclePic">
+									<ul class="fixed picList" item_id='1244060'>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/18081268/171128094829/1511833710_0.jpg@!w_h_153" width="153" height="153"></li>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/18081268/171128094829/1511833710_1.jpg@!w_h_153" width="153" height="153"></li>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/18081268/171128094829/1511833710_2.jpg@!w_h_153" width="153" height="153"></li>
+									</ul>
+								</div>
+								<div class="cOtherinfo"><span class="hui-one">刚刚发布</span>
+									<!--<a href="#" class="cShare hui-four">分享</a>-->
+									<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+									<ul>
+										<li><span class="fense">0</span>赞</li>
+										<li><span class="fense">0</span>收藏</li>
+										<li class="last"><span class="fense">0</span>评论</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="circleList fixed" id="circle_1244059_201711_0">
+							<div class="circleListL">
+								<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/000/73/75/20_avatar_big.jpg@!avatar_66?t=1509809830" width="42" height="42"></a>
+							</div>
+							<div class="circleListR" style="width: 500px;">
+								<a href="user-circle.html" class="cUname size14" style="color:#">丹妮</a>
+								<p class="cSubject size14">旧物改造~~不要问我为什么要买这个充满乡土气息的镜子，我也不记得了[捂脸]反正现在能拿得出手咯[耶]改造过程已发，欢迎去看</p>
+								<!-- 分享 -->
+								<div class="sCirclePic">
+									<ul class="fixed picList" item_id='1244059'>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/737520/171128093943/1511833183693_0.jpg@!w_h_153" width="153" height="153"></li>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/737520/171128093943/1511833183693_1.jpg@!w_h_153" width="153" height="153"></li>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/737520/171128093943/1511833183693_2.jpg@!w_h_153" width="153" height="153"></li>
+									</ul>
+								</div>
+								<div class="cOtherinfo"><span class="hui-one">10分钟前</span>
+									<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+									<ul>
+										<li><span class="fense">0</span>赞</li>
+										<li><span class="fense">0</span>收藏</li>
+										<li class="last"><span class="fense">0</span>评论</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="circleList fixed" id="circle_1244058_201711_0">
+							<div class="circleListL">
+								<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/000/73/75/20_avatar_big.jpg@!avatar_66?t=1509809830" width="42" height="42"></a>
+							</div>
+							<div class="circleListR" style="width: 500px;">
+								<a href="user-circle.html" class="cUname size14" style="color:#">丹妮</a>
+								<p class="cSubject size14">旧物改造~~不要问我为什么要买这个充满乡土气息的镜子，我也不记得了[捂脸]反正现在能拿得出手咯[耶]改造过程已发，欢迎去看</p>
+								<!-- 分享 -->
+								<div class="sCirclePic">
+									<ul class="fixed picList" item_id='1244058'>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/737520/171128093943/1511833183693_0.jpg@!w_h_153" width="153" height="153"></li>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/737520/171128093943/1511833183693_1.jpg@!w_h_153" width="153" height="153"></li>
+										<li style="cursor: default;"><img src="http://imgs.shougongke.com/circle/737520/171128093943/1511833183693_2.jpg@!w_h_153" width="153" height="153"></li>
+									</ul>
+								</div>
+								<div class="cOtherinfo"><span class="hui-one">10分钟前</span>
+									<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+									<ul>
+										<li><span class="fense">0</span>赞</li>
+										<li><span class="fense">0</span>收藏</li>
+										<li class="last"><span class="fense">0</span>评论</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="circleMore">
+						<a href="hangCircle.html">查看更多>></a>
+					</div>
+				</div>
+				<div class="circleConR">
+					<h3>圈子热榜</h3>
+					<ul>
+						<li class="fixed">
+							<dl class="circleCate circleCateName"><dt><a href="hangCircle.html"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1.jpg" /><img class="up" src="http://imgs.shougongke.com/Public/images/handCircle/handCircleCateL1.png" /></a></dt>
+								<dd>
+									<a href="/">手工客官方</a>
+								</dd>
+							</dl>
+							<p class="circleDes">手工客官方圈子，分享手工客最新资讯，欢迎调戏！</p>
+						</li>
+						<li class="fixed">
+							<dl class="circleCate circleCateName"><dt><a href="hangCircle.html"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_8.jpg" /><img class="up" src="http://imgs.shougongke.com/Public/images/handCircle/handCircleCateL1.png" /></a></dt>
+								<dd>
+									<a href="/index.php?m=HandCircle&cate_id=8#top">旧物改造</a>
+								</dd>
+							</dl>
+							<p class="circleDes">为旧物赋予生命。<br /> 1.原创作品可以自行水印或附手写昵称条，非原创请注明【转载】，否则删除！
+								<br /> 2.不可以出现售卖信息，微信号或者其他站外链接。
+								<br /> 3.不得进行刷屏、谩骂、恶意评论等影响他人阅读的行为。
+								<br /> 4.只能发布旧物改造相关作品，无关圈子删除。
+								<br />
+								<br />
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--友情链接-->
+		<div class="sgk_links width980 fixed">
+			<div>
+				<h2 class="size16" style="display:inline;">友情链接</h2>
+				<a href="frined-link.html" class="size14 fense fr" target="_blank">更多</a>
+			</div>
+			<div class="links_body">
+				<ul class="fixed">
+					<li>
+						<a href="/" target="_blank" title="哇噻网">哇噻网</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="手工客官方微博">手工客官方微博</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="手工客下载">手工客下载</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="51费宝">51费宝</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="拼布网">拼布网</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="巧巧手幼儿手工网">巧巧手幼儿手工网</a>
+					</li>
+					<li class="links_none">
+						<a href="/" target="_blank" title="布流行手工制作网">布流行手工制作网</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="手工爱好者">手工爱好者</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="结婚礼物">结婚礼物</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="多肉植物 ">多肉植物 </a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="手艺活">手艺活</a>
+					</li>
+					<li>
+						<a href="/" target="_blank" title="快递查询">快递查询</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+</html>

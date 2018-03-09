@@ -1,0 +1,65 @@
+@charset utf-8;
+.dynamic_top{ height:26px; background:url(http://imgs.shougongke.com/Public/images/dynamic/line.gif) repeat-x;}
+.dynamic_type{ width:445px; float:left;}
+.dynamic_type li{ width:82px; height:26px; float:left; margin-right:29px; background:url(http://imgs.shougongke.com/Public/images/dynamic/icon.png) no-repeat; background-position:0 0;}
+.dynamic_type li a{ width:82px; display:block; color:#fff; line-height:26px; text-align:center;}
+.dynamic_type li.on{ background-position:0 -27px;}
+.dynamic_type li.have_Dynamic{ width:117px; height:26px; float:left; margin-right:29px; background:url(http://imgs.shougongke.com/Public/images/dynamic/icon2.png) no-repeat;}
+.dynamic_type li.have_Dynamic a{ width:117px; display:block; color:#fff; line-height:26px; text-align:center;}
+
+.dynamic_cate{ width:141px; float:right;}
+.dynamic_cate a{ width:25px; height:25px; float:left; background:url(http://imgs.shougongke.com/Public/images/dynamic/icon.png) no-repeat; margin-left:22px; text-indent:-2000px; display:block;}
+.dynamic_cate a.dynamic_course{ background-position:0 -81px;}
+.dynamic_cate a.dynamic_opus{ background-position:-27px -81px;}
+.dynamic_cate a.dynamic_user{ background-position:-54px -81px;}
+
+.dynamic_cate a.dynamic_course:hover,.dynamic_cate a.course_on{ background-position:0 -54px;}
+.dynamic_cate a.dynamic_opus:hover,.dynamic_cate a.opus_on{ background-position:-27px -54px;}
+.dynamic_cate a.dynamic_user:hover,.dynamic_cate a.user_on{ background-position:-54px -54px;}
+
+.dynamic_feed{ background:url(http://imgs.shougongke.com/Public/images/dynamic/line2.gif) 96px 0 repeat-y; margin:55px 0 0 0; position:relative;}
+.feed_list{ position:relative; margin:0 0 29px 0;}
+.dynamic_avatar{ width:60px; height:60px; float:left;}
+.arrow{ width:25px; height:25px; background:url(http://imgs.shougongke.com/Public/images/dynamic/icon.png) no-repeat; position:absolute;}
+.arrow_course{ background-position:0 -81px; position:absolute; left:84px; top:18px;}
+.arrow_opus{ background-position:-27px -81px; position:absolute; left:84px; top:18px;}
+.arrow_user{ background-position:-54px -81px; position:absolute; left:84px; top:18px;}
+
+.dynamic_con{ width:734px; padding:23px 55px 32px; background:#fff; float:right; border:1px solid #dadada; position:relative;}
+.feed_tit{ margin-bottom:21px;}
+.dynamic_time{ color:#a0a0a0; float:right; display:inline;}
+.feed_clist dl{ width:228px; float:left; margin-right:25px;}
+.feed_clist dd{ margin-top:10px;}
+.feed_clist dl dt{ position:relative;}
+.feed_clist dl dt p{ width:220px; padding:0 0 0 8px; color:#e5e5e5; line-height:22px; height:22px; background:rgba(0,0,0,0.5); position:absolute; bottom:0px; display:none;}
+.jiantou{ width:8px; height:15px; background:url(http://imgs.shougongke.com/Public/images/dynamic/jiantou.gif) no-repeat; position:absolute; left:-8px; top:24px;}
+.dynamic_btn{ width:16px; height:26px; position:absolute; cursor:pointer;}
+.dynamic_left{ background:url(http://imgs.shougongke.com/Public/images/dynamic/icon.png) no-repeat 0 -108px; left:20px; top:160px;}
+.dynamic_left:hover{ background-position:0 -135px;}
+.dynamic_right{ background:url(http://imgs.shougongke.com/Public/images/dynamic/icon.png) no-repeat -17px -108px; right:20px; top:160px;}
+.dynamic_right:hover{ background-position:-17px -135px;}
+
+.dynamic_area{ width:734px; overflow:hidden; position:relative;}
+.dynamic_con_list{ width:1468px; position:relative; left:0;}
+.dynamic_con_list li{ width:10000px;overflow: hidden; float:left;}
+
+.feed_ulist{ height:133px; padding-top:15px; background:#f2f2f2; margin-bottom:10px;}
+.feed_userinfo{ width:223px; height:84px; margin:0 0 0 15px; float:left;}
+.feed_userinfo dt{ width:84px; float:left;}
+.feed_userinfo dd{ width:124px; float:right;}
+.feed_course_list{ float:left;}
+.feed_course_list li{ width:153px; height:116px; float:left; margin-right:10px;}
+
+.mark{ width:25px; height:18px; background:#f2f2f2; position:absolute; z-index:3; left:83px; top:0;}
+.fense {
+				color: #000;
+			}
+			
+			.vip12 {
+				color: #ee554d;
+			}
+			
+			.feed_tit img {
+				vertical-align: middle;
+				padding-bottom: 2px;
+			}

@@ -1,0 +1,33 @@
+@charset utf-8;
+.competition{ width:980px; margin:0 0 50px 0; color:#555;}
+.competition h2 a{ font-size:22px; color:#222; font-weight:normal;}
+.competition h2 a span{ color:#000;}
+.competition_time{ font-size:14px; line-height:42px;}
+.competition_des{ line-height:20px; margin:15px 0 0 0; text-indent:2em;}
+
+.competition_theme{ position:relative;}
+.competition_theme a{ position:absolute; width:201px; height:86px; display:block; right:-14px; bottom:38px;}
+.competition_descri{ margin:40px 0 30px 0;}
+.part_tit{ font-size:22px; color:#222; font-weight:normal;}
+.competition_descri p{ color:#474747; font-size:14px; line-height:20px; margin:20px 0 0 0; text-indent:2em;}
+
+.competition_custom{ width:980px; height:auto; background:#ebebeb;}
+.judges{ margin:32px 0 0 0;}
+.judges_list li{ width:145px; height:225px; overflow:hidden; float:left; margin:25px 22px 0 0;}
+.judges_name{ width:145px; text-align:center; font-size:14px; color:#000; line-height:26px;}
+.judges_des{ color:#757575; font-size:12px; line-height:18px; text-align:center;}
+
+.opus_winner{ margin:32px 0 0 0;}
+.opus_list li{ width:228px; height:275px; background:#fff; margin:25px 22px 0 0; box-shadow: 1px 1px 5px #CCCCCC; float:left; position:relative;}
+.opus_list li h3{ width:218px; margin:0 0 0 10px; line-height:36px;}
+.opus_list li h3 a{ color:#000; font-size:14px; font-weight:normal;}
+.opus_list li h3 a:hover{ color:#ff6699;}
+.byAuthor{ color:#8d8d8d; width:218px; margin:0 0 0 10px;}
+.byAuthor a{ color:#8d8d8d;}
+.opus_num{ width:218px; margin:20px 0 0 10px; color:#8d8d8d;}
+
+
+.winner_mark{ position:absolute; width:80px; height:81px; display:block; background:url(http://imgs.shougongke.com/Public/images/competition/mark.png) no-repeat; top:-12px; left:-15px; line-height:75px; text-align:center; color:white; font-size:14px;}
+.opus_condition{ width:190px; color:#d8d8d8; }
+.opus_condition a{ font-size:14px; color:#222; line-height:26px; padding:0 15px;}
+.opus_condition a:hover,.opus_condition a.on{ color:#ff6699;}

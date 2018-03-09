@@ -1,0 +1,323 @@
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td { margin: 0; padding: 0; }
+img { border: 0 none; vertical-align: top; }
+ul, li { list-style-type: none; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; font-weight:normal; }
+body, input, select, button, textarea { font-size: 12px; font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif; }
+button { cursor: pointer; }
+i, em, cite { font-style: normal; }
+body { background: #f2f2f2; color: #000; line-height: 1.2; overflow: -moz-scrollbars-vertical;}
+a, a:link { text-decoration: none; }
+a:visited { }
+a:active, a:hover { text-decoration: none; }
+a:focus { outline: none; }
+
+.fixed:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; }
+.gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+	filter: gray;
+    }
+.fixed { display: block; min-height: 1%;}
+*html .fixed { height: 1%; }
+.clear { diplay: block!important; float: none!important; clear: both; overflow: hidden; width: auto!important; height: 0!important; margin: 0 auto!important; padding: 0!important; font-size: 0; line-height: 0; }
+.more { float: right; }
+.more a { font-weight: normal; font-size: 12px; }
+.fl, .fr { display: inline; float: left; }
+.fr { float: right; }
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.width980{ width:980px; margin:0 auto;}
+.mauto{ margin:0 auto;}
+.hui-one{ color:#999;}
+.hui-two{ color:#777;}
+.hui-three{ color:#555;}
+.hui-four{ color:#222;}
+.hui-five{ color:#666;}
+.fense{ color:#ff6699;}
+.hui-six{ color:#bbb;}
+.color252525{ color:#252525;}
+.color009815{ color:#009815;}
+
+.size24{ font-size:24px;}
+.size14{ font-size:14px;}
+.size16{ font-size:16px;}
+.size20{ font-size:20px;}
+.size18{ font-size:18px;}
+.size26{ font-size:26px;}
+.size28{ font-size:28px;}
+
+.hover:hover{ color:#fff; background:#ff6699;}
+
+.center{ text-align:center;}
+
+.mb40{ margin:0 0 40px 0;}
+
+#over{ background:#000; position:absolute; left:0; top:0; opacity:0.5; filter:alpha(opacity=50); z-index:3;}
+
+body{ background:url(http://imgs.shougongke.com/Public/index/images/common/bg.jpg) repeat; padding-top:106px;}
+#sgk-header{ width:100%; height:60px; margin:0 0 56px 0; background:url(http://imgs.shougongke.com/Public/index/images/common/header_bg.png) repeat-x bottom #fff; position:fixed; left:0; top:0; z-index:999;}
+.header-box{ width:980px; height:60px; margin:0 auto;}
+.header-box .logo{ width:93px; height:30px; float:left; margin:12px 40px 0 7px;}
+.header-box h1{ width:93px; height:30px; float:left; margin:12px 45px 0 7px;}
+.header-nav{ width:47px; height:57px; float:left; line-height:57px; font-size:14px; color:#222;}
+.header-nav:hover{ color:#ff6699;}
+
+.header_competition{ background:url(http://imgs.shougongke.com/Public/index/images/common/new_icon.png) 29px 13px no-repeat;}
+.header_course{ width:90px; padding:0 0 0 20px; float:left; height:57px; font-size:14px; line-height:57px; border-left:1px solid #f0f0f0; border-right:1px solid #f0f0f0; margin:0 19px; position:relative; cursor:pointer;}
+.xiala{ width:9px; height:5px; background:url(http://imgs.shougongke.com/Public/index/images/common/xiala.gif) no-repeat; display:block; position:absolute; right:20px; top:28px;}
+.course_tip{ width:489px; background:#fff; position:absolute; top:57px; left:0; z-index:4; padding:36px 0; box-shadow:0px 0px 12px #999; display:none; cursor:default;}
+/*.course_tip li{ width:178px; height:39px; padding:4px 0 0 4px; border:1px solid #fff; float:left; margin:0 0 2px 20px;}
+.course_tip li:hover{ border-color:#ff699b;}
+.course_tip_tit{ color:#ff6699; font-size:16px; text-align:center; line-height:35px;}
+.course_tip li dt{ width:35px; height:35px; float:left; line-height:35px;}
+.course_tip li dd{ width:134px; float:right; text-align:left; line-height:35px;}
+.course_tip li dd a{ color:#000;}
+*/
+.course_tip .tip{ width:110px; height:15px; display:block; background:#fff; left:0; position:absolute; top:-12px; box-shadow:none;}
+
+.course_tip_nav{ height:27px; padding-left: 7px;}
+.course_tip_nav li{ float:left; height:27px; line-height:27px; margin:0 0 0 94px;}
+.course_tip_nav li a{ font-size:14px; color:#222; height:27px; display:inline-block;}
+.course_tip_nav li a.on{color: #f69;}
+.course_tip_nav li a span{ float:left;}
+.course_tip_nav li a span.course_icon{ height: 27px; width: 27px; margin-right: 14px;}
+.course_tip_nav li a:hover span{ color:#F69;}
+.course_tip_nav li a.jc_pic span.course_icon{ background:url(http://imgs.shougongke.com/Public/index/images/common/icon_pic.png) no-repeat; }
+.course_tip_nav li a.jc_pic:hover span.course_icon{background:url(http://imgs.shougongke.com/Public/index/images/common/icon_pic.png) no-repeat;}
+.course_tip_nav li a.jc_video span.course_icon{ background:url(http://imgs.shougongke.com/Public/index/images/common/icon_video.png) no-repeat;}
+.course_tip_nav li a.jc_video:hover span.course_icon{ background:url(http://imgs.shougongke.com/Public/index/images/common/icon_video.png) no-repeat;}
+
+.course_tip_cate{ height:338px; border-top:1px solid #f0f0f0; padding-bottom:10px; border-bottom:1px solid #f0f0f0; margin:23px 0 0 0;}
+.course_tip_cate ul{ height:38px; background:url(http://imgs.shougongke.com/Public/index/images/common/course_cate.png) no-repeat 20px center; width:466px; padding:0 0 0 23px;}
+.course_tip_cate ul li{ height:38px; line-height:38px; float:left; margin:0 0 0 14px; font-size:12px;}
+.course_tip_cate ul li a{ font-size:12px; color:#222;}
+.course_tip_cate ul li.more{ float:right; margin-right:21px;}
+.course_tip_cate ul li.more a{ color:#ff6699;}
+.course_tip_cate ul li.more a:hover{ color:#fff; background:#ff6699;}
+.all_cate{ width:115px; margin:28px auto 0; height:16px;}
+.all_cate a{ width:84px; padding:0 0 0 31px; line-height:16px; float:left; height:16px; display:block; background:url(http://imgs.shougongke.com/Public/index/images/common/all_cate_bg.png) no-repeat;}
+.all_cate a:hover{ background-position:0 -16px; color:#ff6699;}
+
+.search_box{ width:150px; height:28px; float:left; margin:13px 0 0 0px; border:1px solid #f0f0f0;}
+.search_box dt{ width:50px; height:28px; line-height:28px; float:left;}
+.search_box dt input{ width:110px; padding:0 0 0 10px; height:26px; line-height:26px; border:0;}
+.search_box dd{ width:35px; height:28px; float:right;}
+.search_box dd a{ width:35px; height:28px; display:block; background:url(http://imgs.shougongke.com/Public/index/images/common/new_mirror.png) no-repeat center;}
+
+.noLogin{ float:right; height:56px; border-left:1px solid #f0f0f0; padding-left:25px;}
+.noLogin a{ line-height:56px; font-size:14px; color:#222;}
+.noLogin a:hover{ color:#ff6699;}
+
+.haveLogin{ float:right; height:56px; border-left:1px solid #f0f0f0;}
+
+.haveLogin li.h{ float:left; position:relative; z-index:2;}
+.haveLogin li.h a{ width:36px; height:57px; display:inline-block; background:url(http://imgs.shougongke.com/Public/index/images/common/header_icon.png) no-repeat; padding:0 3px;}
+.haveLogin li.h a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/header_icon.png) no-repeat #fff;}
+.haveLogin li.h a.upload{ background-position:13px 0;}
+.haveLogin li.h a.tongzhi{ background-position:-84px 0; border-left:1px solid #f0f0f0; border-right:1px solid #f0f0f0;}
+.haveLogin li.h a.avatar{ background:none;}
+.haveLogin li.h a.avatar img{ width:32px; height:32px; margin:12px 0 0 8px;}
+.up_tip,.msg_tip{ width:42px; height:21px; background:#fff; position:absolute; left:0; top:-20px;}
+.avatar_tip{ width:36px; height:11px; background:#fff; position:absolute; right:0; top:-10px;}
+
+.haveLogin li.check{ height:71px; background:url(http://imgs.shougongke.com/Public/index/images/common/check_icon2.png) 1px 0 no-repeat;}
+.haveLogin li.check a.tongzhi{ background:url(http://imgs.shougongke.com/Public/index/images/common/header_icon.png) no-repeat; background-position:-84px -56px; border-left:1px solid #f0f0f0; border-right:1px solid #f0f0f0; position:relative;}
+#header_pm_count{color:#fff; position:absolute; bottom:15px; width:42px; text-align:center;}
+
+.haveLogin li.on{ height:57; background:#fff;}
+.haveLogin li.on a.tongzhi{ background:url(http://imgs.shougongke.com/Public/index/images/common/header_icon.png) no-repeat; background-position:-84px 0; border-left:1px solid #f0f0f0; border-right:1px solid #f0f0f0; position:relative;}
+
+.son{ width:150px; position:absolute; top:57px; left:1px; background:#fff; display:none; box-shadow:0px 0px 12px #999;}
+.son li{ height:50px; line-height:50px; border-bottom:1px solid #f0f0f0;}
+.son li.last{ border-bottom:none; height:50px;}
+.son li.s a{ height:50px; width:140px; padding:0 0 0 10px; font-size:14px; background:none; color:#000;}
+.son li.s a:hover{ background:#f0f0f0;}
+.son li.jc_upload a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/jc_icon.png) 10px 15px no-repeat;}
+.son li.jc_upload a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/jc_icon.png) 10px 15px no-repeat #f0f0f0;}
+.son li.zp_upload a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/zp-icon.png) 10px 15px no-repeat;}
+.son li.zp_upload a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/zp-icon.png) 10px 15px no-repeat #f0f0f0;}
+.son li.jc_by_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/jc_by.gif) 10px 15px no-repeat;}
+.son li.jc_by_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/jc_by.gif) 10px 15px no-repeat #f0f0f0;}
+.son li.zp_by_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/zp_by.gif) 10px 15px no-repeat;}
+.son li.zp_by_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/zp_by.gif) 10px 15px no-repeat #f0f0f0;}
+.son li.user_by_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/user_by.gif) 10px 15px no-repeat;}
+.son li.user_by_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/user_by.gif) 10px 15px no-repeat #f0f0f0;}
+.son li.buyer_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/buyer.png) 10px 15px no-repeat;}
+.son li.buyer_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/buyer.png) 10px 15px no-repeat #f0f0f0;}
+.son li.seller_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/seller.png) 10px 15px no-repeat;}
+.son li.seller_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/seller.png) 10px 15px no-repeat #f0f0f0;}
+.son li.teacher_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/teacher.png) 10px 15px no-repeat;}
+.son li.teacher_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/teacher.png) 10px 15px no-repeat #f0f0f0;}
+.son li.level_me a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/level.png) 10px 15px no-repeat;}
+.son li.level_me a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/level.png) 10px 15px no-repeat #f0f0f0;}
+.son li.pay_vip a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/vip.png) 10px 15px no-repeat;}
+.son li.pay_vip a:hover{background:#f0f0f0 url(http://imgs.shougongke.com/Public/index/images/common/vip.png) 10px 15px no-repeat;;}
+.son li.group a{ width:107px; padding:0 0 0 43px; background:url(http://imgs.shougongke.com/Public/index/images/common/group.png) 10px 15px no-repeat;}
+.son li.group a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/group.png) 10px 15px no-repeat #f0f0f0;}
+.orderNav{ display:none;}
+
+.s_text{ float:left; font-weight:normal;}
+.msg_num{ float:right; font-weight:bold;}
+
+
+#sgk-warp{ width:980px; margin:0 auto;}
+.icon{ background:url(http://imgs.shougongke.com/Public/index/images/common/sgk-icon.png) no-repeat;}
+
+
+.sgk-footer{ width:980px; border-top:1px solid #999; margin:84px auto 0; padding:3px 0 35px 0; position:relative;}
+.sgk-footer a{ color:#222; margin-right:5px;}
+.share-fans{ position:absolute; width:217px; top:15px; right:0;}
+/*关于我们*/
+.sgk-info-tit{ height:61px; color:#333; font-size:26px;}
+.sgk-info-main{ width:700px; float:left;}
+.sgk-info-side{ width:280px; float:right;}
+.sgk-company-info{ margin:0 0 25px 0;}
+.sgk-company-info p{ font-size:20px; margin:0 0 10px 0;}
+.sgk-company-info ul li{ font-size:14px; line-height:25px;}
+.sgk-info-side a{ display:block; height:43px; line-height:43px; width:248px; padding:0 0 0 32px; font-size:14px; color:#ff6699;}
+.sgk-info-side a.on{ background:#eae6e6; color:#333;}
+.sgk-info-side a:hover{ background:#eae6e6;}
+.sgk-info-con{ width:620px;}
+.sgk-info-main p{ line-height:25px; font-size:14px;}
+.linkList li{ float:left; padding:0 25px 15px 0; white-space:nowrap;}
+.linkList li a{ color:#222; font-size:14px;}
+.linkList li a:hover{ text-decoration:underline;}
+
+
+.img_hover:hover{ opacity:0.7;transition: all 0.2s ease-in-out 0s;}
+
+
+/*404页面样式*/
+.error404{ width:474px; margin:0 auto;}
+.error404 img{ margin:0 0 20px 0;}
+.error404 p{ font-size:20px; text-align:center; margin:15px 0 0 0;}
+
+.toTop{ width:65px; height:65px; background:url(http://imgs.shougongke.com/Public/index/images/common/totop.png) no-repeat -65px 0;}
+.toTop:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/totop.png) no-repeat 0 0;}
+
+
+/*弹出层的样式汇总*/
+.layer{ background:#a9a9a9; width:auto; padding:6px; border-radius:8px;}
+.layer-delete-success{ width:198px;}
+.layer-con{ background:#f2f2f2; border-radius:8px;}
+.delete-success{ height:88px; color:#66cc99; font-size:18px; line-height:88px; text-align:center; position:relative;}
+.icon-ok{ width:26px; height:20px; float:left; background-position:0 -190px; position:absolute; left:30px; top:33px;}
+
+.layer-delete-confirm{ width:320px;}
+.delete-confirm{ height:98px; line-height:90px; border-radius:8px 8px 0 0; font-size:14px;}
+.icon-warning{ width:22px; height:20px; float:left; background-position:-75px -188px; margin:36px 10px 0 28px;}
+.delete-confirm-btn{ height:42px; background:#e6e1e1; border-radius:0 0 8px 8px;}
+.confirm-btn{ width:64px; height:29px; float:right; line-height:29px; margin:5px 10px 0 0; border-radius:5px; text-align:center;}
+.confirm-false{ border:1px solid #d1d1d1; background:#fff; color:#555;}
+.confirm-true{ border:1px solid #e6e1e1; background:#ff6699; color:#fff;}
+
+
+
+.upload-tit{ width:82px; height:37px; color:#fff; text-align:center; line-height:40px; background:url(http://imgs.shougongke.com/Public/index/images/common/sgk-icon1.png) no-repeat; position:absolute; top:50px; left:-20px;}
+
+/*分页的样式*/
+.pager{ text-align:center; margin:50px 0 0 0;}
+.pager_icon{ width:25px; height:18px; background:url(http://imgs.shougongke.com/Public/index/images/common/page.png) no-repeat; margin:9px auto 0; display:block;}
+.pager ul li{ display:inline-block; margin:0 0 0 7px;}
+.pager ul li a,.pager ul li span{ width:36px; height:36px; line-height:36px; float:left;}
+.pager ul li span.pager-sl{ line-height:25px; width:auto; color:#ff6699;}
+.pager ul li span.prev i{ background-position:0 0;}
+.pager ul li a.prev i{ background-position:0 -18px;}
+.pager ul li a.prev:hover i{ background-position:0 -36px;}
+
+.pager ul li span.next i{ background-position:-25px -36px;}
+.pager ul li a.next i{ background-position:-25px -18px;}
+.pager ul li a.next:hover i{ background-position:-25px 0;}
+
+.pager ul li a.next:hover,.pager ul li a.prev:hover{ background-position:0 -57px;}
+.pager a{ color:#ff6699;}
+.pager a:hover{ background:url(http://imgs.shougongke.com/Public/index/images/common/page.png) no-repeat; background-position: 0 -93px; color:#FFF;}
+.pager span.now{ color:#FFF; background:url(http://imgs.shougongke.com/Public/index/images/common/page.png) no-repeat; background-position: 0 -57px;}
+
+.ewm{ width:65px; height:65px; position:fixed; right:50px; bottom:180px; background:url(http://imgs.shougongke.com/Public/index/images/common/ewm.png) no-repeat; background-position:-65px 0; cursor:pointer; z-index:1000;}
+.ewm:hover{ width:65px; height:65px; position:fixed; right:50px; bottom:180px; background:url(http://imgs.shougongke.com/Public/index/images/common/ewm.png) no-repeat; background-position:0 0; cursor:pointer;}
+#erweima{ position:fixed; right:125px; bottom:180px; display:none; z-index:1000;}
+
+/*auto complete 2015-08-13*/
+.ui-autocomplete { position: absolute; cursor: default; }
+
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left; background:#f7f7f7; border:1px solid #d3d3d3
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+	margin:0;
+	padding: 0;
+	zoom: 1;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding:.2em .4em;
+	line-height:1.5;
+	zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	background:#ff6699;
+	font-weight: normal;
+}
+
+/**我的小店入口**/
+.store_href{color: #000; width:87%; padding-left: 13%; height: 66px; background:url('http://imgs.shougongke.com/Public/images/common/store_1.png') no-repeat  25px 25px #fafafa; line-height: 66px; font-size: 14px; display: inline-block; position: relative;}
+.store_href span{ color: #ff6699;}
+.store_href img{ position: absolute; right: 25px; top: 26px;}
+
+.sgk-upload-layer{ width:842px; height:430px; background:rgba(208,208,208,0.5); *background:#d0d0d0; padding:9px 11px; border-radius:5px; z-index:4; position:absolute; display:none;}
+.sgk-upload-area{ width:842px; height:430px; background:#fff;}
+.sgk-upload-tit{ width:820px; padding:0 0 0 22px; height:57px; background:#e6e1e1; line-height:57px; font-size:14px; color:#555;}
+.icon-close{ width:13px; height:13px; display:block; background-position:-72px -114px; float:right; margin:22px 22px 0; cursor:pointer;}
+
+						.course_tip_body {
+							border-top: 1px solid #ccc;
+							border-bottom: 1px solid #ccc;
+							margin-top: 30px;
+							padding-bottom: 15px;
+						}
+						
+						.course_tip_body dl {
+							width: 132px;
+							float: left;
+							padding-left: 30px;
+							line-height: 35px;
+							margin-top: 13px;
+						}
+						
+						.course_tip_body dt {
+							width: 30px;
+							float: left;
+							padding-top: 3px;
+						}
+						
+						.course_tip_body dd {
+							width: 92px;
+							float: left;
+							padding-left: 10px;
+						}
+						
+						.course_tip_body a {
+							color: #222;
+						}
+						

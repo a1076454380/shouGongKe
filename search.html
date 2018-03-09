@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>教程搜索</title>
+		<link rel="canonical" href="http://www.shougongke.com/" />
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<!-- <div id="erweima"><img src="http://imgs.shougongke.comindex/images/common/erweima2.png" /></div><div class="ewm"></div> -->
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='教程搜索' id='title'>
+				<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<link href="css/search.css" rel="stylesheet" type="text/css" />
+		<script language="javascript" src="js/search.js"></script>
+		<div id="sgk-warp">
+			<div class="search-nav">
+				<ul class="search-nav-text fixed">
+					<li val="jc">
+						<a href="javascript:void(0);">教程</a>
+					</li>
+					<li val="dr">
+						<a href="javascript:void(0);">用户</a>
+					</li>
+					<!-- <li val="zp"><a href="javascript:void(0);">作品</a></li> -->
+				</ul>
+				<dl class="search-nav-input fixed"><dt><input type="text" id="word" class="size14 hui-two" placeholder="请输入要搜索的关键字" autofocus="autofocus" value="大" onkeypress="search_tab(event)"/><span class="arrow arrow-jc" id="arrow_point"></span></dt>
+					<dd>
+						<a href="javascript:search()" class="search-btn size14">搜索</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="search-result fixed">
+				<div class="search-result-l">
+					<p class="size14">Hi，你目前搜索关键字<span class="fense">“大”</span>，共找到<span class="fense">4306</span>个相关教程</p>
+					<!--                 <div class="search-condition"><div class="condition-list fixed"><p class="condition-catename">材料：</p><ul class="condition-catelist " id="condition-catelist"></ul><span class="condition-edit"></span><input type="hidden" class="select" value=""/></div><div class="condition-list fixed"><p class="condition-catename">难度：</p><ul class="condition-catelist more-catelist" id="condition-catelist"></ul><input type="hidden" class="select" value=""/></div><ul class="more-choice fixed"><li style="color:#999;">更多选项</li><li class="more-li"><i class="icon "></i>风格
+                        </li><li class="more-li"><i class="icon "></i>节日
+                        </li><li class="more-li"><i class="icon "></i>工具
+                        </li><li class="more-li"><i class="icon "></i>场景
+                        </li><li class="more-li"><i class="icon "></i>人群
+                        </li><li class="more-li"><i class="icon "></i>制作时间
+                        </li></ul><div class="condition-list more-cate-item fixed" style="display:none;"><p class="condition-catename">风格：</p><ul class="condition-catelist more-catelist" id="condition-catelist"></ul><input type="hidden" class="select" value=""/></div><div class="condition-list more-cate-item fixed" style="display:none;"><p class="condition-catename">节日：</p><ul class="condition-catelist more-catelist" id="condition-catelist"></ul><input type="hidden" class="select" value=""/></div><div class="condition-list more-cate-item fixed" style="display:none;"><p class="condition-catename">工具：</p><ul class="condition-catelist more-catelist" id="condition-catelist"></ul><input type="hidden" class="select" value=""/></div><div class="condition-list more-cate-item fixed" style="display:none;"><p class="condition-catename">场景：</p><ul class="condition-catelist more-catelist" id="condition-catelist"></ul><input type="hidden" class="select" value=""/></div><div class="condition-list more-cate-item fixed" style="display:none;"><p class="condition-catename">人群：</p><ul class="condition-catelist more-catelist" id="condition-catelist"></ul><input type="hidden" class="select" value=""/></div><div class="condition-list more-cate-item fixed" style="display:none;"><p class="condition-catename">制作时间：</p><ul class="condition-catelist more-catelist" id="condition-catelist"><li><a href="javascript:void(0);" type="mtime" val="2" >< 1小时</a></li><li><a href="javascript:void(0);" type="mtime" val="3" >< 半天</a></li><li><a href="javascript:void(0);" type="mtime" val="4" >< 1天</a></li><li><a href="javascript:void(0);" type="mtime" val="5" >< 半星期</a></li><li><a href="javascript:void(0);" type="mtime" val="6" >< 1星期</a></li><li><a href="javascript:void(0);" type="mtime" val="7" >> 1星期</a></li></ul><input type="hidden" class="select" value=""/></div></div> -->
+					<div class="search-content">
+						<!-- <ul class="search-content-nav fixed"> -->
+						<!-- <li style="border-right:none;"><a href="javascript:order_desc('order','0')" class="checked">最近发布</a></li> -->
+						<!--<li><a href="#" class="checked">最新作品</a></li>-->
+						<!--<li><a href="#">作品数</a></li>-->
+						<!--                     	<li><a href="javascript:order_desc('order','daren')" >用户</a></li><input type="hidden" class="select" value=""/> -->
+						<!-- </ul> -->
+						<div class="search-content-list">
+							<dl class="fixed"><dt><a href="http://www.shougongke.com/course/412334.html" target="_blank" title="<font color='#ee554d'>大大大</font>眼睛"><img src="http://imgs.shougongker.com/course/17802385/412334/170429000342_cover.jpg@!web_course_228" class="img_hover" alt="<font color='#ee554d'>大大大</font>眼睛"/></a></dt>
+								<dd>
+									<h3><a href="http://www.shougongke.com/course/412334.html" target="_blank" class="hui-four size14 search-tit" title="<font color='#ee554d'>大大大</font>眼睛"><font color='#ee554d'>大大大</font>眼睛</a></h3>
+									<p class="search-collent hui-one"><span class="fense">0</span> 评论 / <span class="fense">17</span> 收藏</p>
+									<p class="hui-three">材料：纸 &nbsp;铅笔 &nbsp;橡皮 &nbsp;手 &nbsp;</p>
+									<p class="hui-three" style="margin-top: 10px;">
+										作者：
+										<a href="/user/17802385.html" target="_blank" class="hui-three" title="蓝缡如梦主页">蓝缡如梦</a>
+									</p>
+									<p class="hui-one pubtime">
+										发布时间：2017-04-29</p>
+								</dd>
+							</dl>
+							<dl class="fixed"><dt><a href="http://www.shougongke.com/course/380700.html" target="_blank" title="床<font color='#ee554d'>大大</font>"><img src="http://imgs.shougongker.com/course/16971272/380700/161112135902_cover.jpg@!web_course_228" class="img_hover" alt="床<font color='#ee554d'>大大</font>"/></a></dt>
+								<dd>
+									<h3><a href="http://www.shougongke.com/course/380700.html" target="_blank" class="hui-four size14 search-tit" title="床<font color='#ee554d'>大大</font>">床<font color='#ee554d'>大大</font></a></h3>
+									<p class="search-collent hui-one"><span class="fense">4</span> 评论 / <span class="fense">14</span> 收藏</p>
+									<p class="hui-three">材料：硬纸板 &nbsp;布 &nbsp;</p>
+									<p class="hui-three" style="margin-top: 10px;">
+										作者：
+										<a href="/user/16971272.html" target="_blank" class="hui-three" title="妖℃    冰瞳主页">妖℃ 冰瞳</a>
+									</p>
+									<p class="hui-one pubtime">
+										发布时间：2016-11-12</p>
+								</dd>
+							</dl>
+							<div style="display:block;" class="pager size18 fixed">
+								<ul class="fixed">
+									<li><span class="prev"><i class="pager_icon"></i></span></li>
+									<li><span class="now">1</span></a>
+									</li>
+									<li>
+										<a href="/index.php?m=Search&word=%E5%A4%A7&k=cb1444a43caf2022f454cca8660962f4&p=2">2</a>
+									</li>
+									<li>
+										<a href="/index.php?m=Search&word=%E5%A4%A7&k=cb1444a43caf2022f454cca8660962f4&p=3">3</a>
+									</li>
+									<li>
+										<a href="/index.php?m=Search&word=%E5%A4%A7&k=cb1444a43caf2022f454cca8660962f4&p=4">4</a>
+									</li>
+									<li>
+										<a href="/index.php?m=Search&word=%E5%A4%A7&k=cb1444a43caf2022f454cca8660962f4&p=5">5</a>
+									</li>
+									<li><span class="pager-sl">...</span></li>
+									<li>
+										<a href="/index.php?m=Search&word=%E5%A4%A7&k=cb1444a43caf2022f454cca8660962f4&p=2" class="next"><i class="pager_icon"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-result-r">
+					<p class="size14">与<span class="fense">“大”</span>相关的用户</p>
+					<div class="search-about-daren">
+						<dl><dt><a href="/user/14286125.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/014/28/61/25_avatar_big.jpg?t=1475570495" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/14286125.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/16832757.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/016/83/27/57_avatar_big.jpg?t=1507245328" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/16832757.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17972814.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/24_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17972814.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl style="margin-right:0px;"><dt><a href="/user/17667667.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/7_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17667667.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/16977664.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/016/97/76/64_avatar_big.jpg?t=1477336996" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/16977664.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17570613.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/3_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17570613.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17678786.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/26_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17678786.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl style="margin-right:0px;"><dt><a href="/user/14985805.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/014/98/58/05_avatar_big.jpg?t=1477214481" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/14985805.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17249878.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/28_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17249878.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17311367.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/31/13/67_avatar_big.jpg?t=1477386997" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17311367.html" target="_blank" class="hui-three" title="主页">
+									<font>大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17851209.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/9_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17851209.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl style="margin-right:0px;"><dt><a href="/user/17768026.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/16_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17768026.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17929721.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/11_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17929721.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/13655765.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/013/65/57/65_avatar_big.jpg?t=1477122884" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/13655765.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17246843.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/24/68/43_avatar_big.jpg?t=1477377696" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17246843.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大</font>
+								</a>
+							</dd>
+						</dl>
+						<dl style="margin-right:0px;"><dt><a href="/user/13771456.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/013/77/14/56_avatar_big.jpg?t=1477138269" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/13771456.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大大大大大大大大</font>星</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17667939.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/9_big.jpg" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17667939.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大大大大大大大大</font>眼</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/17819321.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/81/93/21_avatar_big.jpg?t=1497321294" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/17819321.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大大大大大大</font>瑶</a>
+							</dd>
+						</dl>
+						<dl><dt><a href="/user/16964768.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/016/96/47/68_avatar_big.jpg?t=1475157478" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/16964768.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大大大大大</font>Bossbala</a>
+							</dd>
+						</dl>
+						<dl style="margin-right:0px;"><dt><a href="/user/1301346.html" target="_blank" title="主页"><img src="http://imgs.shougongker.com/bridge/data/avatar/001/30/13/46_avatar_big.jpg?t=1476600811" width="66" height="66" class="img_hover" /></a></dt>
+							<dd>
+								<a href="/user/1301346.html" target="_blank" class="hui-three" title="主页">
+									<font>大大大大大大大大</font>嫣</a>
+							</dd>
+						</dl>
+					</div>
+					<!--                 <p class="size14">与<span class="fense">“大”</span>相关的作品</p><div class="search-about-production"></div> -->
+				</div>
+			</div>
+		</div><input type="hidden" id="istag" value="">
+		<script language="javascript">
+			$(function() {
+				//选择分类时，出现边框和关闭的效果
+				$.each($("#condition-catelist li a"), function(n, m) {
+					$(this).click(function() {
+						var type = $(this).attr("type");
+						var val = $(this).attr("val");
+						location.href = pin_url(type, val);
+						return false;
+					});
+				});
+
+			});
+		</script>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

@@ -1,0 +1,19 @@
+@charset utf-8;
+.pager{ text-align:center; margin:50px 0 0 0;}
+.pager_icon{ width:25px; height:18px; background:url(http://imgs.shougongke.com/Public/images/common/page.png) no-repeat; margin:9px auto 0; display:block;}
+.pager ul li{ display:inline-block; display:inline \9; margin:0 0 0 7px;}
+.pager ul li a,.pager ul li span{ width:36px; height:36px; line-height:36px; float:left;}
+.pager ul li span.prev i{ background-position:0 0;}
+.pager ul li a.prev i{ background-position:0 -18px;}
+.pager ul li a.prev:hover i{ background-position:0 -36px;}
+
+.pager ul li span.next i{ background-position:-25px -36px;}
+.pager ul li a.next i{ background-position:-25px -18px;}
+.pager ul li a.next:hover i{ background-position:-25px 0;}
+
+.pager ul li a.next:hover,.pager ul li a.prev:hover{ background-position:0 -57px;}
+.pager a{ color:#ff6699;}
+.pager a:hover{ background:url(http://imgs.shougongke.com/Public/images/common/page.png) no-repeat; background-position: 0 -93px; color:#FFF;}
+.pager span.now{ color:#FFF; background:url(http://imgs.shougongke.com/Public/images/common/page.png) no-repeat; background-position: 0 -57px;}
+.pager ul li span.pager-sl{ line-height:25px; width:auto; color:#ff6699;}
+

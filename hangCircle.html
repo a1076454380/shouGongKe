@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>手工作品_手工作品图片_手工作品大全_手工客</title>
+		<link rel="canonical" href="http://www.shougongke.com/" />
+		<link href="index/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.com/Public/images/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.com/Public/images/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.com/Public/images/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='手工作品_手工作品图片_手工作品大全_手工客' id='title'>
+		<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<link href="css/handCircle.css" rel="stylesheet" type="text/css" />
+		<script src="js/handCircle.js"></script>
+		<div class="width980">
+			<div class="circleIndexTop fixed" _hover-ignore="1">
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=1#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=1#top" style="font-size: 12px;">手工客官方</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2#top" style="font-size: 12px;">综合圈</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=3#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_3.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=3#top" style="font-size: 12px;">布艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=4#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_4.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=4#top" style="font-size: 12px;">皮艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=5#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_5.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=5#top" style="font-size: 12px;">木艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=6#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_6.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=6#top" style="font-size: 12px;">纸艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=7#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_7.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=7#top" style="font-size: 12px;">发饰</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=8#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_8.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=8#top" style="font-size: 12px;">旧物改造</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=9#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_9.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=9#top" style="font-size: 12px;">橡皮章</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=10#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_10.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=10#top" style="font-size: 12px;">手绘</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=11#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_11.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=11#top" style="font-size: 12px;">软陶粘土</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=12#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_12.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=12#top" style="font-size: 12px;">园艺花艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=14#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_14.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=14#top" style="font-size: 12px;">钩编</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=15#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_15.jpg"><img class="up" src="./images/handCircleCateL1.png" _hover-ignore="1"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=15#top" style="font-size: 12px;">羊毛毡</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=16#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_16.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=16#top" style="font-size: 12px;">电子科技</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=17#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_17.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=17#top" style="font-size: 12px;">亲子手工</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=19#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_19.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=19#top" style="font-size: 12px;">投诉建议</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=41#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_41.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=41#top" style="font-size: 12px;">滴胶热缩圈</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=44#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_44.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=44#top" style="font-size: 12px;">美食烘焙</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=49#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_49.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=49#top" style="font-size: 12px;">剪纸</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=90#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_90.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd _hover-ignore="1">
+						<a href="/index.php?m=HandCircle&amp;cate_id=90#top" style="font-size: 12px;">拼布</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=177#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_177.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=177#top" style="font-size: 12px;">护肤美妆</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=514#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_514.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=514#top" style="font-size: 12px;">刺绣</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=559#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_559.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=559#top" style="font-size: 12px;">雕刻雕塑</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=956#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_956.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=956#top" style="font-size: 12px;">人形娃娃</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=957#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_957.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=957#top" style="font-size: 12px;">传统手工艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=965#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_965.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=965#top" style="font-size: 12px;">不织布</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=969#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_969.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=969#top" style="font-size: 12px;">绕线</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=974#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_974.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd _hover-ignore="1">
+						<a href="/index.php?m=HandCircle&amp;cate_id=974#top" style="font-size: 12px;">多肉</a>
+					</dd>
+				</dl>
+				<dl class="circleCate" _hover-ignore="1"><dt><a href="/index.php?m=HandCircle&amp;cate_id=1466#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1466.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=1466#top" style="font-size: 12px;">衍纸</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=1521#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1521.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=1521#top" style="font-size: 12px;">文玩设计</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=1524#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1524.jpg"><img class="up" src="./images/handCircleCateL1.png" _hover-ignore="1"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=1524#top" style="font-size: 12px;">玉石琥珀</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=1525#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1525.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=1525#top" style="font-size: 12px;">结绳</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=1593#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_1593.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=1593#top" style="font-size: 12px;">以物易物</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2103#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2103.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2103#top" style="font-size: 12px;">沙龙活动</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2116#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2116.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2116#top" style="font-size: 12px;">游泳池</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2267#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2267.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2267#top" style="font-size: 12px;">金工</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2268#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2268.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2268#top" style="font-size: 12px;">古风首饰</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2269#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2269.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2269#top" style="font-size: 12px;">服装裁剪</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2270#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2270.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2270#top" style="font-size: 12px;">手帐</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2273#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2273.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2273#top" style="font-size: 12px;">陶艺</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2292#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2292.jpg"><img class="up" src="./images/handCircleCateL1.png" _hover-ignore="1"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2292#top" style="font-size: 12px;">模型</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2301#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2301.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2301#top" style="font-size: 12px;">串珠</a>
+					</dd>
+				</dl>
+				<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&amp;cate_id=2761#top"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2761.jpg"><img class="up" src="./images/handCircleCateL1.png"></a></dt>
+					<dd>
+						<a href="/index.php?m=HandCircle&amp;cate_id=2761#top" style="font-size: 12px;">首饰</a>
+					</dd>
+				</dl>
+				<!--
+		<dl class="circleCate"><dt><a href="/index.php?m=HandCircle&a=apply"><img src="/Public/images/handCircle/add.jpg" /><img class="up" src="./images/handCircleCateL1.png" /></a></dt><dd><a href="/index.php?m=HandCircle&a=apply">申请圈子</a></dd></dl>
+		-->
+				<a name="top" id="top" style="display: block; height: 10px; width: 944px; float:left;" _hover-ignore="1"></a>
+			</div>
+			<div class="circleWarp fixed">
+				<div class="circleWarpL fl">
+					<div class="circleOrderNav fixed">
+						<ul>
+							<li class="on">
+								<a href="/index.php?m=HandCircle&cate_id=2">最新</a>
+							</li>
+							<li>
+								<a href="/index.php?m=HandCircle&order=hot&cate_id=2">最热</a>
+							</li>
+							<li class="last ">
+								<a href="/index.php?m=HandCircle&order=jingxuan&cate_id=2">精品</a>
+							</li>
+						</ul>
+						<!-- <a href="/index.php?m=HandCircle&a=upload&type=circle" target="_blank" class="circleAddLink">发手工圈</a> -->
+					</div><input type="hidden" value="2" id="cate_id" />
+					<!--手工圈列表-->
+					<div class="circleList fixed" id="circle_1244257_201711_4">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/88/76/34_avatar_big.jpg@!avatar_320?t=1493883193" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">漫长的生活都是我杜撰的记忆</a>
+							<p class="cSubject size14">圣诞节要到了，帮客人做个手机链的时候，客人表示感谢送了一个蜜蜡小鱼给我，然后我就给自己做了🎄，哈哈哈哈</p>
+							<!-- 分享 -->
+							<div class="sCirclePic">
+								<ul class="fixed picList" item_id='1244257'>
+									<li><img src="http://imgs.shougongke.com/circle/17887634/171128153116/1511854276970_0.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17887634/171128153116/1511854276970_1.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17887634/171128153116/1511854276970_2.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17887634/171128153116/1511854276970_3.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17887634/171128153116/1511854276970_4.jpg@!w_h_153" width="153" height="153"></li>
+								</ul>
+							</div>
+							<div class="cOtherinfo"><span class="hui-one">刚刚发布</span>
+								<a href="#" class="cShare hui-four">分享</a>
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244257_201711_4">0</span>
+										<a class="hui-four" id="zanText_1244257_201711_4" href="javascript:laud('1244257_201711_4','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244257_201711_4">0</span>
+										<a class="hui-four" id="collectText_1244257_201711_4" href="javascript:collect('1244257_201711_4','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244257_201711_4')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=1525#top">结绳</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244257',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244257',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244257',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244257',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244257',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244257_201711_4','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244257_201711_4">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+					<div class="circleList fixed" id="circle_1244256_201711_4">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/71/60/34_avatar_big.jpg@!avatar_320?t=1492735764" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">sgk_m_1487378609363</a>
+							<!-- 分享 -->
+							<div class="sCirclePic">
+								<ul class="fixed picList" item_id='1244256'>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_0.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_1.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_2.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_3.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_4.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_5.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_6.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_7.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17716034/171128153136/1511854296139_8.jpg@!w_h_153" width="153" height="153"></li>
+								</ul>
+							</div>
+							<div class="cOtherinfo"><span class="hui-one">刚刚发布</span>
+								<!--<a href="#" class="cShare hui-four">分享</a>-->
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244256_201711_4">0</span>
+										<a class="hui-four" id="zanText_1244256_201711_4" href="javascript:laud('1244256_201711_4','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244256_201711_4">0</span>
+										<a class="hui-four" id="collectText_1244256_201711_4" href="javascript:collect('1244256_201711_4','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244256_201711_4')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=7#top">发饰</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244256',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244256',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244256',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244256',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244256',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244256_201711_4','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244256_201711_4">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+					<div class="circleList fixed" id="circle_1244255_201711_4">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/001/19/93/74_avatar_big.jpg@!avatar_320?t=1476591821" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">回避型人格障碍阿拜托</a>
+							<p class="cSubject size14">丑不拉几一家人</p>
+							<!-- 分享 -->
+							<div class="sCirclePic">
+								<ul class="fixed picList" item_id='1244255'>
+									<li><img src="http://imgs.shougongke.com/circle/1199374/171128153142/1511854302407_0.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/1199374/171128153142/1511854302407_1.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/1199374/171128153142/1511854302407_2.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/1199374/171128153142/1511854302407_3.jpg@!w_h_153" width="153" height="153"></li>
+								</ul>
+							</div>
+							<div class="cOtherinfo"><span class="hui-one">刚刚发布</span>
+								<!--<a href="#" class="cShare hui-four">分享</a>-->
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244255_201711_4">0</span>
+										<a class="hui-four" id="zanText_1244255_201711_4" href="javascript:laud('1244255_201711_4','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244255_201711_4">0</span>
+										<a class="hui-four" id="collectText_1244255_201711_4" href="javascript:collect('1244255_201711_4','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244255_201711_4')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=11#top">软陶粘土</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244255',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244255',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244255',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244255',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244255',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244255_201711_4','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244255_201711_4">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+
+					<div class="circleList fixed" id="circle_1244211_201711_8">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/55/53/28_avatar_big.jpg@!avatar_320?t=1490083536" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">白羊手制</a>
+							<p class="cSubject size14">烧花。</p>
+							<!-- 分享 -->
+							<div class="sCirclePic">
+								<ul class="fixed picList" item_id='1244211'>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_0.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_1.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_2.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_3.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_4.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_5.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_6.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_7.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/17555328/171128141030/1511849430059_8.jpg@!w_h_153" width="153" height="153"></li>
+								</ul>
+							</div>
+							<div class="cOtherinfo"><span class="hui-one">1小时前</span>
+								<a href="#" class="cShare hui-four">分享</a>
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244211_201711_8">1</span>
+										<a class="hui-four" id="zanText_1244211_201711_8" href="javascript:laud('1244211_201711_8','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244211_201711_8">0</span>
+										<a class="hui-four" id="collectText_1244211_201711_8" href="javascript:collect('1244211_201711_8','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244211_201711_8')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=7#top">发饰</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244211',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244211',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244211',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244211',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244211',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244211_201711_8','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244211_201711_8">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+					<div class="circleList fixed" id="circle_1244210_201711_9">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/94/44/99_avatar_big.jpg@!avatar_320?t=1498829677" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">玻璃美人</a>
+							<p class="cSubject size14">大神指导后做的&nbsp;过关🤓</p>
+							<!-- 分享 -->
+							<div class="sCirclePic"><img src="http://imgs.shougongke.com/circle/17944499/171128141008/1511849408_0.jpg@!w_200" /></div>
+							<div class="cOtherinfo"><span class="hui-one">1小时前</span>
+								<a href="#" class="cShare hui-four">分享</a>
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244210_201711_9">0</span>
+										<a class="hui-four" id="zanText_1244210_201711_9" href="javascript:laud('1244210_201711_9','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244210_201711_9">0</span>
+										<a class="hui-four" id="collectText_1244210_201711_9" href="javascript:collect('1244210_201711_9','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244210_201711_9')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=957#top">传统手工艺</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244210',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244210',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244210',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244210',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244210',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244210_201711_9','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244210_201711_9">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+					<div class="circleList fixed" id="circle_1244209_201711_9">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/94/44/99_avatar_big.jpg@!avatar_320?t=1498829677" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">玻璃美人</a>
+							<p class="cSubject size14">大神指导后做的&nbsp;过关🤓</p>
+							<!-- 分享 -->
+							<div class="sCirclePic"><img src="http://imgs.shougongke.com/circle/17944499/171128141008/1511849408_0.jpg@!w_200" /></div>
+							<div class="cOtherinfo"><span class="hui-one">1小时前</span>
+								<a href="#" class="cShare hui-four">分享</a>
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244209_201711_9">1</span>
+										<a class="hui-four" id="zanText_1244209_201711_9" href="javascript:laud('1244209_201711_9','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244209_201711_9">0</span>
+										<a class="hui-four" id="collectText_1244209_201711_9" href="javascript:collect('1244209_201711_9','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244209_201711_9')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=1525#top">结绳</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244209',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244209',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244209',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244209',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244209',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244209_201711_9','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244209_201711_9">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+					<div class="circleList fixed" id="circle_1244208_201711_6">
+						<div class="circleListL">
+							<a href="user-circle.html"><img src="http://imgs.shougongker.com/bridge/data/avatar/016/88/60/26_avatar_big.jpg@!avatar_320?t=1481448288" width="42" height="42"></a>
+						</div>
+						<div class="circleListR">
+							<a href="user-circle.html" class="cUname size14" style="color:#">追梦人</a>
+							<!-- 分享 -->
+							<div class="sCirclePic">
+								<ul class="fixed picList" item_id='1244208'>
+									<li><img src="http://imgs.shougongke.com/circle/16886026/171128140954/1511849394250_0.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/16886026/171128140954/1511849394250_1.jpg@!w_h_153" width="153" height="153"></li>
+									<li><img src="http://imgs.shougongke.com/circle/16886026/171128140954/1511849394250_2.jpg@!w_h_153" width="153" height="153"></li>
+								</ul>
+							</div>
+							<div class="cOtherinfo"><span class="hui-one">1小时前</span>
+								<a href="#" class="cShare hui-four">分享</a>
+								<a href="details.html" target="_blank" class="cInfo hui-four">查看详情</a>
+								<ul>
+									<li><span class="fense" id="laudNum_1244208_201711_6">1</span>
+										<a class="hui-four" id="zanText_1244208_201711_6" href="javascript:laud('1244208_201711_6','index')">赞</a>
+									</li>
+									<li><span class="fense" id="collectNum_1244208_201711_6">0</span>
+										<a class="hui-four" id="collectText_1244208_201711_6" href="javascript:collect('1244208_201711_6','index')">收藏</a>
+									</li>
+									<li class="last"><span class="fense">0</span>
+										<a href="javascript:getComment('1244208_201711_6')" style="color:#000">评论</a>
+									</li>
+								</ul>
+							</div>
+							<!--该条信息所属的cate_name  start-->
+							<p class="lei_cate">来自：
+								<a href="/index.php?m=HandCircle&cate_id=11#top">软陶粘土</a>
+							</p>
+							<!--该条信息所属的cate_name  end-->
+							<div class="cJubao">
+								举报
+								<div class="jubaoLe">
+									<ul>
+										<li>
+											<a href="javascript:report('1244208',1);" class="size14">色情</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244208',2);" class="size14">恶意营销</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244208',3);" class="size14">暴力</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244208',4);" class="size14">非法广告</a>
+										</li>
+										<li>
+											<a href="javascript:report('1244208',5);" class="size14">其他</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 评论列表 -->
+							<div class="cMessageBox" style="display: none;">
+								<div class="cMegInput"><input class="InputBox" type="text" placeholder="请输入评论内容" />
+									<a href="javascript:comment('1244208_201711_6','','')" class="cMsgBtn cMsgBtn01" id="cMsgBtn_1244208_201711_6">评论</a>
+								</div><span class="msgMark"><img src="images/handCircle/icon3.gif"></span></div>
+						</div>
+					</div>
+					<div id="page" class="pager size18 fixed" style="display:block;">
+						<ul class="fixed">
+							<li><span class="prev"><i class="pager_icon"></i></span></li>
+							<li><span class="now">1</span></a>
+							</li>
+							<li>
+								<a href="/index.php?m=HandCircle&p=2">2</a>
+							</li>
+							<li>
+								<a href="/index.php?m=HandCircle&p=3">3</a>
+							</li>
+							<li>
+								<a href="/index.php?m=HandCircle&p=4">4</a>
+							</li>
+							<li>
+								<a href="/index.php?m=HandCircle&p=5">5</a>
+							</li>
+							<li><span class="pager-sl">...</span></li>
+							<li>
+								<a href="/index.php?m=HandCircle&p=2" class="next"><i class="pager_icon"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="circleWarpR fr">
+					<div class="circleRTop">
+						<dl class="circleCate circleCateName"><dt><a href="#"><img src="http://imgs.shougongke.com/Public/data/hand_circle_cate/cate_2.jpg" /><img class="up" src="./images/handCircleCateL1.png" /></a></dt>
+							<dd>
+								<a href="#">综合圈</a>
+							</dd>
+						</dl>
+						<div class="circleDescription">来自社区用户最新分享——手工作品、手工生活、心情、问答等！</div>
+						<p class="hr"></p>
+						<div class="circleManage">
+							<p class="circleManageTit size14 hui-four center">综合圈管理员</p>
+							<div class="fixed circleManageListBox">
+								<dl class="circleManageList fl"><dt><a href="user-circle.html"><img src='http://imgs.shougongker.com/bridge/data/avatar/000/00/00/01_avatar_big.jpg@!avatar_320?t=1480652833' /></a></dt>
+									<dd class="center">
+										<a href="user-circle.html">手工客管...</a>
+									</dd>
+								</dl>
+								<dl class="circleManageList fl"><dt><a href="user-circle.html"><img src='http://imgs.shougongker.com/bridge/data/avatar/000/74/40/18_avatar_big.jpg@!avatar_320?t=1480660835' /></a></dt>
+									<dd class="center">
+										<a href="user-circle.html">手工客官...</a>
+									</dd>
+								</dl>
+								<dl class="circleManageList fl"><dt><a href="user-circle.html"><img src='http://imgs.shougongker.com/bridge/data/avatar/013/85/40/26_avatar_big.jpg@!avatar_320?t=1498472927' /></a></dt>
+									<dd class="center">
+										<a href="user-circle.html">手工客材...</a>
+									</dd>
+								</dl>
+								<dl class="circleManageList fl"><dt><a href="user-circle.html"><img src='http://imgs.shougongker.com/bridge/data/avatar/016/74/41/24_avatar_big.jpg@!avatar_320?t=1479437959' /></a></dt>
+									<dd class="center">
+										<a href="user-circle.html">麦芽小小...</a>
+									</dd>
+								</dl>
+								<dl class="circleManageList fl"><dt><a href="user-circle.html"><img src='http://imgs.shougongker.com/bridge/data/avatar/015/08/73/52_avatar_big.jpg@!avatar_320?t=1495188785' /></a></dt>
+									<dd class="center">
+										<a href="user-circle.html">问你怕不...</a>
+									</dd>
+								</dl>
+								<dl class="circleManageList fl"><dt><a href="user-circle.html"><img src='http://imgs.shougongker.com/bridge/data/avatar/001/11/92/47_avatar_big.jpg@!avatar_320?t=1473754584' /></a></dt>
+									<dd class="center">
+										<a href="user-circle.html">小客 莎...</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<!--
+            	作者：shaerdong@wowsai.com
+            	时间：2014-12-16
+            	描述：精品
+            -->
+					<div class="circleItem">
+						<p class="circleItemTit hui-four size14">精品</p>
+						<div class="circleItemList">
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14"  style="color:#000">七芽</a><p class="size14 hui-four"><a class="hui-four" href="details.html">也许你对眼花缭乱的涂鸦手账或技艺高超的手绘日记望而却步，也许你有数不完...</a></p></dt>
+								<dd class="fl">
+									<a class="hui-four" href="details.html"><img src="http://imgs.shougongke.com/circle/1112303/171127171055/1511773855_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14"  style="color:#000">七芽</a><p class="size14 hui-four"><a class="hui-four" href="details.html">也许你对眼花缭乱的涂鸦手账或技艺高超的手绘日记望而却步，也许你有数不完...</a></p></dt>
+								<dd class="fl">
+									<a class="hui-four" href="details.html"><img src="http://imgs.shougongke.com/circle/1112303/171127171055/1511773855_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14"  style="color:#000">zlian恋晓lian</a><p class="size14 hui-four"><a class="hui-four" href="details.html">花了三个晚上，18个小时完成的。其实也不算完全完成，跟一开始的想法其实...</a></p></dt>
+								<dd class="fl">
+									<a class="hui-four" href="details.html"><img src="http://imgs.shougongke.com/circle/14939652/171127154617/1511768777_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14"  style="color:#000">衍生物</a><p class="size14 hui-four"><a class="hui-four" href="details.html">终于学会了一种留白😬</a></p></dt>
+								<dd class="fl">
+									<a class="hui-four" href="details.html"><img src="http://imgs.shougongke.com/circle/17159917/171127140256/1511762576786_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14"  style="color:#000">甜蜜瑞心</a><p class="size14 hui-four"><a class="hui-four" href="details.html">我也不知道算烧花还是烫花，反正是利用温度来定型</a></p></dt>
+								<dd class="fl">
+									<a class="hui-four" href="details.html"><img src="http://imgs.shougongke.com/circle/762456/171127111210/1511752330636_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed last"><dt class="fl"><a href="user-circle.html" class="size14"  style="color:#000">限定誌工作室</a><p class="size14 hui-four"><a class="hui-four" href="details.html">·人鱼姬·<br />
+&nbsp;晃动的波浪里&nbsp;&nbsp...</a></p></dt>
+								<dd class="fl">
+									<a class="hui-four" href="details.html"><img src="http://imgs.shougongke.com/circle/18186012/171126234602/1511711162118_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--
+            	作者：shaerdong@wowsai.com
+            	时间：2014-12-16
+            	描述：最热
+            -->
+					<div class="circleItem">
+						<p class="circleItemTit hui-four size14">最热</p>
+						<div class="circleItemList">
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14 " style="color:#000">神秘人。。</a><p class="size14 hui-four"><a class="hui-four" href="details.html">实物超美呢～🌚</a></p></dt>
+								<dd class="fl">
+									<a href="details.html"><img src="http://imgs.shougongke.com/circle/18155635/171110165242/1510303962917_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14 " style="color:#000">LUck手作</a><p class="size14 hui-four"><a class="hui-four" href="details.html">钥匙扣小黄鸭出炉</a></p></dt>
+								<dd class="fl">
+									<a href="details.html"><img src="http://imgs.shougongke.com/circle/17771172/171110165319/1510303999308_0.jpg@!w_200" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14 " style="color:#000">LUck手作</a><p class="size14 hui-four"><a class="hui-four" href="details.html">钥匙扣小黄鸭出炉</a></p></dt>
+								<dd class="fl">
+									<a href="details.html"><img src="http://imgs.shougongke.com/circle/17771172/171110165319/1510303999308_0.jpg@!w_200" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14 " style="color:#000">柒子。无界</a><p class="size14 hui-four"><a class="hui-four" href="details.html">【苏绣之美】她从光中走来，忽明忽暗……<br />
+每一块老绣片都来之...</a></p></dt>
+								<dd class="fl">
+									<a href="details.html"><img src="http://imgs.shougongke.com/circle/18026535/171110165749/1510304270_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed "><dt class="fl"><a href="user-circle.html" class="size14 " style="color:#000">心痞</a><p class="size14 hui-four"><a class="hui-four" href="details.html">蓝色调调</a></p></dt>
+								<dd class="fl">
+									<a href="details.html"><img src="http://imgs.shougongke.com/circle/14061077/171110170224/1510304544252_0.jpg@!w_h_153" width="62" height="62" /></a>
+								</dd>
+							</dl>
+							<dl class="fixed last"><dt class="fl"><a href="user-circle.html" class="size14 " style="color:#000">路小屁~</a><p class="size14 hui-four"><a class="hui-four" href="details.html">13</a></p></dt>
+								<dd class="fl">
+									<a href="details.html"><img src="http://imgs.shougongke.com/circle/1290358/171110170418/1510304659_0.jpg@!w_200" width="62" height="62" /></a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>
+<script type="text/javascript">
+	$(function() {
+		$('.circleIndexTop dl').hover(function() {
+			$(this).find(".up").attr('src', 'images/handCircle/handCircleCateL2.png');
+		}, function() {
+			$(this).find(".up").attr('src', './images/handCircleCateL1.png');
+		})
+
+		$(".cJubao").hover(function() {
+			$(this).find('.jubaoLe').show();
+		}, function() {
+			$(this).find('.jubaoLe').hide();
+		})
+
+		$(window).scroll(function() {
+			var top = $(document).scrollTop();
+			if(top > 2500) {
+				$('.circleWarpR').css({
+					position: 'fixed',
+					top: '70px',
+					right: '50%',
+					marginRight: '-490px'
+				});
+				$('.circleItem').hide();
+			} else {
+				$('.circleWarpR').css({
+					position: '',
+					top: '',
+					right: '',
+					marginRight: ''
+				});
+				$('.circleItem').show();
+			}
+		})
+	})
+</script>

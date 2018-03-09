@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="alternate" media="handheld" href="#" />
+		<title>全站动态_手工客网</title>
+		<link rel="canonical" href="http://www.shougongke.com/" />
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<!-- <div id="erweima"><img src="http://imgs.shougongke.comindex/images/common/erweima2.png" /></div><div class="ewm"></div> -->
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='全站动态_手工客网' id='title'>
+				<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+
+		<link href="css/dynamic.css" rel="stylesheet" type="text/css" />
+
+		<div id="sgk-warp" class="fixed">
+			<div class="dynamic_top fixed">
+				<ul class="dynamic_type fixed">
+					<li class="on ">
+						<a href="/index.php?m=Dynamic" class="size14">全部动态</a>
+					</li>
+					<li class=''>
+						<a href="/index.php?m=Dynamic&a=friends" class="size14 ">好友动态 </a>
+					</li>
+					<li>
+						<a href="/index.php?m=Dynamic&a=at" class="size14">@我的</a>
+					</li>
+				</ul>
+				<!---页面上面右侧的导航，如果选中，class加course_on,opus_on,user_on-->
+				<p class="dynamic_cate fixed">
+					<a href="/index.php?m=Dynamic&type=course" class="dynamic_course ">教程</a>
+					<a href="/index.php?m=Dynamic&type=opus" class="dynamic_opus ">作品</a>
+					<a href="/index.php?m=Dynamic&type=person" class="dynamic_user ">达人</a>
+				</p>
+			</div>
+			<div class="dynamic_feed">
+				<div class="mark"></div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/18187856.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/18/78/56_avatar_big.jpg@!avatar_66?t=1511855209" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/18187856.html" class="fense ">sgk_2_1511855015810</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">刚刚发布</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201511/29/host/144872642898124_593.jpg@!web_course_228" width="228" height="172" alt="DILILI羽毛头饰教程" /></a><p>8690 人气 / 4 评论 / 233 收藏</p></dt>
+								<dd>
+									<a href="#" class="hui-four size14" target="_blank">DILILI羽毛头饰教程</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/17931495.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/15_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/17931495.html" class="fense ">柯小女儿</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">刚刚发布</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/443170.html" target="_blank"><img src="http://imgs.shougongke.com/course/16803322/443170/171103110241_cover.jpg@!web_course_228" width="228" height="172" alt="丨刺绣丨绡上樱花·海棠樱丨" /></a><p>61631 人气 / 2 评论 / 181 收藏</p></dt>
+								<dd>
+									<a href="/course/443170.html" class="hui-four size14" target="_blank">丨刺绣丨绡上樱花·海棠樱...</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/1006243.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/001/00/62/43_avatar_big.jpg@!avatar_66?t=1473837971" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/1006243.html" class="fense ">❤、biubiubiu</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">8</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">刚刚发布</span></div>
+						<div class="dynamic_area">
+							<ul class='dynamic_con_list' style='width:1468px;'>
+								<li>
+									<div class="feed_clist fixed">
+										<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201411/08/main/141544747395100414374_593.jpg@!web_course_228" width="228" height="172" alt="心心相印" /></a><p>70292 人气 / 12 评论 / 1599 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">心心相印</a>
+											</dd>
+										</dl>
+										<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201407/28/main/140653418292454328020_593.jpg@!web_course_228" width="228" height="172" alt="α非凡β简单精致八字结手镯制作" /></a><p>64482 人气 / 12 评论 / 1291 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">α非凡β简单精致八字结手...</a>
+											</dd>
+										</dl>
+										<dl style="margin-right:0px;"><dt><a href="/course/211465.html" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201507/01/host/143574335012409_593.jpg@!web_course_228" width="228" height="172" alt="手工DIY球形打结编法图解" /></a><p>67049 人气 / 25 评论 / 4200 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">手工DIY球形打结编法图...</a>
+											</dd>
+										</dl>
+										<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201307/15/main/137387843174139192684_593.jpg@!web_course_228" width="228" height="172" alt="【编绳】九乘金刚结红手绳-最简单版" /></a><p>74038 人气 / 23 评论 / 1381 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">【编绳】九乘金刚结红手绳...</a>
+											</dd>
+										</dl>
+										<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201410/08/main/141278269879748239958_593.jpg@!web_course_228" width="228" height="172" alt="❀ 致闺蜜 少女系桃花运手绳制作教程" /></a><p>74579 人气 / 39 评论 / 1081 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">❀ 致闺蜜 少女系桃花运...</a>
+											</dd>
+										</dl>
+										<dl style="margin-right:0px;"><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201507/24/host/143771768282888_593.jpg@!web_course_228" width="228" height="172" alt="绳编基础之蛇结" /></a><p>83854 人气 / 22 评论 / 2020 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">绳编基础之蛇结</a>
+											</dd>
+										</dl>
+										<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201410/20/main/1413780064101588261655_593.jpg@!web_course_228" width="228" height="172" alt="藏式五彩金刚结DIY教程" /></a><p>98227 人气 / 13 评论 / 1063 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">藏式五彩金刚结DIY教程</a>
+											</dd>
+										</dl>
+										<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/course/16960117/398145/170214202444_cover.jpg@!web_course_228" width="228" height="172" alt="三生三世十里桃花 红手绳" /></a><p>140491 人气 / 53 评论 / 4244 收藏</p></dt>
+											<dd>
+												<a href="#" class="hui-four size14" target="_blank">三生三世十里桃花 红手绳</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="jiantou"></div>
+						<p class="dynamic_btn dynamic_left"></p>
+						<p class="dynamic_btn dynamic_right"></p>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/18183814.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/4_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/18183814.html" class="fense ">sgk_2_1511583023502</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">6分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/446562.html" target="_blank"><img src="http://imgs.shougongke.com/course/13752003/446562/171126173024_cover.jpg@!web_course_228" width="228" height="172" alt="旗袍" /></a><p>1632 人气 / 4 评论 / 48 收藏</p></dt>
+								<dd>
+									<a href="/course/446562.html" class="hui-four size14" target="_blank">旗袍</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/17847707.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/17_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/17847707.html" class="fense ">嘚儿鱼i</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">11分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/438407.html" target="_blank"><img src="http://imgs.shougongke.com/course/18009494/438407/170925093114_cover.jpg@!web_course_228" width="228" height="172" alt="八股辫纹理解析和线材排列" /></a><p>7211 人气 / 2 评论 / 517 收藏</p></dt>
+								<dd>
+									<a href="/course/438407.html" class="hui-four size14" target="_blank">八股辫纹理解析和线材排列</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/17781262.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/22_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/17781262.html" class="fense ">女儿绿</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">12分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/437699.html" target="_blank"><img src="http://imgs.shougongke.com/course/16884666/437699/170915205309_cover.jpg@!web_course_228" width="228" height="172" alt="【木口子手工作品】那年花开月正圆～周莹" /></a><p>13570 人气 / 16 评论 / 240 收藏</p></dt>
+								<dd>
+									<a href="/course/437699.html" class="hui-four size14" target="_blank">【木口子手工作品】那年花...</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/17781262.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/22_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/17781262.html" class="fense ">女儿绿</a> &nbsp;赞了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">12分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/437699.html" target="_blank"><img src="http://imgs.shougongke.com/course/16884666/437699/170915205309_cover.jpg@!web_course_228" width="228" height="172" alt="【木口子手工作品】那年花开月正圆～周莹" /></a><p>13570 人气 / 16 评论 / 240 收藏</p></dt>
+								<dd>
+									<a href="/course/437699.html" class="hui-four size14" target="_blank">【木口子手工作品】那年花...</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/16743960.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/016/74/39/60_avatar_big.jpg@!avatar_66?t=1474195189" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/16743960.html" class="fense ">Miss_黯</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">16分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/260182.html" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201511/24/host/144836996984025_593.jpg@!web_course_228" width="228" height="172" alt="精致秀气的小米珠手链" /></a><p>10886 人气 / 7 评论 / 446 收藏</p></dt>
+								<dd>
+									<a href="/course/260182.html" class="hui-four size14" target="_blank">精致秀气的小米珠手链</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/17867607.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/27_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_user"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/17867607.html" class="fense ">GJ</a> &nbsp;关注了&nbsp;
+								<a href="/user/14903048.html" class="fense ">螃蟹·竖着走</a>,
+								<a href="/user/17519725.html" class="fense ">0A北鼻（兜兜的拼布小屋...</a>
+							</p><span class="dynamic_time">22分钟前</span></div>
+						<div class="feed_ulist fixed">
+							<dl class="feed_userinfo fixed"><dt><a href="/user/14903048.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/014/90/30/48_avatar_big.jpg@!avatar_66?t=1488459394" width="84" height="84" /></a></dt>
+								<dd>
+									<p class="size14 hui-four" style="margin-bottom:12px;">螃蟹·竖着走</p>
+									<p>
+										<a href="/user/.html" class="fense">57</a>教程</p>
+								</dd>
+							</dl>
+							<ul class="feed_course_list">
+								<li>
+									<a href="/course/440875.html" target="_blank"><img src="http://imgs.shougongke.com/course/14903048/440875/171017205257_cover.jpg@!web_course_153" width="153" height="116" alt='' title='最近订单太多比较忙很少来更新了对不起大家😄' /></a>
+								</li>
+								<li>
+									<a href="/course/425496.html" target="_blank"><img src="http://imgs.shougongke.com/course/14903048/425496/170705195749_cover.jpg@!web_course_153" width="153" height="116" alt='' title='根据客户需求做的这玩意' /></a>
+								</li>
+								<li>
+									<a href="/course/420218.html" target="_blank"><img src="http://imgs.shougongke.com/course/14903048/420218/170608221749_cover.jpg@!web_course_153" width="153" height="116" alt='' title='女式宴会包唐草包面' /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="feed_ulist fixed">
+							<dl class="feed_userinfo fixed"><dt><a href="/user/17519725.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/51/97/25_avatar_big.jpg@!avatar_66?t=1511453730" width="84" height="84" /></a></dt>
+								<dd>
+									<p class="size14 hui-four" style="margin-bottom:12px;">0A北鼻（兜兜的拼布小屋...</p>
+									<p>
+										<a href="/user/.html" class="fense">0</a>教程</p>
+								</dd>
+							</dl>
+							<ul class="feed_course_list"></ul>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/17968845.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/images/default_avatar/15_big.jpg@!avatar_66" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/17968845.html" class="fense ">王阿晨</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">27分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="/course/444957.html" target="_blank"><img src="http://imgs.shougongke.com/course/cover/201711/15/1163777_1510727840_napy3dcabi.jpg@!web_course_228" width="228" height="172" alt="【Xiaox手作】超美！绣棚上长多肉！" /></a><p>1814 人气 / 1 评论 / 54 收藏</p></dt>
+								<dd>
+									<a href="/course/444957.html" class="hui-four size14" target="_blank">【Xiaox手作】超美！...</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/18163228.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/16/32/28_avatar_big.jpg@!avatar_66?t=1510199382" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_course"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/18163228.html" class="fense ">二疙瘩的橱柜</a> &nbsp;收藏了&nbsp;<span style="font-size:24px; font-style:italic;">1</span>&nbsp;&nbsp;个教程</p><span class="dynamic_time" style="line-height:30px;">30分钟前</span></div>
+						<div class="feed_clist fixed">
+							<dl><dt><a href="#" target="_blank"><img src="http://imgs.shougongke.com/Public/data/hand/201607/27/host/146961610255588_593.jpg@!web_course_228" width="228" height="172" alt="抽绳包（转）" /></a><p>5357 人气 / 3 评论 / 170 收藏</p></dt>
+								<dd>
+									<a href="#" class="hui-four size14" target="_blank">抽绳包（转）</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+				<div class="feed_list fixed">
+					<p class="dynamic_avatar">
+						<a href="/user/18163228.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/16/32/28_avatar_big.jpg@!avatar_66?t=1510199382" width="60" height="60" /></a>
+					</p>
+					<div class="arrow arrow_user"></div>
+					<div class="dynamic_con">
+						<div class="hui-four size14 feed_tit fixed">
+							<p style="display:inline; float:left;">
+								<a href="/user/18163228.html" class="fense ">二疙瘩的橱柜</a> &nbsp;关注了&nbsp;
+								<a href="/user/897065.html" class="fense ">Pure goddes</a>
+							</p><span class="dynamic_time">33分钟前</span></div>
+						<div class="feed_ulist fixed">
+							<dl class="feed_userinfo fixed"><dt><a href="/user/897065.html" target="_blank"><img src="http://imgs.shougongker.com/bridge/data/avatar/000/89/70/65_avatar_big.jpg@!avatar_66?t=1473758633" width="84" height="84" /></a></dt>
+								<dd>
+									<p class="size14 hui-four" style="margin-bottom:12px;">Pure goddes</p>
+									<p>
+										<a href="/user/.html" class="fense">4</a>教程</p>
+								</dd>
+							</dl>
+							<ul class="feed_course_list">
+								<li>
+									<a href="/course/348556.html" target="_blank"><img src="http://imgs.shougongke.comdata/hand/201607/31/host/146993429967342_593.jpg@!web_course_153" width="153" height="116" alt='' title='耐心耐心' /></a>
+								</li>
+								<li>
+									<a href="/course/284467.html" target="_blank"><img src="http://imgs.shougongke.comdata/hand/201602/08/host/145492414562737_593.jpg@!web_course_153" width="153" height="116" alt='' title='。' /></a>
+								</li>
+								<li>
+									<a href="/course/276081.html" target="_blank"><img src="http://imgs.shougongke.comdata/hand/201601/17/host/145303799856197_593.jpg@!web_course_153" width="153" height="116" alt='' title='。' /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="jiantou"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pager size18 fixed">
+			<ul class="fixed">
+				<li><span class="prev"><i class="pager_icon"></i></span></li>
+				<li><span class="now">1</span></a>
+				</li>
+				<li>
+					<a href="/index.php?m=Dynamic&p=2">2</a>
+				</li>
+				<li>
+					<a href="/index.php?m=Dynamic&p=3">3</a>
+				</li>
+				<li>
+					<a href="/index.php?m=Dynamic&p=4">4</a>
+				</li>
+				<li>
+					<a href="/index.php?m=Dynamic&p=5">5</a>
+				</li>
+				<li><span class="pager-sl">...</span></li>
+				<li>
+					<a href="/index.php?m=Dynamic&p=2" class="next"><i class="pager_icon"></i></a>
+				</li>
+			</ul>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+</html>
+<script type="text/javascript">
+	$(function() {
+		var width = $(".dynamic_area").width();
+		var len;
+		var left;
+		$(".dynamic_right").click(function() {
+			len = $(this).parent().find(".dynamic_con_list li dl").length;
+			if((len % 3) == 0) {
+				len = len / 3;
+			} else {
+				len = parseInt(len / 3) + 1;
+			}
+			$(this).parent().find(".dynamic_con_list,.dynamic_con_list li").css("width", width * (len));
+			left = $(this).parent().find(".dynamic_con_list").css("left");
+			nowLeft = parseInt(left) - width;
+			var totalLeft = -(len) * width;
+			if(nowLeft != totalLeft) {
+				$(this).parent().find(".dynamic_con_list").stop(true, false).animate({
+					"left": nowLeft + "px"
+				}, 400);
+			}
+		})
+		$(".dynamic_left").click(function() {
+			len = $(this).parent().find(".dynamic_con_list li dl").length;
+			if((len % 3) == 0) {
+				len = len / 3;
+			} else {
+				len = parseInt(len / 3) + 1;
+			}
+			$(this).parent().find(".dynamic_con_list,.dynamic_con_list li").css("width", width * (len));
+			left = $(this).parent().find(".dynamic_con_list").css("left");
+			if(parseInt(left) != 0) {
+				nowLeft = parseInt(left) + width;
+				$(this).parent().find(".dynamic_con_list").stop(true, false).animate({
+					"left": nowLeft + "px"
+				}, 400);
+			}
+		})
+		$(".feed_clist dl dt").hover(function() {
+			$(this).find("p").slideDown(100);
+		}, function() {
+			$(this).find("p").slideUp(100);
+		})
+	})
+</script>

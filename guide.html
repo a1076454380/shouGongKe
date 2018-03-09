@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>玩转手工客新手攻略-手工客官网</title>
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<!-- <div id="erweima"><img src="http://imgs.shougongke.comindex/images/common/erweima2.png" /></div><div class="ewm"></div> -->
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='玩转手工客新手攻略-手工客官网' id='title'>
+				<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<div id="sgk-warp">
+			<h2 class="sgk-info-tit">新手攻略</h2>
+			<div class="sgk-info-main">
+				<p><img src="images/raiders/raiders_1.png"></p>
+				<p>首先，从网站首页找到正确的位置注册一个新的账号。可以点击右上角的“注册”，也可以点击粉色“立即加入”按钮注册。</p>
+				<p><img src="images/raiders/raiders_2.png"></p>
+				<p>注册页面填写邮箱、昵称与密码后，点击“注册”就可以快速注册一个手工客账号。</p>
+				<p>同时支持QQ账号、新浪微博、豆瓣与哇噻网的账号登陆，可以免去思考昵称密码等各种细节问题。</p>
+				<p>注意勾选“我已阅读并且同意手工客使用协议”选项。</p><br /><br />
+				<p><img src="images/raiders/raiders_3.png"></p>
+				<p>注册之后点击“登陆”按钮，进入登陆界面。输入账号注册邮箱或者关联账号的使用邮箱与密码进行登陆。</p><br /><br />
+				<p><img src="images/raiders/raiders_5.png"></p>
+				<p>注册好之后，点击方框内的粉色图标，就进入教程上传页面。</p><br /><br />
+				<p><img src="images/raiders/raiders_6.png"></p>
+				<p>然后按照提示输入教程的名称、分类、封面图（也就是成品图）和教程作品的简介。</p><br /><br />
+				<p><img src="images/raiders/raiders_7.png"></p>
+				<p>1. 主分类是按照教程作品的最终形态进行分类，有三级分类。比如橡皮章，是在 文具纸本-文具-章子 的三级分类下。</p><br /><br />
+				<p><img src="images/raiders/raiders_10.png"></p>
+				<p>2. 副分类主要按照工艺手法进行分类。在网站首页也是按照副分类进行分类排列。还是以橡皮章为例，在副分类里，是在橡皮章&热缩片-橡皮章 的二级分类下。</p><br /><br />
+				<p><img src="images/raiders/raiders_13.png"></p>
+				<p>接下来，点击一下粉色方框进入上传页.</p><br /><br />
+				<p><img src="images/raiders/raiders_15.png"></p>
+				<p>点击蓝色方框后进入文件夹选择合适的教程封面图上传。</p><br /><br />
+				<p><img src="images/raiders/raiders_16.png"></p>
+				<p>上传封面图的尺寸是593*423，如果图片超过尺寸就会出现红色方框中的灰色部分，教程上传之后灰色的部分是不显示的。<br /> 决定封面图之后点击粉色保存按钮进行上传。
+				</p><br /><br />
+				<p><img src="images/raiders/raiders_17.png"></p>
+				<p>上传完毕之后，会显示预览，如果图片被裁切，可以重新对图片进行调整重新上传。</p><br /><br />
+				<p><img src="images/raiders/raiders_19.png"></p>
+				<p>作品简介的目的是让人对作品的特色、用途等概念一目了然。</p><br /><br />
+				<p><img src="images/raiders/raiders_21.png"></p>
+				<p>标签分为风格、场景、人群、节日等分类，通过点击进行选择，建议尽量多选。如风格可以同时选择可爱、复古、原宿系等标签。除了网站已有的标签，还可以在方框内手动填写其他关联标签，多个标签用隔空隔开。</p><br /><br />
+				<p><img src="images/raiders/raiders_23.png"></p>
+				<p>主要材料默认有6行输入位置，可以随时点击“增加一行”添加更多的材料输入位置，材料和工具的位置都没有上限。<br /> 材料名称可以从右侧的备选框里选择，也可以手动输入。
+					<br /> 用量如果有明确的要求，需要手动输入，如果没有要求则可以不填。如橡皮章需要的尺寸可以手动输入10*7cm。
+				</p><br /><br />
+				<p><img src="images/raiders/raiders_24.png"></p>
+				<p>如果没有必须的主要材料，比如折纸教程可能只需要一张A4白纸，在所需工具第一栏写上“不需要”或者“无”即可。</p><br /><br />
+				<p><img src="images/raiders/raiders_26.png"></p>
+				<p>选择教程的难度系数，一星是最简单，五星最困难<br /> 时间以小时为单位，不满一小时的可以精确到小数点后位数，如0.1小时（6分钟）等。
+				</p><br /><br />
+				<p><img src="images/raiders/raiders_28.png"></p>
+				<p>在点击开始上传步骤图之前，先确认上述教程内容填写是否无误。因为进入上传步骤图之后无法直接返回当前页面进行修改。</p><br /><br />
+				<p><img src="images/raiders/raiders_30.png"></p>
+				<p><img src="images/raiders/raiders_31.png"></p>
+				<p>建议教程步骤图按顺序进行命名。先选择第一张图，按住Shift键再选择教程最后一张图，就能全选所有图片，点击确认后能够同时选择多张过程图进行批量上传。</p><br /><br />
+				<p><img src="images/raiders/raiders_32.png"></p>
+				<p>步骤图的排列默认按照文件名顺序进行排列。<br /> 上传好的图片前部的双箭头，拖住可以上下调整图片的顺序。
+					<br /> 点击右侧的× ，可以轻松删除重复上传的步骤图。<br /> 二次上传的步骤图默认为最后一张。
+					<br /> 步骤图的预览显示尺寸是宽度为593，不限高，但并不是图片显示的实际尺寸。实际尺寸以上传的具体图片为准。
+				</p><br /><br />
+				<p><img src="images/raiders/raiders_34.png"></p>
+				<p>关于制作教程的小诀窍，或者其他的做法可以在小贴士里进行简单的介绍。</p><br /><br />
+				<p><img src="images/raiders/raiders_36.png"></p>
+				<p>如果教程需要某些特定的材料，或者教材的成品有售，可以在这里添加产品链接。<br /> 将网址添加到链接框内后，点击同行右侧的灰色“添加”按钮，变为绿色的“已添加”表示链接添加成功。
+				</p><br /><br />
+				<p><img src="images/raiders/raiders_38.png"></p>
+				<p>点击“发布教程”按钮，教程就发布了。</p><br /><br />
+				<p><img src="images/raiders/raiders_39.png"></p>
+				<p>教程发布成功后的跳转页面，等待五秒后进入刚刚上传成功的教程，也直接可以选择“查看”查看刚刚上传成功的教程。<br /> 选择“继续发布”将进入上传教程页面，可以发布新的教程。
+				</p><br /><br />
+				<p><img src="images/raiders/raiders_41.png"></p>
+				<p>教程发布成功后会跳转到教程页面。随时可以点击教程封面图上的“编辑教程”按钮，进入教程上传的页面，对教程进行编辑。<br /> 教程编辑需要对教程发布的两个页面进行确认。
+					<br /> 通常情况下，不需要用到“删除教程”的按钮。无论是传错步骤图、图文不一的问题都可以通过编辑进行调整。但是“删除教程”的按钮按下后还是会准确无误地删除教程，并且不能还原，请谨慎使用。
+					<br /></p><br /><br />
+				<p><img src="images/raiders/raiders_43.png"></p>
+				<p>教程发布之后，可以在教程页右侧的一键分享按钮，将教程发布到各大网站。<br /> 如果折叠的第一级菜单中仍然没有你需要的网站，可以点击绿色的＋号按钮可以查看124个网站。
+				</p><br /><br />
+				<p>“攻略虽然很长，到这里还是结束了，谢谢观赏！”</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

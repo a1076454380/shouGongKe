@@ -1,0 +1,9 @@
+@charset utf-8;
+h1{ font-size:26px; color:#000;}
+.cate_con{ width:980px; border-top:2px solid #ff6699; background:#fff; padding:20px 0 40px 0; margin:17px 0 0 0;}
+.cate_con_list{ border-bottom:1px solid #e6e6e6; padding-bottom:35px; margin:40px 0 0 0;}
+.cate_con_list_l{ width:120px; text-align:right; float:left; font-size:16px;}
+.cate_con_list_r{ width:722px; float:right;}
+.cate_con_list_r li{ width:150px; padding:0 0 0 10px; float:left; background:url(http://imgs.shougongke.com/Public/images/common/course_cate.png) no-repeat 0 center;}
+.cate_con_list_r li a{ line-height:25px; padding:0 5px; font-size:14px; color:#000;}
+.cate_con_list_r li a:hover{ background:#ff6699; color:#fff;}

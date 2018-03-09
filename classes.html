@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>【手作特训营&amp;短训班】在家学手艺就这么简单！-手工客官网</title>
+		<link rel="canonical" href="http://www.shougongke.com/" />
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='【手作特训营&amp;短训班】在家学手艺就这么简单！-手工客官网' id='title'>
+				<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<link href="css/fairs.css" rel="stylesheet" type="text/css">
+		<link href="css/topic_details.css" rel="stylesheet" type="text/css">
+		
+		<div class="width980 topic_top">
+			<div><span><a href="/coursehome.html" class="font-black" target="_blank" >教程</a></span><span>&gt;</span><span><a href="/TagTopic/" class="font-black" target="_blank" >专题</a></span><span>&gt;</span><span class="pink">【手作特训营&amp;短训班】在家学手艺就这么简单！</span></div>
+		</div>
+		<div class="width980  topic_content ">
+			<div class="topic_content-left">
+				<!-- 头部 -->
+				<!--   <div class="topic_content_top">【手作特训营&amp;短训班】在家学手艺就这么简单！</div> -->
+				<div style="background:#fff;">
+					<div class="topic_content-head ">
+						<div class="topic_right_name">【手作特训营&amp;短训班】在家学手艺就这么简单！</div>
+						<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/main/1495434086_nwp6bdcbrf.jpg" alt=""></div>
+						<div class="topic_content-text">跨越地域与时空的限制，以最低的价格、超高的性价比，带来丰富又系统的教学，在家拜师学艺就是这么简单！<br />
+							<br /> 如果你是新手小白爱好者，希望有人带领你系统学习一门手艺，或者是想以手工职业为方向进阶，系统专业的【特训营】便是你最好的选择！
+							<br />
+							<br /> 如果你时间有限，但又不想错过学习的机会，精品体验的【短训班】等你加入！
+						</div>
+					</div>
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--专题详情-->
+						<a href="/TagTopic/2180/?tag_id=">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1496980026_bkxp5f43f4.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="topic_content_title type2">
+						<div class="children " style="">
+							<div style="float: right;font-size:14px;">|</div>
+							<div class="right-border"></div>
+						</div>
+						<div class="children" style="position:relative;top:-3px;width:auto;padding:0 6px;">特训营</div>
+						<div class="children" style="">
+							<div style="float:left;font-size:14px;">|</div>
+							<div class="left-border"></div>
+						</div>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1977">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416253_dxsb5ntpd7.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1950">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416208_dbee8s73rk.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1864">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416179_adap6nikma.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1895">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416120_k2pjicj3ah.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1875">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416087_y8yadi85ke.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1886">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416062_rmrmcda2in.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1851">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511415993_ykciedweak.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1784">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511415941_ic728j3etp.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1808">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1505903033_yebnxajh2m.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1787">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1505384675_fsfts23wtb.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1667">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1504253214_jb66nk2efc.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1754">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1505270177_rksadekeaz.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1703">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1503569093_5ctnfzzwtx.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1723">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1503568757_5hw7cc7bbh.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1702">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1504520700_ywzxa4mf8x.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1665">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1502157894_m63wfnr65b.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1675">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1501752917_3art7yfp7k.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1644">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1500268808_ik5izrj44k.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1636">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1500037019_4r8pkwnbd3.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1619">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1499330195_imkc4pcsck.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1609">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1498373243_8p7yihzx8p.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1610">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1498373377_683wfyptib.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1590">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1497434462_c48427cf6w.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1537">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1496980094_pbmjbkzf6y.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1461">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369461_jbtps48eaj.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1446">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416437_j2m8nn2c58.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1484">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369506_m7z63rfab3.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1479">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493521609_z4rs82x7m8.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1460">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369833_tx8e7mm3cn.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1445">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369873_3it2fab75r.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1412">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369915_rz2ef6ky5a.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1421">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369948_rbs6365sh2.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1431">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369963_jaw62ff7nb.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1430">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369980_p835mmi47k.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1434">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493369998_rry8c6kwma.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1432">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370018_5c75riic2s.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1419">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370036_admr8cns4w.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1429">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370076_88tjhkimad.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1462">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370118_z2k2tczhi3.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1423">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370138_4846i6drrk.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1427">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370169_mctpnj85js.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1500">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1496980183_myzzchnb33.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="topic_content_title type2">
+						<div class="children " style="">
+							<div style="float: right;font-size:14px;">|</div>
+							<div class="right-border"></div>
+						</div>
+						<div class="children" style="position:relative;top:-3px;width:auto;padding:0 6px;">短训班</div>
+						<div class="children" style="">
+							<div style="float:left;font-size:14px;">|</div>
+							<div class="left-border"></div>
+						</div>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=2016">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511922059_bd2es7acnt.png" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=2005">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511922018_erbn5fxcrk.png" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=2006">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511921949_dpee2s6b5p.png" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1995">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511417177_7szadjd582.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1992">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511417149_7t7yi5a3mh.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1984">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511417121_yhcek238p2.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1983">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511417092_jyrafk5y3i.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1963">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511417060_86bbrx8kms.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1960">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511417031_7khmrsiz6b.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1958">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416987_axzjfcfkmz.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1941">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416950_det4pr8zpd.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1893">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416895_ph7fxcwcax.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1927">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416852_xcyb7epd7d.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1859">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416809_rimesxyjye.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1881">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416781_edinrne3cx.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1844">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416745_4stjeatae5.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1846">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416692_pefjefk8wy.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1837">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416656_42ez7jsm4m.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1858">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416519_565dzarj83.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1861">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1511416382_y3rby4bbhk.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1811">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1506072099_j4ecbdfz62.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1810">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1505987300_8yxjx8xnwx.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1746">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1504766186_cb7wzd35dp.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1739">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1504766517_3dkk3kf6td.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1752">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1504495729_xtknhptkp2.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1725">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1503568684_7w7zpkwkc7.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type4">
+						<!--市集专题详情-->
+						<a href="/index.php?m=Fair&a=topic_details&id=1740">
+							<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1504253517_enm4kpnn2f.jpg" alt=""></div>
+						</a>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type3">
+						<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370899_n6ex7asdt3.jpg" alt=""></div>
+						<div class="topic_content-text"></div>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type3">
+						<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1493370942_sytzn3xmph.jpg" alt=""></div>
+						<div class="topic_content-text"></div>
+					</div>
+					<!--商品集-->
+					<!--序号标题-->
+					<!--分段标题-->
+					<div class="type3">
+						<div class="topic_content-img" style=""><img src="http://image.shougongke.com/topic/course/2049/1509696779_csf7azyekz.jpg" alt=""></div>
+						<div class="topic_content-text"></div>
+					</div>
+					<!--商品集-->
+					<div class="clear"></div>
+				</div>
+				<!-- 分享 -->
+				<div class="details_share">
+					<div class="share_list fixed">
+						<a class="share_qzone" title="分享到QQ空间"></a>
+						<a class="share_weibo" title="分享到新浪微博"></a>
+						<a class="share_weixin" title="分享到微信"></a>
+						<a class="share_qq" title="分享到QQ好友"></a>
+					</div>
+					<div style="float:right;position:relative;margin:13px 6px 0 0 ;">
+						分享到:
+					</div>
+				</div>
+			</div>
+			<div class="topic_content-right">
+				<div class="topic_right_top">
+					其他热门专题
+				</div>
+				<div class="topic_right_content">
+					<a href="/TagTopic/2634/?tag_id=">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2634/main/1511859786_n57t55kx82.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨橡皮章——二、三次元通吃的神奇手作</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2624/?tag_id=">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2624/main/1511341251_32kjhb2nk7.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨当滴胶碰上脑洞大开</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2592/?tag_id=">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2592/main/1510222000_dmenhxtmsr.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨手账——记录生活的点滴美好</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2556/?tag_id=">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2556/main/1509005482_88wnwbykad.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨做一只超萌的皮卡丘！！！</div>
+							</div>
+						</div>
+					</a>
+					<a href="/TagTopic/2548/?tag_id=">
+						<div class="topic_details_img">
+							<div class=""><img src="http://image.shougongke.com/topic/course/2548/main/1508825661_r4di2jfbyb.jpg" alt=""></div>
+							<div class="topic_details_text">
+								<div class="topic_details_text_content">教程专题丨神奇的马赛克手工——拼豆</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both "></div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

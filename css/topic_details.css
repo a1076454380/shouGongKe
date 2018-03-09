@@ -1,0 +1,314 @@
+.topic_content{ margin-top:34px;}
+.topic_content-left{float:left;width:625px;}
+.topic_content-right{float:left;width:305px;height:100px;margin-left:50px;}
+.topic_content_top{font-size:20px;border-bottom:1px dashed #ABABAB;line-height: 20px; height: 30px;}
+.topic_content-head{background:#FFFFFF;width:100%;}
+.topic_content-img{padding-top:30px;padding-bottom:24px;margin:0px auto;width:560px;}
+.topic_content-img>img{width:560px;	}
+.topic_content-text{width:560px;padding-bottom:20px;padding-top:10px;margin:0px auto;	line-height:22px;font-size:15px;color:#555555;}
+.topic_content-shop{margin-top:30px;width:625px;display:block;}
+.topic_content-shop>div{display:block;float: left;height: 425px;width: 296px;margin-right: 32px;background: #FFF;margin-bottom: 25px;border-radius:3px;}
+.fair_topic_introduce {margin-top:1px;height:125px;border:1px solid #D4D4D4;border-top:1px dashed #E8E8E8;}
+.fair_topic_name {font-size:14px;margin:16px 14px 0px;line-height:24px;height:54px;width:268px;overflow:hidden;}
+.topic_right_name{width: 560px;padding-top:30px;margin: 0px auto;line-height: 22px;font-size: 18px;color: #555555;}
+.fair_topic_price {margin:20px 10px 0px;width:268px;}
+.fair_topic_real_price {font-size:22px;color:#FF6699;}
+.topic_content-shop>div:nth-child(2n) {margin-right:0;}
+.fair_topic_not_price {font-size:12px;position:relative;text-decoration:line-through;color:#D4D4D4;}
+.fair_topic_buy {font-size:14px;float:right;position:relative;top:8px;color:#A4A4A4;left:-7px;}
+.fair_topic>div {float:left;height:335px;width:230px;margin-right:20px;background:#FFF;}
+.fair_topic_border1 {border-top:1px solid #D4D4D4;width:290px;height:1px;margin-top:1px;margin-left:4px;}
+.fair_topic_border2 {border-top:1px solid #D4D4D4;width:284px;height:1px;margin-left:7px;}
+.fair_topic>div:nth-child(4) {margin-right:0;}
+.clear{ clear:both}
+.topic_top div span{margin-right:8px;font-size:15px;}
+.topic_details_img{	width: 305px;height: 170px;margin:17px 0px  0px;}
+.topic_details_text{position: relative;top: -30px;height:30px;font-size: 12px;color: #FEFEFE;width:305px;background:linear-gradient(to bottom,rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.4) 200%);}
+.topic_right_top{font-size:18px;padding-top:10px;line-height: 20px;height: 20px;}
+.topic_details_text_content{padding-top:8px;padding-left:10px;height:15px;width:295px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.clear{ clear:both}
+ .topic_top div span{margin-right:8px;font-size:15px;}
+.pink{color:#FF6699;}
+.topic_details_img{	width: 305px;height: 170px;margin:17px 0px  0px;}
+.topic_details_img img{width:305px;height:170px;}
+.left_title{display: inline-block;width: 30px;font-size:12px;height: 30px;line-height: 30px;border-radius: 30px;color: #fff;background: #FF679A;text-align: center;}
+.shop_content{	width:560px;margin:15px auto 0 ;line-height:25px;font-size:15px;color:#555555;}
+.shop_img{	width:560px;margin:0px auto;}
+.shop_img img{margin-top:5px;width:560px;}
+.topic_details_buy{background:#FFFFFF;width:625px;border-top:1px dashed #999;}
+.details_buy_title{padding:26px 0 0 30px;width:560px;}
+.details_buy_title_content{margin-left:10px;font-size:16px;}
+.shop_details{margin:20px auto 0;width:560px;padding-bottom:30px;}
+.shop_details_yh_price{font-size:25px;color:#FF679A;position:relative;top:10px}
+.shop_details_sum{font-size:14px;color:#BFBFBF;position:relative;top:10px;margin-left:10px;}
+.shop_details_buy_buttom{position:relative;float:right;width:130px;height:38px;text-aligin:center;background:#FF679A; border-radius: 30px;text-align:center;line-height:38px;font-size:16px;}
+
+
+.shop_content{	width:560px;margin:15px auto 0 ;line-height:25px;font-size:15px;color:#555555;}
+.title_content{width:560px;margin:0px auto 0 ;line-height:25px;font-size:15px;color:#555555;}
+.shop_img{width:560px;margin:0px auto;}
+.shop_img img{margin-top:5px;width:560px;}
+.topic_content_title{width:625px;padding-top:20px;padding-bottom:20px;text-align:center;background:#fff;line-height:20px;font-size:20px;}
+.type6{padding-top:20px;}
+.type6 .commodity_information{margin:20px auto 0;width:560px;padding-bottom:30px;}
+.type6 .commodity_information span:first-child{font-size:25px;color:#FF679A;position:relative;top:10px;}
+.type6 .commodity_information span:nth-child(2){	font-size:14px;color:#BFBFBF;position:relative;top:10px;margin-left:10px;}
+.type6 .commodity_information span:last-child{position:relative;float:right;width:130px;height:38px;text-aligin:center;background:#FF679A; border-radius: 30px;text-align:center;line-height:38px;font-size:16px;}
+.type7 dt{padding:8px 0px 8px 8px;}
+.type7 dt img{width:106px;height:106px;}
+.type7_div{width:556px;height:120px;background:#F0F0F0;margin:26px 0px 20px 34px;}
+.type7_div dl{height:122px;}
+.type7_div dt{width:106px;height:106px;}
+.type7_div .shop_title{position:relative;top:-107px;left:135px;font-size:18px;color:#000000;}
+.type7_div .shop_content{position:relative;top:-75px;left:135px;}
+.type7_div .shop_content span:first-child{font-size:24px;color:#FF679A;}
+.type7_div .shop_content span:last-child{float:right;position:relative;right:165px;top:5px;color:#a6a6a6;}
+.type5{border-bottom:1px dashed;padding-bottom:20px;}
+.type5 .user_information{width:650px;}
+.topic_user_pic{ width:130px;float:left;}
+.topic_user_pic span:nth-child(1){position:relative;left:38px;width:60px;}
+.user_information span:nth-child(1) img:nth-child(1){width:60px;height:60px;border-radius: 32px;}
+.topic_username{font-size:16px;margin-top:20px;}
+.topic_fensi{font-size:11px;color:#a6a6a6;}
+.topic_user_details {float:right;position:relative;left:-63px;top:36px;color:#a6a6a6;}
+/*宸﹀彸妯嚎*/
+.type2 {  background: #fff none repeat scroll 0 0;font-size: 20px;line-height: 20px;padding-bottom: 20px;padding-top: 20px;text-align: center;width: 625px;text-align:center;}
+   .children {display:inline-block;width:120px;height:20px;}
+   *+ html .children { display:inline;zoom:1;}
+   * html .children { display:inline;zoom:1;}
+   .left-border{float: left;height:1px;width:100px;margin:10px 0px 0px -1px;background: -webkit-linear-gradient(left, #fff ,#000); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(left, #fff ,#000); /* Opera 11.1 - 12.0 */ background: -moz-linear-gradient(left, #fff ,#000); /* Firefox 3.6 - 15 */  background: linear-gradient(to left, #fff ,#000); /* 鏍囧噯鐨勮娉� */}
+   .right-border{float: right;height:1px;width:100px;margin:10px -1px 0px 0px;background: -webkit-linear-gradient(right, #fff ,#000); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(right, #fff ,#000); /* Opera 11.1 - 12.0 */  background: -moz-linear-gradient(right, #fff ,#000); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #fff ,#000); /* 鏍囧噯鐨勮娉� */}
+
+/*鍒嗕韩鍥炬爣*/
+.share_list{height:40px; float:right;}
+.share_list a {background:none;padding-left:0px !important; margin-right:10px; width:40px!important; height:40px!important; float: left; cursor: pointer;}
+.share_list a.share_qzone { background:url(http://image.shougongke.com/shiji/qzone_share_button.png?t=1462866240108) no-repeat;background-position: 0px 0px;}
+.share_list a.share_weibo{ background:url(http://image.shougongke.com/shiji/sina_share_button.png?t=1462866240184) no-repeat; background-position: 0px 0px;}
+.share_list a.share_weixin{ background:url(http://image.shougongke.com/shiji/wechat_share_button.png?t=1462866240181) no-repeat;background-position: 0px 0px;}
+.share_list a.share_qq{ background:url(http://image.shougongke.com/shiji/qq_share_button.png?t=1462866240110) no-repeat;background-position: 0px 0px;}
+.type5 .is_daren{position:relative;top:30px;right:20px; width:28px;height:28px;}
+.details_share{padding-bottom:70px;padding-top:20px;background: url(http://imgs.shougongke.com/Public/index/images/common/bg.jpg) repeat;width:625px;}
+/*鍒嗙被瀵艰埅鏍�*/
+.project_top{width:980px;background:#fff;border-top:3px solid pink;padding-left:6px;}
+.project_top ul{ list-style-type: none;}
+.project_top li{float:left;width:80px;line-height:14px;font-size:14px;text-align:center;margin-right:26px;display:block}
+.project_top li:nth-child(9n){margin-right:0px;}
+.project_top li:nth-child(-n+9){margin-top:21px;}
+.project_top li{padding-bottom:21px;}
+.fair{top:0px;margin-top:22px;height:auto;}
+<style type="text/css">
+			.video-js {
+				margin-top: 20px;
+				height: 200px;
+				width: 100%;
+			}
+			
+			.video-js .vjs-control:before {
+				line-height: 36px;
+			}
+			
+			.video-js .vjs-control-bar {
+				height: 36px;
+			}
+			
+			.video-js .vjs-time-control {
+				font-size: 12px;
+				line-height: 36px;
+			}
+			
+			.vjs-icon-audio,
+			.video-js .vjs-audio-button {
+				display: none
+			}
+			
+			.video-js .vjs-big-play-button {
+				font-size: 72px;
+				line-height: 118px;
+				height: 118px;
+				width: 118px;
+				-webkit-border-radius: 59px;
+				-moz-border-radius: 59px;
+				border-radius: 59px;
+			}
+			
+			.vjs-big-play-centered .vjs-big-play-button {
+				top: 50%;
+				left: 50%;
+				margin-top: -59px;
+				margin-left: -59px;
+			}
+			
+			.video-js .vjs-big-play-button {
+				border: 3px solid #fff;
+			}
+			
+			video {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			
+			@media (min-width: 600px) {
+				.video-js {
+					height: 320px;
+					width: 100%;
+				}
+			}
+			
+			.courseItem {
+				margin-bottom: 15px;
+				width: 270px;
+				margin-left: 32px;
+				margin-right: -10px;
+				;
+				float: left;
+			}
+			
+			.courseItem .img_bg {
+				background: #FFF;
+			}
+			
+			.courseItem img {
+				border-radius: 4px 4px 0 0;
+				margin: 0 auto;
+				width: 100%;
+			}
+			
+			.courseInfo {
+				height: auto;
+				border-radius: 0 0 4px 4px;
+				border-top: 1px dashed #E8E8E8;
+			}
+			
+			.courseText {
+				width: 85%;
+				margin: 0 auto;
+				overflow: hidden;
+				line-height: 24px;
+				padding: 16px 0 1px;
+				font-size: 14px;
+				height: 48px;
+			}
+			
+			.courseText2 {
+				width: 85%;
+				margin: 5px auto 0 auto;
+				font-size: 12px;
+			}
+			
+			.yh_price {
+				font-size: 20px;
+				color: #ff6699;
+				width: 50%;
+				float: left;
+				line-height: 20px;
+				padding-bottom: 10px;
+			}
+			
+			.price_num {
+				width: 50%;
+				float: right;
+				font-size: 10px;
+				color: #aaa;
+				text-align: right;
+				padding-top: 5px
+			}
+			/* 教程新*/
+			
+			.hand_courses>div:nth-child(2n) {
+				margin-right: 20px;
+				margin-left: 22px;
+			}
+			
+			.hand_courses>div:nth-child(2n-1) {
+				margin-right: 0px;
+				margin-left: 32px;
+			}
+			
+			.hand_course {
+				display: block;
+				float: left;
+				height: 404px;
+				width: 270px;
+				background: #FFF;
+				margin-bottom: 15px;
+				border-radius: 3px;
+			}
+			/*.hand_course:nth-child(2n){margin-right:20px;}*/
+			/*.hand_course:nth-child(3n-1){margin-left:0;}*/
+			
+			.hand_introduce {
+				backgroud: #fff;
+			}
+			
+			.course_content {
+				padding: 0 15px;
+			}
+			
+			.course_title {
+				font-size: 14px;
+				margin: 16px 0px 0px;
+				line-height: 14px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			
+			.course_user_name {
+				color: #A4A4A4;
+				font-size: 14px;
+				border-bottom: 1px solid #D4D4D4;
+				height: 42px;
+				line-height: 38px;
+			}
+			
+			.course_total {
+				color: #A4A4A4;
+				font-size: 14px;
+				line-height: 52px;
+			}
+			
+			.hand_class {
+				display: block;
+				float: left;
+				height: 350px;
+				width: 270px;
+				background: #FFF;
+				margin-bottom: 20px;
+				border-radius: 3px;
+				margin-left: 32px;
+			}
+			
+			.hand_class:nth-child(2n) {
+				margin-left: 21px;
+			}
+			/*.hand_class:nth-child(2n-1){margin-left:0;}*/
+			
+			.course_introduce {
+				margin-top: 1px;
+				height: 125px;
+				border-top: 1px dashed #E8E8E8;
+			}
+			
+			.class_introduce {
+				margin-top: 1px;
+				height: 78px;
+				border-top: 1px dashed #E8E8E8;
+				background: #f5f5f5;
+				margin-top: -70px;
+			}
+			
+			.offlineVideo_introduce {
+				margin-top: 1px;
+				height: 78px;
+				border-top: 1px dashed #E8E8E8;
+				background: #f5f5f5;
+			}
+			
+			.video_play_button {
+				position: relative;
+				width: 70px;
+				top: -170px;
+				left: 100px;
+			}

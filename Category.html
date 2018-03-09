@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN" [weibo_xml]>
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>,手工制作,手工制作方法,手工怎么做</title>
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+		
+	</head>
+
+	<body>
+		<div id="over"></div>
+		
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value=',手工制作,手工制作方法,手工怎么做' id='title'>
+		<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<link href="css/jiaocheng.css" rel="stylesheet" type="text/css" />
+		<div id="sgk-warp">
+			<div class="sgk-cate-nav-bar">
+				<ul class="course_type fixed">
+					<li class="on">
+						<a href="/index.php?m=Category&a=index">图文教程</a>
+					</li>
+					<li>
+						<a href="/index.php?m=HandVideo&a=index">视频教程</a>
+					</li>
+				</ul>
+				<ul class="cate-parent fixed">
+					<li class='on'>
+						<h1><a href="/index.php?m=Category">全部</a></h1></li>
+					<li>
+						<h1><a href="/category/1.html">布艺</a></h1></li>
+					<li>
+						<h1><a href="/category/2.html">皮艺</a></h1></li>
+					<li>
+						<h1><a href="/category/3.html">纸艺</a></h1></li>
+					<li>
+						<h1><a href="/category/4.html">木艺</a></h1></li>
+					<li>
+						<h1><a href="/category/5.html">饰品</a></h1></li>
+					<li>
+						<h1><a href="/category/6.html">编织</a></h1></li>
+					<li>
+						<h1><a href="/category/7.html">刺绣</a></h1></li>
+					<li>
+						<h1><a href="/category/8.html">雕塑雕刻</a></h1></li>
+					<li>
+						<h1><a href="/category/9.html">模型</a></h1></li>
+					<li>
+						<h1><a href="/category/10.html">橡皮章</a></h1></li>
+					<li>
+						<h1><a href="/category/11.html">羊毛毡</a></h1></li>
+					<li>
+						<h1><a href="/category/12.html">旧物改造</a></h1></li>
+					<li>
+						<h1><a href="/category/13.html">美食烘焙</a></h1></li>
+					<li>
+						<h1><a href="/category/14.html">粘土陶艺</a></h1></li>
+					<li>
+						<h1><a href="/category/15.html">手绘印染</a></h1></li>
+					<li>
+						<h1><a href="/category/16.html">滴胶热缩</a></h1></li>
+					<li>
+						<h1><a href="/category/17.html">金属工艺</a></h1></li>
+					<li>
+						<h1><a href="/category/18.html">电子科技</a></h1></li>
+					<li>
+						<h1><a href="/category/19.html">手工护肤</a></h1></li>
+					<li>
+						<h1><a href="/category/20.html">园艺多肉</a></h1></li>
+					<li>
+						<h1><a href="/category/21.html">其他</a></h1></li>
+				</ul>
+				<ul class="more-choice fixed">
+					<li>更多选项</li>
+					<li class="more-li"><i class="icon"></i>风格</li>
+					<li class="more-li"><i class="icon"></i>场景</li>
+					<li class="more-li"><i class="icon"></i>人群</li>
+					<li class="more-li"><i class="icon"></i>节日</li>
+					<li class="more-li"><i class="icon"></i>工具</li>
+					<li class="more-li"><i class="icon"></i>材料</li>
+					<li class="more-li"><i class="icon"></i>难度</li>
+					<li class="more-li"><i class="icon"></i>制作时间</li>
+				</ul>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>风格</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0)" val="1" only="1_0" genre="0">可爱</a><i class="icon" val="1" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="2" only="2_0" genre="0">复古</a><i class="icon" val="2" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="3" only="3_0" genre="0">清新</a><i class="icon" val="3" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="4" only="4_0" genre="0">森系</a><i class="icon" val="4" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="5" only="5_0" genre="0">民族</a><i class="icon" val="5" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="6" only="6_0" genre="0">摇滚朋克</a><i class="icon" val="6" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="7" only="7_0" genre="0">原宿系</a><i class="icon" val="7" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="8" only="8_0" genre="0">英伦</a><i class="icon" val="8" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="9" only="9_0" genre="0">北欧</a><i class="icon" val="9" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="10" only="10_0" genre="0">田园</a><i class="icon" val="10" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="11" only="11_0" genre="0">欧美</a><i class="icon" val="11" genre="0"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="56" only="56_0" genre="0">简洁</a><i class="icon" val="56" genre="0"></i></li>
+					</ul><input type="hidden" class="select" value="style:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>场景</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0)" val="26" only="26_1" genre="1">办公室</a><i class="icon" val="26" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="27" only="27_1" genre="1">教室</a><i class="icon" val="27" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="28" only="28_1" genre="1">卧室</a><i class="icon" val="28" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="29" only="29_1" genre="1">客厅</a><i class="icon" val="29" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="30" only="30_1" genre="1">阳台</a><i class="icon" val="30" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="31" only="31_1" genre="1">院子</a><i class="icon" val="31" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="32" only="32_1" genre="1">室外</a><i class="icon" val="32" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="33" only="33_1" genre="1">车内</a><i class="icon" val="33" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="43" only="43_1" genre="1">随处</a><i class="icon" val="43" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="45" only="45_1" genre="1">厨房</a><i class="icon" val="45" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="49" only="49_1" genre="1">聚会</a><i class="icon" val="49" genre="1"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="55" only="55_1" genre="1">书房</a><i class="icon" val="55" genre="1"></i></li>
+					</ul><input type="hidden" class="select" value="scene:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>人群</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0)" val="34" only="34_2" genre="2">儿童</a><i class="icon" val="34" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="35" only="35_2" genre="2">妈妈</a><i class="icon" val="35" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="36" only="36_2" genre="2">老年人</a><i class="icon" val="36" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="37" only="37_2" genre="2">森女</a><i class="icon" val="37" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="38" only="38_2" genre="2">小清新</a><i class="icon" val="38" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="39" only="39_2" genre="2">宅男</a><i class="icon" val="39" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="40" only="40_2" genre="2">宅女</a><i class="icon" val="40" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="41" only="41_2" genre="2">上班族</a><i class="icon" val="41" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="46" only="46_2" genre="2">女孩子</a><i class="icon" val="46" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="47" only="47_2" genre="2">男孩子</a><i class="icon" val="47" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="48" only="48_2" genre="2">学生党</a><i class="icon" val="48" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="50" only="50_2" genre="2">极客</a><i class="icon" val="50" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="53" only="53_2" genre="2">爸爸</a><i class="icon" val="53" genre="2"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="54" only="54_2" genre="2">创客</a><i class="icon" val="54" genre="2"></i></li>
+					</ul><input type="hidden" class="select" value="crowd:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>节日</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0)" val="12" only="12_3" genre="3">春节</a><i class="icon" val="12" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="13" only="13_3" genre="3">清明节</a><i class="icon" val="13" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="14" only="14_3" genre="3">端午节</a><i class="icon" val="14" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="15" only="15_3" genre="3">父亲节</a><i class="icon" val="15" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="16" only="16_3" genre="3">母亲节</a><i class="icon" val="16" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="17" only="17_3" genre="3">儿童节</a><i class="icon" val="17" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="18" only="18_3" genre="3">中秋节</a><i class="icon" val="18" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="19" only="19_3" genre="3">万圣节</a><i class="icon" val="19" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="20" only="20_3" genre="3">圣诞节</a><i class="icon" val="20" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="21" only="21_3" genre="3">情人节</a><i class="icon" val="21" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="22" only="22_3" genre="3">七夕</a><i class="icon" val="22" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="23" only="23_3" genre="3">愚人节</a><i class="icon" val="23" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="24" only="24_3" genre="3">生日</a><i class="icon" val="24" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="25" only="25_3" genre="3">婚礼</a><i class="icon" val="25" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="42" only="42_3" genre="3">日常</a><i class="icon" val="42" genre="3"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="52" only="52_3" genre="3">感恩节</a><i class="icon" val="52" genre="3"></i></li>
+					</ul><input type="hidden" class="select" value="festival:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>工具</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0)" val="7" only="7_4" genre="4">打孔器</a><i class="icon" val="7" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="9" only="9_4" genre="4">直尺</a><i class="icon" val="9" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="11" only="11_4" genre="4">美工刀</a><i class="icon" val="11" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="12" only="12_4" genre="4">水消笔</a><i class="icon" val="12" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="13" only="13_4" genre="4">定位针</a><i class="icon" val="13" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="14" only="14_4" genre="4">划粉</a><i class="icon" val="14" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="16" only="16_4" genre="4">刷子</a><i class="icon" val="16" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="18" only="18_4" genre="4">水彩笔</a><i class="icon" val="18" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="19" only="19_4" genre="4">热胶枪</a><i class="icon" val="19" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="20" only="20_4" genre="4">锥子</a><i class="icon" val="20" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="22" only="22_4" genre="4">砂纸</a><i class="icon" val="22" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="24" only="24_4" genre="4">刨子</a><i class="icon" val="24" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="25" only="25_4" genre="4">3D打印机</a><i class="icon" val="25" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="28" only="28_4" genre="4">502胶</a><i class="icon" val="28" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="29" only="29_4" genre="4">UV胶</a><i class="icon" val="29" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="30" only="30_4" genre="4">AB胶</a><i class="icon" val="30" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="32" only="32_4" genre="4">硅胶</a><i class="icon" val="32" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="33" only="33_4" genre="4">胶枪（胶棒）</a><i class="icon" val="33" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="34" only="34_4" genre="4">酒精胶</a><i class="icon" val="34" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="35" only="35_4" genre="4">中性笔</a><i class="icon" val="35" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="36" only="36_4" genre="4">砧子</a><i class="icon" val="36" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="37" only="37_4" genre="4">冲子</a><i class="icon" val="37" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="38" only="38_4" genre="4">剁刀</a><i class="icon" val="38" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="39" only="39_4" genre="4">测量工具</a><i class="icon" val="39" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="40" only="40_4" genre="4">电烙铁</a><i class="icon" val="40" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="41" only="41_4" genre="4">喷漆枪</a><i class="icon" val="41" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="42" only="42_4" genre="4">笔刀</a><i class="icon" val="42" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="43" only="43_4" genre="4">塑形橡皮</a><i class="icon" val="43" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="44" only="44_4" genre="4">铅笔</a><i class="icon" val="44" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="45" only="45_4" genre="4">镊子</a><i class="icon" val="45" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="46" only="46_4" genre="4">定画液</a><i class="icon" val="46" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="47" only="47_4" genre="4">垫板</a><i class="icon" val="47" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="48" only="48_4" genre="4">热风枪</a><i class="icon" val="48" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="49" only="49_4" genre="4">彩色铅笔</a><i class="icon" val="49" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="50" only="50_4" genre="4">水彩</a><i class="icon" val="50" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="51" only="51_4" genre="4">剪刀</a><i class="icon" val="51" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="52" only="52_4" genre="4">硅胶模具</a><i class="icon" val="52" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="53" only="53_4" genre="4">量杯</a><i class="icon" val="53" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="54" only="54_4" genre="4">塑料杯</a><i class="icon" val="54" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="55" only="55_4" genre="4">烧杯</a><i class="icon" val="55" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="56" only="56_4" genre="4">搅拌棒</a><i class="icon" val="56" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="57" only="57_4" genre="4">一次性手套</a><i class="icon" val="57" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="58" only="58_4" genre="4">滴管</a><i class="icon" val="58" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="59" only="59_4" genre="4">针筒</a><i class="icon" val="59" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="60" only="60_4" genre="4">电子称</a><i class="icon" val="60" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="61" only="61_4" genre="4">刻刀</a><i class="icon" val="61" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="65" only="65_4" genre="4">曲线锯</a><i class="icon" val="65" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="67" only="67_4" genre="4">锉刀</a><i class="icon" val="67" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="71" only="71_4" genre="4">锯子</a><i class="icon" val="71" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="73" only="73_4" genre="4">502胶水</a><i class="icon" val="73" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="75" only="75_4" genre="4">白乳胶</a><i class="icon" val="75" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="77" only="77_4" genre="4">热熔胶</a><i class="icon" val="77" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="80" only="80_4" genre="4">炭笔</a><i class="icon" val="80" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="81" only="81_4" genre="4">橡皮</a><i class="icon" val="81" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="82" only="82_4" genre="4">工具刀</a><i class="icon" val="82" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="83" only="83_4" genre="4">水笔</a><i class="icon" val="83" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="84" only="84_4" genre="4">马克笔</a><i class="icon" val="84" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="85" only="85_4" genre="4">彩铅</a><i class="icon" val="85" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="86" only="86_4" genre="4">T针</a><i class="icon" val="86" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="87" only="87_4" genre="4">钳子</a><i class="icon" val="87" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="88" only="88_4" genre="4">圆头针</a><i class="icon" val="88" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="90" only="90_4" genre="4">工艺锤</a><i class="icon" val="90" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="91" only="91_4" genre="4">尖嘴钳</a><i class="icon" val="91" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="92" only="92_4" genre="4">平口钳</a><i class="icon" val="92" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="93" only="93_4" genre="4">打磨工具</a><i class="icon" val="93" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="98" only="98_4" genre="4">熔焊机</a><i class="icon" val="98" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="99" only="99_4" genre="4">锤子</a><i class="icon" val="99" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="100" only="100_4" genre="4">拉丝板</a><i class="icon" val="100" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="101" only="101_4" genre="4">小镊子</a><i class="icon" val="101" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="106" only="106_4" genre="4">方夹</a><i class="icon" val="106" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="107" only="107_4" genre="4">弹簧夹</a><i class="icon" val="107" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="109" only="109_4" genre="4">绣珠</a><i class="icon" val="109" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="111" only="111_4" genre="4">绣绷</a><i class="icon" val="111" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="112" only="112_4" genre="4">大头针</a><i class="icon" val="112" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="134" only="134_4" genre="4">U型针/花叉</a><i class="icon" val="134" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="135" only="135_4" genre="4">棒针</a><i class="icon" val="135" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="136" only="136_4" genre="4">钩针</a><i class="icon" val="136" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="137" only="137_4" genre="4">卷尺</a><i class="icon" val="137" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="165" only="165_4" genre="4">针线</a><i class="icon" val="165" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="166" only="166_4" genre="4">缝纫机</a><i class="icon" val="166" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="168" only="168_4" genre="4">尺子</a><i class="icon" val="168" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="170" only="170_4" genre="4">拉链</a><i class="icon" val="170" genre="4"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="171" only="171_4" genre="4">纽扣</a><i class="icon" val="171" genre="4"></i></li>
+					</ul><input type="hidden" class="select" value="tools:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>材料</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0)" val="1" only="1_5" genre="5">羊毛毡</a><i class="icon" val="1" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="2" only="2_5" genre="5">不织布</a><i class="icon" val="2" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="3" only="3_5" genre="5">银</a><i class="icon" val="3" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="4" only="4_5" genre="5">黄铜</a><i class="icon" val="4" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="5" only="5_5" genre="5">铝</a><i class="icon" val="5" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="6" only="6_5" genre="5">焊丝</a><i class="icon" val="6" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="7" only="7_5" genre="5">焊锡浆</a><i class="icon" val="7" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="8" only="8_5" genre="5">橡皮砖</a><i class="icon" val="8" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="9" only="9_5" genre="5">硫酸纸</a><i class="icon" val="9" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="10" only="10_5" genre="5">染料</a><i class="icon" val="10" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="11" only="11_5" genre="5">印台</a><i class="icon" val="11" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="13" only="13_5" genre="5">木柄</a><i class="icon" val="13" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="14" only="14_5" genre="5">软木垫</a><i class="icon" val="14" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="15" only="15_5" genre="5">热缩片</a><i class="icon" val="15" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="16" only="16_5" genre="5">光油</a><i class="icon" val="16" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="17" only="17_5" genre="5">砂纸</a><i class="icon" val="17" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="18" only="18_5" genre="5">橡皮</a><i class="icon" val="18" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="19" only="19_5" genre="5">滴胶</a><i class="icon" val="19" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="21" only="21_5" genre="5">水晶滴胶AB 胶</a><i class="icon" val="21" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="22" only="22_5" genre="5">竹筷</a><i class="icon" val="22" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="24" only="24_5" genre="5">牙签</a><i class="icon" val="24" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="25" only="25_5" genre="5">竹片</a><i class="icon" val="25" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="26" only="26_5" genre="5">A4纸</a><i class="icon" val="26" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="27" only="27_5" genre="5">小叶紫檀</a><i class="icon" val="27" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="28" only="28_5" genre="5">紫光檀木</a><i class="icon" val="28" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="29" only="29_5" genre="5">木板</a><i class="icon" val="29" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="30" only="30_5" genre="5">黑檀</a><i class="icon" val="30" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="31" only="31_5" genre="5">橡木</a><i class="icon" val="31" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="32" only="32_5" genre="5">苏木</a><i class="icon" val="32" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="33" only="33_5" genre="5">彩色玻璃</a><i class="icon" val="33" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="34" only="34_5" genre="5">布料</a><i class="icon" val="34" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="35" only="35_5" genre="5">皮料</a><i class="icon" val="35" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="36" only="36_5" genre="5">木料</a><i class="icon" val="36" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="37" only="37_5" genre="5">贝壳</a><i class="icon" val="37" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="38" only="38_5" genre="5">特种纸</a><i class="icon" val="38" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="39" only="39_5" genre="5">画纸</a><i class="icon" val="39" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="40" only="40_5" genre="5">T恤</a><i class="icon" val="40" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="43" only="43_5" genre="5">丝绸</a><i class="icon" val="43" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="44" only="44_5" genre="5">牛仔衣</a><i class="icon" val="44" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="45" only="45_5" genre="5">泡沫球</a><i class="icon" val="45" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="46" only="46_5" genre="5">湿毡网布</a><i class="icon" val="46" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="50" only="50_5" genre="5">光纤</a><i class="icon" val="50" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="57" only="57_5" genre="5">导线</a><i class="icon" val="57" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="62" only="62_5" genre="5">电阻</a><i class="icon" val="62" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="69" only="69_5" genre="5">电池</a><i class="icon" val="69" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="75" only="75_5" genre="5">LED</a><i class="icon" val="75" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="81" only="81_5" genre="5">二极管</a><i class="icon" val="81" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="87" only="87_5" genre="5">牛皮</a><i class="icon" val="87" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="93" only="93_5" genre="5">羊皮</a><i class="icon" val="93" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="99" only="99_5" genre="5">植鞣革</a><i class="icon" val="99" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="105" only="105_5" genre="5">疯马皮</a><i class="icon" val="105" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="107" only="107_5" genre="5">反绒皮</a><i class="icon" val="107" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="117" only="117_5" genre="5">马油 </a><i class="icon" val="117" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="123" only="123_5" genre="5">边油</a><i class="icon" val="123" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="127" only="127_5" genre="5">蜂蜡</a><i class="icon" val="127" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="132" only="132_5" genre="5">低筋面粉</a><i class="icon" val="132" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="133" only="133_5" genre="5">小麦粉</a><i class="icon" val="133" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="134" only="134_5" genre="5">饼干粉</a><i class="icon" val="134" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="135" only="135_5" genre="5">高筋粉</a><i class="icon" val="135" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="136" only="136_5" genre="5">巧克力</a><i class="icon" val="136" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="137" only="137_5" genre="5">黄油</a><i class="icon" val="137" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="138" only="138_5" genre="5">酵母</a><i class="icon" val="138" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="139" only="139_5" genre="5">淡奶</a><i class="icon" val="139" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="140" only="140_5" genre="5">糖粉</a><i class="icon" val="140" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="141" only="141_5" genre="5">奶酪</a><i class="icon" val="141" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="142" only="142_5" genre="5">超轻粘土</a><i class="icon" val="142" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="143" only="143_5" genre="5">树脂粘土</a><i class="icon" val="143" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="144" only="144_5" genre="5">珍珠粘土</a><i class="icon" val="144" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="145" only="145_5" genre="5">木皮粘土</a><i class="icon" val="145" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="146" only="146_5" genre="5">奶油粘土</a><i class="icon" val="146" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="147" only="147_5" genre="5">陶泥</a><i class="icon" val="147" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="148" only="148_5" genre="5">瓷泥</a><i class="icon" val="148" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="149" only="149_5" genre="5">紫砂泥</a><i class="icon" val="149" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="150" only="150_5" genre="5">油泥</a><i class="icon" val="150" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="151" only="151_5" genre="5">高岭土</a><i class="icon" val="151" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="152" only="152_5" genre="5">釉料</a><i class="icon" val="152" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="153" only="153_5" genre="5">棉线</a><i class="icon" val="153" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="154" only="154_5" genre="5">丝带</a><i class="icon" val="154" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="155" only="155_5" genre="5">绣布</a><i class="icon" val="155" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="156" only="156_5" genre="5">绣珠</a><i class="icon" val="156" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="158" only="158_5" genre="5">绣线</a><i class="icon" val="158" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="160" only="160_5" genre="5">绒线</a><i class="icon" val="160" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="162" only="162_5" genre="5">竹签</a><i class="icon" val="162" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="163" only="163_5" genre="5">毛线</a><i class="icon" val="163" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="164" only="164_5" genre="5">草料</a><i class="icon" val="164" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="165" only="165_5" genre="5">布绳</a><i class="icon" val="165" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="166" only="166_5" genre="5">纸带</a><i class="icon" val="166" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="167" only="167_5" genre="5">玉线</a><i class="icon" val="167" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="168" only="168_5" genre="5">红绳</a><i class="icon" val="168" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="170" only="170_5" genre="5">棉布</a><i class="icon" val="170" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="171" only="171_5" genre="5">麻布</a><i class="icon" val="171" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="172" only="172_5" genre="5">纱</a><i class="icon" val="172" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="180" only="180_5" genre="5">呢绒</a><i class="icon" val="180" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="184" only="184_5" genre="5">帆布</a><i class="icon" val="184" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="192" only="192_5" genre="5">无纺布</a><i class="icon" val="192" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="193" only="193_5" genre="5">彩纸</a><i class="icon" val="193" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="196" only="196_5" genre="5">衍纸条</a><i class="icon" val="196" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="200" only="200_5" genre="5">牛皮纸</a><i class="icon" val="200" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="201" only="201_5" genre="5">瓦楞纸</a><i class="icon" val="201" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="204" only="204_5" genre="5">皱纹纸</a><i class="icon" val="204" genre="5"></i></li>
+						<li>
+							<a href="javascript:void(0)" val="207" only="207_5" genre="5">卡纸</a><i class="icon" val="207" genre="5"></i></li>
+					</ul><input type="hidden" class="select" value="material:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>难度</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0);" val="1" only="1_6" genre="6">初学</a><i class="icon" val="1" genre="6"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="2" only="2_6" genre="6">入门</a><i class="icon" val="2" genre="6"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="3" only="3_6" genre="6">能手</a><i class="icon" val="3" genre="6"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="4" only="4_6" genre="6">高手</a><i class="icon" val="4" genre="6"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="5" only="5_6" genre="6">大师</a><i class="icon" val="5" genre="6"></i></li>
+					</ul><input type="hidden" class="select" value="difficulty:0" /></div>
+				<div class="more-cate-item fixed" style="display:none;">
+					<div class="more-cate-name size14 hui-four"><i class="icon"></i>制作时间</div>
+					<ul class="more-cate-list">
+						<li>
+							<a href="javascript:void(0);" val="1" only="1_7" genre="7">
+								< 1小时</a><i class="icon" val="1" genre="7"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="2" only="2_7" genre="7">
+								< 半天</a><i class="icon" val="2" genre="7"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="3" only="3_7" genre="7">
+								< 1天</a><i class="icon" val="3" genre="7"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="4" only="4_7" genre="7">
+								< 半星期</a><i class="icon" val="4" genre="7"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="5" only="5_7" genre="7">
+								< 1星期</a><i class="icon" val="5" genre="7"></i></li>
+						<li>
+							<a href="javascript:void(0);" val="6" only="6_7" genre="7">> 1星期</a><i class="icon" val="6" genre="7"></i></li>
+					</ul><input type="hidden" class="select" value="mtime:0" /></div>
+			</div>
+			<!---->
+			<div class="jc-index-body fixed">
+				<div class="jc-index-toolbar fixed">
+					<div class="jc-conditions fixed">
+						<ul>
+							<!--                         <li><div href="jsvascript:;" id="select_time" class="jc-btn on"><span class="current">一周<span class="caret"></span></span><div class="select"><a href="//index.php?m=Category&a=index&" class="on">一周</a><a href="//index.php?m=Category&a=index&time=1" class="">一月</a><a href="//index.php?m=Category&a=index&time=2" class="">全部</a></div></div></li><li><a class="jc-btn dot"></a></li> -->
+							<li>
+								<a href="/index.php?m=Category&a=index&cate_id=&time=&order=" class="jc-btn on">最新更新</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Category&a=index&cate_id=&time=&order=click" class="jc-btn ">最热教程</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Category&a=index&cate_id=&time=&order=comment" class="jc-btn ">评论最多</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Category&a=index&cate_id=&time=&order=collect" class="jc-btn ">收藏最多</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Category&a=index&cate_id=&time=&order=material" class="jc-btn ">材料包有售</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Category&a=index&cate_id=&time=&order=pro" class="jc-btn ">成品有售</a>
+							</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div id="sgk-gerenzhuye-jc fixed" class="fixed">
+					<div class="sgk-gerenzhuye-jc-one">
+						<p>
+							<a href="details.html" target="_blank" title="粘土迷你饺子小景" rel="nofollow"><img src="http://imgs.shougongke.com/course/18146593/446916/171129165226_cover.jpg@!web_course_228" width="228" height="172" alt="粘土迷你饺子小景" title="粘土迷你饺子小景" class="img_hover" /></a>
+						</p>
+						<div class="sgk-gerenzhuye-jc-one-info">
+							<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="粘土迷你饺子小景" target="_blank" title="粘土迷你饺子小景">粘土迷你饺子小景</a></h3>
+							<p class="hui-one">14分钟前上传</p>
+							<p class="hui-one jc-pl-sc-num"><span class="fense">8</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">1</span> 收藏</p>
+						</div>
+						<!--教程右下角用户头像-->
+						<div class="sgk-jc-writer fixed">
+							<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/14/65/93_avatar_big.jpg@!avatar_32?t=1508982942" width="32" height="32" alt="魔术兔" /></a></dt>
+								<dd>
+									<a class="vip" href="user-circle.html" target="_blank" class="hui-three">魔术兔</a>
+								</dd>
+							</dl>
+						</div><mark class="icon icon-add-love"></mark></div>
+					<div class="sgk-gerenzhuye-jc-one">
+						<p>
+							<a href="details.html" target="_blank" title="简单的手绘墙绘制" rel="nofollow"><img src="http://imgs.shougongke.com/course/18069601/446906/171129161948_cover.jpg@!web_course_228" width="228" height="172" alt="简单的手绘墙绘制" title="简单的手绘墙绘制" class="img_hover" /></a>
+						</p>
+						<div class="sgk-gerenzhuye-jc-one-info">
+							<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="简单的手绘墙绘制" target="_blank" title="简单的手绘墙绘制">简单的手绘墙绘制</a></h3>
+							<p class="hui-one">51分钟前上传</p>
+							<p class="hui-one jc-pl-sc-num"><span class="fense">87</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">0</span> 收藏</p>
+						</div>
+						<!--教程右下角用户头像-->
+						<div class="sgk-jc-writer fixed">
+							<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/06/96/01_avatar_big.jpg@!avatar_32?t=1504314735" width="32" height="32" alt="攀子" /></a></dt>
+								<dd>
+									<a class="vip" href="user-circle.html" target="_blank" class="hui-three">攀子</a>
+								</dd>
+							</dl>
+						</div><mark class="icon icon-add-love"></mark></div>
+					<div class="sgk-gerenzhuye-jc-one">
+						<p>
+							<a href="details.html" target="_blank" title="公交车" rel="nofollow"><img src="http://imgs.shougongke.com/course/18167940/446898/171129153249_cover.jpg@!web_course_228" width="228" height="172" alt="公交车" title="公交车" class="img_hover" /></a>
+						</p>
+						<div class="sgk-gerenzhuye-jc-one-info">
+							<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="公交车" target="_blank" title="公交车">公交车</a></h3>
+							<p class="hui-one">2小时前上传</p>
+							<p class="hui-one jc-pl-sc-num"><span class="fense">62</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">0</span> 收藏</p>
+						</div>
+						<!--教程右下角用户头像-->
+						<div class="sgk-jc-writer fixed">
+							<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/16/79/40_avatar_big.jpg@!avatar_32?t=1510455998" width="32" height="32" alt="huajianshow" /></a></dt>
+								<dd>
+									<a class="vip" href="user-circle.html" target="_blank" class="hui-three">huajianshow</a>
+								</dd>
+							</dl>
+						</div><mark class="icon icon-add-love"></mark></div>
+					<div class="sgk-gerenzhuye-jc-one" style="margin-right:0px;">
+						<p>
+							<a href="details.html" target="_blank" title="还没名字，哪位美眉帮忙起个名字" rel="nofollow"><img src="http://imgs.shougongke.com/course/18080633/446897/171129153157_cover.jpg@!web_course_228" width="228" height="172" alt="还没名字，哪位美眉帮忙起个名字" title="还没名字，哪位美眉帮忙起个名字" class="img_hover" /></a>
+						</p>
+						<div class="sgk-gerenzhuye-jc-one-info">
+							<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="还没名字，哪位美眉帮忙起个名字" target="_blank" title="还没名字，哪位美眉帮忙起个名字">还没名字，哪位美眉帮忙起...</a></h3>
+							<p class="hui-one">2小时前上传</p>
+							<p class="hui-one jc-pl-sc-num"><span class="fense">37</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">7</span> 收藏</p>
+						</div>
+						<!--教程右下角用户头像-->
+						<div class="sgk-jc-writer fixed">
+							<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/018/08/06/33_avatar_big.jpg@!avatar_32?t=1509016449" width="32" height="32" alt="烟雨楼手作" /></a></dt>
+								<dd>
+									<a class="vip1" href="user-circle.html" target="_blank" class="hui-three">烟雨楼手作</a>
+								</dd>
+							</dl>
+						</div><mark class="icon icon-add-love"></mark></div>
+					<div class="sgk-gerenzhuye-jc-one">
+						<p>
+							<a href="details.html" target="_blank" title="冬来了，雪来了。" rel="nofollow"><img src="http://imgs.shougongke.com/course/17427848/446896/171129152221_cover.jpg@!web_course_228" width="228" height="172" alt="冬来了，雪来了。" title="冬来了，雪来了。" class="img_hover" /></a>
+						</p>
+						<div class="sgk-gerenzhuye-jc-one-info">
+							<h3 class="jc-tit"><a href="details.html" class="size14 hui-five" title="冬来了，雪来了。" target="_blank" title="冬来了，雪来了。">冬来了，雪来了。</a></h3>
+							<p class="hui-one">2小时前上传</p>
+							<p class="hui-one jc-pl-sc-num"><span class="fense">58</span> 人气 / <span class="fense">0</span> 评论 / <span class="fense">1</span> 收藏</p>
+						</div>
+						<!--教程右下角用户头像-->
+						<div class="sgk-jc-writer fixed">
+							<dl class="fixed"><dt><a href="user-circle.html" target="_blank" rel="nofollow"><img src="http://imgs.shougongker.com/bridge/data/avatar/017/42/78/48_avatar_big.jpg@!avatar_32?t=1474728259" width="32" height="32" alt="指缝手创" /></a></dt>
+								<dd>
+									<a class="vip" href="user-circle.html" target="_blank" class="hui-three">指缝手创</a>
+								</dd>
+							</dl>
+						</div><mark class="icon icon-add-love"></mark></div>
+					
+				</div>
+				<div class="jc-search-empty" style="display:none;">
+					<div class="condition-list fixed"></div>
+					<div class="search-result" style="margin-top:0px;">
+						<p class="hui-three rt1">共找到<span class="fense">0</span>个结果</p>
+						<p class="hui-three size14">你可以 适当减少筛选内容 或者 查看以下热门教程</p>
+					</div>
+					<div id="sgk-gerenzhuye-jc fixed" style="display:block;"></div>
+				</div>
+			</div>
+			<div class="pager size18 fixed">
+				<ul class="fixed">
+					<li><span class="prev"><i class="pager_icon"></i></span></li>
+					<li><span class="now">1</span></a>
+					</li>
+					<li>
+						<a href="/index.php?m=Category&p=2">2</a>
+					</li>
+					<li>
+						<a href="/index.php?m=Category&p=3">3</a>
+					</li>
+					<li>
+						<a href="/index.php?m=Category&p=4">4</a>
+					</li>
+					<li>
+						<a href="/index.php?m=Category&p=5">5</a>
+					</li>
+					<li><span class="pager-sl">...</span></li>
+					<li>
+						<a href="/index.php?m=Category&p=2" class="next"><i class="pager_icon"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="/copyright/about_us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="/copyright/contact_us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="/copyright/guide.html" target="_blank">新手攻略</a>
+					<a href="/map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/category/3.html" target="_blank">旧物改造</a>、
+					<a href="/category/60.html" target="_blank">折纸</a>和
+					<a href="/category/27.html" target="_blank">美容护肤</a>等精彩
+					<a href="/coursehome.html" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

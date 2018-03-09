@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>手工客视频会员服务协议-手工客官网</title>
+		<link href="index/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='手工客视频会员服务协议-手工客官网' id='title'>
+		<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<link rel="stylesheet" href="css/vip/vip.css" type="text/css">
+		<div id="agreement">
+			<div class="header">手工客视频会员服务协议</div>
+			<div class="content">
+				<h3>尊敬的手工客用户：</h3>
+				<p>欢迎您使用手工客视频会员服务。手工客提供的视频教程采用会员专享与免费相结合的方式。您须先成为手工客普通注册用户之后，才能继续进行购买服务。通过购买程序支付费用后，您就可以享受手工客会员专属视频服务。在开始购买程序之前，请您首先同意并接受以下服务条款。</p>
+				<p>【注意】手工客有责任提醒您，请仔细阅读以下全部内容，如果您不同意本服务协议的任一或全部条款内容，请不要以确认的形式（包括但不限于：勾选、点击）选择“同意接受”或使用本协议项下服务。当您确认接受本服务协议或开始使用本协议项下手工客服务时，即表示用户与手工客（北京光年创艺信息技术有限公司）已达成协议关系，并自愿接受并遵守手工客服务的所有服务协议及相关之子协议、管理规范等。</p>
+				<h3>一、协议条款的确认和接受</h3>
+				<p>1.1、在您决定购买会员之前，请仔细阅读本协议条款。您必须在完全同意以下条款的前提下，才能进行购买程序。手工客将根据以下协议条款为您提供服务。您在享受手工客会员服务时必须完全、严格遵守本协议条款。</p>
+				<p>1.2、手工客根据互联网的发展和中华人民共和国有关法律、法规的变化，不断地完善服务质量并依此修改服务条款。手工客有权就本协议随时更新，且无须另行通知。您的权利以及义务的表述、购买程序及收费标准，均以最新的服务条款为准。您如果不同意该条款的修改并不影响已发生责任及义务的承担；如果您在条款变更后继续访问或使用手工客，则视为您已经接受对本协议的修改。</p>
+				<p>1.3、您在进行注册程序及缴费程序过程中点击"我同意"按钮即表示您已仔细阅读并完全接受本收费协议下的全部条款。只有您根据提示愿意支付相关费用，并通过本协议约定方式中的一种方式支付费用后，您才能观看会员专享视频教程。如您拒绝支付该等费用，则不能观看相关的服务视频。</p>
+				<p>1.4、您一旦购买手工客提供的会员服务，即视为您是符合中华人民共和国法律规定的具有完全民事权利能力和完全民事行为能力及能够独立承担民事责任的自然人，并了解及完全同意手工客本协议的各项内容，以及手工客对本协议随时所做的任何修改。</p>
+				<h3>二、风险及责任</h3>
+				<p>2.1、您需对自身在使用手工客所提供的服务时的一切行为、行动（不论是否故意）负全部责任。</p>
+				<p>2.2、您应自行负责妥善且正确地保管、使用、维护在手工客申请取得的账户及账户密码。您应对您的账户密码采取必要和有效的保密措施。非手工客原因致使您账户密码泄漏以及因您保管、使用、维护不当造成损失的，手工客无须承担与此有关的任何责任。</p>
+				<p>2.3、您明确了解并同意，本协议约定的付费方式为代收费运营商托收的付款方式，您通过此种付费方式付费可能存在一定的商业风险（包括但不限于不法分子利用您账户或银行卡等有价卡等进行违法活动），该等风险均会给您造成相应的经济损失。为此，您同意手工客在充分履行其在本协议项下全部义务及勤勉谨慎义务的前提下不对您的前述风险和损失承担任何责任；并且，手工客不承担向不法分子追究侵权责任或者代其向您承担损失的任何责任和义务。</p>
+				<p>2.4、您对本服务条款及修改有任何异议，可自动放弃其资格，但不退还任何已缴纳的会员充值费用。</p>
+				<h3>三、收费标准</h3>
+				<p>3.1、一旦您购买了手工客会员，即视为您认可该项服务标明之价格；您购买成功后，该项服务即时生效。</p>
+				<p>3.2、收费费用标准：手工客将根据用户购买周期的不同提供不同幅度的优惠，具体资费信息与优惠信息以会员支付页上内容为准。 </p>
+				<h3>四、购买步骤</h3>
+				<p>4.1、对于具体购买的操作步骤，手工客会在相关页面上做每一步的明确提示。</p>
+				<p>4.2、费用支付：收费费用将在您点击购买之日按照收标示价格通过支付宝、微信支付等第三方代收费的方式支付。</p>
+				<p>4.3、一旦您在手工客购买会员成功后，则手工客将即时收取该费用，并不提供退费服务。</p>
+				<p>4.4、手工客在此声明：手工客从未授权任何第三方单位或个人销售、转让手工客会员资格，任何未经授权销售手工客会员的属于非法销售，手工客有权追究其法律责任。</p>
+				<h3>五、用户权利限制</h3>
+				<p>5.1、对于您观看的会员专属视频，您只可以私人观看，不得用于商业、盈利等用途。</p>
+				<p>5.2、您同意不会采用收费或免费的方式，全部或部分地在任何公开场合展示您在手工客上所观看的视频。</p>
+				<p>5.3会员应确保注册资料的真实性。如因注册信息不真实而引起的问题所带来的后果及责任，由用户自行承担。 </p>
+				<p>5.4、当您购买、使用视频时，禁止有下列情况发生：</p>
+				<p>5.4.1、用非法的方式或为了非法的目的使用视频；</p>
+				<p>5.4.2、将您的手工客账户有偿或无偿提供给任何第三人，并允许他通过您的账户观看非他付费购买的会员专享视频。将收费视频复制、销售、出租或授权给任何第三方。</p>
+				<p>5.4.4、主动对手工客用于保护其视频的任何安全措施技术进行攻克、反向操作、更改、破坏或其他篡改，或协助他人进行上述行为。</p>
+				<p>5.4.5、通过非手工客认可的方式获得会员专享视频，或者删除会员专享视频上的任何所有权声明或标签。</p>
+				<p>5.4.6、损害第三方利益，通过手工客收集第三方资料信息，破坏或盗取第三方账号，发送诈骗邮件和垃圾邮件等非法信息，侵犯第三方合法权益，包括但不限于隐私权、知识产权、财产权等。</p>
+				<p>5.5、您不得通过手工客的任何服务直接或间接地从事以下违反国家法律法规及社会公序良俗之道德保留之行为：</p>
+				<p>• 违反宪法确定的基本原则的；</p>
+				<p>• 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+				<p>• 损害国家荣誉和利益的；</p>
+				<p>• 煽动民族仇恨、民族歧视，破坏民族团结的；</p>
+				<p>• 破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
+				<p>• 散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
+				<p>• 散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；</p>
+				<p>• 侮辱或者诽谤他人，侵害他人合法权益的；</p>
+				<p>• 煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；</p>
+				<p>• 以非法民间组织名义活动的；</p>
+				<p>• 含有法律、行政法规禁止的其他内容的。</p>
+				<p>• 手工客有权对您就使用服务之行为进行不定期监督，一旦发现涉及上述之行为，手工客有权收回您对服务的使用权而不对您作出任何的赔偿。而且，手工客将依法向国家机关就您之行为进行举报并保留进一步追究您的行为而导致手工客损失之权利。</p>
+				<h3>六、变更及免责条款</h3>
+				<p>6.1、手工客对会员的使用周期、购买价格保留随时变更的权利，而不需通知您。对于所有服务的中断或终止而造成的任何损失，手工客无需对您或任何第三方承担任何责任。</p>
+				<p>6.2、鉴于网络服务的特殊性，您同意手工客有权随时变更、中断或终止部分或全部的网络服务。手工客保留随时修改或中断服务而不需通知您的权利，对于所有服务的中断或终止而造成的任何损失，手工客无需对您或任何第三方承担任何责任。</p>
+				<p>6.3、对于因服务器的死机、网络的故障、数据库故障、软件升级、服务器维修、调整、升级等问题，或其他不可抗拒的事由，包括但不限于政府行为、自然灾害、黑客攻击等造成的服务中断和对您个人数据及资料造成的损失，手工客不承担由此对您造成的任何损失或退还任何已缴纳的收费服务费用。但手工客应尽可能事先进行通告。</p>
+				<p>6.4、您购买的服务使用期限中包含解决故障、服务器维修、调整、升级等所需用的合理时间，对上述情况所需用的时间手工客不予补偿。</p>
+				<p>6.5、手工客对任何直接、间接、偶然、特殊及继起的损害不负责任，不予赔偿。</p>
+				<p>6.6、您在使用手工客所提供的服务时，如遭受任何人身或财务的损失、损害或伤害，不论原因如何，手工客均不负责任。由于您将个人密码告知他人或与他人共享注册帐户，由此导致的任何个人资料泄露，本网站不负任何责任。</p>
+				<h3>七. 法律的适用和管辖 </h3>
+				<p>7.1本协议的订立、变更、执行和解释，以及与本协议有关的争议解决，均应适用中华人民共和国法律。如与本协议有关的某一特定事项缺乏明确法律规定，则应参照通用的国际商业惯例和行业惯例。</p>
+				<p>7.2如因本协议内容或其执行发生争议，双方应友好协商解决；协商不成时，任何一方均可向手工客所在地有管辖权的人民法院提起诉讼。</p>
+			</div>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+</html>

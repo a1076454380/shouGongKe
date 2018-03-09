@@ -1,0 +1,207 @@
+.sgk-gerenzhuye-top{ margin-bottom:66px;}
+.avatar{ width:160px; height:160px; float:left; position:relative;}
+.avatar a.edit{ width:160px; height:24px; background-color:rgba(0,0,0,0.5); text-align:center; line-height:24px; color:#fff; position:absolute; bottom:0; left:0;}
+.avatar a.ruleBtn{ display:block; line-height:70px; text-align:center; text-decoration:underline;}
+.user-info{ width:475px; height:160px; margin:0 0 0 21px; float:left;}
+.user-info h1{ font-size:26px; margin:0 0 5px 0;}
+.user-info-desc{ line-height:25px; margin-top:22px; }
+.user-info-desc a:hover{ background:#ff6699; color:white;}
+.user-shejiao{ width:324px; float:left;}
+.user-shejiao ul{ width:279px; height:54px; margin:20px 0 0 43px;}
+.user-shejiao ul li{ width:92px; height:54px; border-right:1px solid #cccccc; float:left;}
+.user-shejiao ul li.last{ border-right:none;}
+.user-shejiao ul li a{ line-height:36px; text-align:center;}
+.user-shejiao ul li p{ text-align:center; margin-top:5px;}
+
+.btn-guanzhu{ background-color:#ff6699; color:white; text-align:center; border:1px solid #ea316e; background-image:linear-gradient(#f95d91, #ff6699);}
+.btn-sixin{ background-color:#fff; color:#ff6699; text-align:center; background-image:linear-gradient(#ffffff,#ebebeb); border:1px solid #c8c8c8; margin:0 0 0 10px;}
+.btn-guanzhu:hover{ background:#ff6688;}
+
+.icon{ background:url(http://imgs.shougongke.com/Public/index/images/common/sgk-icon.png) no-repeat;}
+.icon-jia{ width:10px; height:10px; display:inline-block; background-position:0 0; position:relative; left:-5px; *top:-3px;}
+.icon-message{ width:12px; height:10px; display:inline-block; background-position:-12px 0; position:relative; left:-5px; *top:-3px;}
+.icon_shop {background:url(/Public/index/images/common/myshop.png) no-repeat;width: 16px;height: 16px;display: inline-block; position: relative; left: -5px;top:3px;}
+.icon-store{ width:16px; height:16px; display:inline-block; background:url('/Public/images/common/store_2.png') no-repeat; position: relative; top: 5px;}
+
+
+.btn-shop{ width:101px; height:43px; line-height:45px; border-radius:5px 5px 5px 5px;background-color: #fff; color: #ff6699;text-align: center; background-image: linear-gradient(#ffffff,#ebebeb);border: 1px solid #c8c8c8;}
+.btn-shejiao{ width:70px; height:32px; line-height:32px; border-radius:5px; float:right;}
+
+.user-shejiao-btn{ height:45px; margin:30px 0 0 0px;}
+
+.user-shejiao-btn a{width:70px; height:32px; line-height:32px; box-sizing: border-box; border-radius:5px; float:right;text-align:center; margin:0 0 0 10px;
+    background-color:#fff; color:#ff6699; background-image:linear-gradient(#ffffff,#ebebeb); border:1px solid #c8c8c8;
+}
+.user-shejiao-btn .renew{float:right; height:32px; display: inline-block; line-height:32px; color: #555;}
+.user-shejiao-btn .renew b{ font-weight: 100; font-size: 14px; color: #000; }
+.user-shejiao-btn .renew img{
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding-right: 6px;
+}
+.user-shejiao-btn a img{ vertical-align: middle; padding-bottom: 3px; box-sizing: border-box;}
+.user-shejiao-btn a.on{
+    background-color:#f69; color:#FFF; background-image:linear-gradient(#f95d91, #ff6699); border:1px solid #ea316e;
+}
+
+.sgk-gerenzhuye-tabs{ background:url('http://imgs.shougongke.com/Public/index/images/gerenzhuye/sgk_tab_bg.jpg') 0 40px repeat-x; height:41px;}
+.sgk-gerenzhuye-tabs li{ float:left; position: relative;}
+.sgk-gerenzhuye-tabs li a{ display:block; line-height:41px; padding:0 30px; font-size:14px; color:#666;}
+.sgk-gerenzhuye-tabs li a span{color:#ff6699;}
+.sgk-gerenzhuye-tabs li.active{ background:#f2f2f2; border:1px solid #bbbbbb; height:40px; border-bottom: none;}
+.sgk-gerenzhuye-tabs li.fff{ background:#fff; border:1px solid #bbbbbb; height:40px;border-bottom: none;}
+.sgk-gerenzhuye-tabs li.active a{ color:black;}
+
+.sgk-gerenzhuye-list{margin-right: -22px}
+.sgk-gerenzhuye-jc-one{ width:228px; padding-bottom:15px; background:#fff; box-shadow:1px 1px 5px #cccccc; float:left; margin:22px 22px 0 0; position:relative;}
+.sgk-gerenzhuye-jc-one-info{ width:208px; padding:0 10px;}
+.jc-tit{ height:20px; line-height:22px; overflow:hidden; font-weight:normal; margin:10px 0 10px 0;}
+.jc-tit a:hover{ color:#ff6699;}
+.jc-pl-sc-num{ margin:10px 0 0 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.sgk-gerenzhuye-jc-one mark{ width:25px; height:25px; background-position:-27px 0; position:absolute; right:7px; top:6px; cursor:pointer; display:none;}
+.sgk-gerenzhuye-jc-one mark.icon-add-love{ width:25px; height:25px; display:block; background-position:-27px -26px; position:absolute; right:7px; top:6px; cursor:pointer; display:none;}
+.sgk-gerenzhuye-jc-one mark.icon-have-love{ background-position:-53px -26px;}
+.sgk-gerenzhuye-jc-one mark.icon-add-love:hover{ background-position:-53px 0px;}
+.sgk-gerenzhuye-jc-one .price{height: 26px; line-height: 26px; color:#FFF; min-width: 68px; position: absolute; background: #F69; right: 0; top:10px; text-align: center; font-size: 16px; border-radius: 13px 0 0 13px; padding: 0 10px;}
+/*用户中心专用样式*/
+#user_center .sgk-gerenzhuye-jc-one{ width:228px; padding-bottom:0px; background:#fff; color: #a8a8a8; box-shadow:1px 1px 5px #cccccc; float:left; margin:22px 22px 0 0; position:relative;}
+#user_center .sgk-gerenzhuye-jc-one-info{ width:208px; padding:8px 10px 8px;}
+#user_center .jc-tit{ height:28px; line-height:28px; overflow:hidden; font-weight:normal; margin:0;}
+#user_center .jc-tit a{ color:#6f6f6f;}
+#user_center .jc-tit a:hover{ color:#ff6699;}
+#user_center .jc-pl-sc-num{ margin:0; line-height: 24px; height: 24px;}
+#user_center .time{ margin:0; line-height: 24px; height: 24px; margin-top: 14px;}
+#user_center .status{ font-size: 14px; float: right;}
+#user_center .sgk-gerenzhuye-jc-one mark{ width:25px; height:25px; background-position:-27px 0; position:absolute; right:7px; top:6px; cursor:pointer; display:none;}
+#user_center .sgk-gerenzhuye-jc-one mark.icon-add-love{ width:25px; height:25px; display:block; background-position:-27px -26px; position:absolute; right:7px; top:6px; cursor:pointer; display:none;}
+#user_center .sgk-gerenzhuye-jc-one mark.icon-have-love{ background-position:-53px -26px;}
+#user_center .sgk-gerenzhuye-jc-one mark.icon-add-love:hover{ background-position:-53px 0px;}
+/***教程添加用户头像***/
+#user_center .sgk-jc-writer {margin-top: 4px; margin-bottom: 10px;}
+#user_center .sgk-jc-writer dl{ float:right; margin-right:10px;}
+#user_center .sgk-jc-writer dl dt{ float:right;}
+#user_center .sgk-jc-writer dl dd a{ line-height:32px; padding-right:12px;}
+#user_center .sgk-jc-writer dl dd{ float:right;}
+#user_center .sgk-jc-writer dl dd.daren{ background:url(http://imgs.shougongke.com/Public/index/images/common/v.png) no-repeat left center; padding:0 0 0 25px;}
+
+/**手工客站内信列表**/
+.sgk-gerenzhuye-msg{ background:#fff; padding-bottom:200px;}
+.sgk-msg-tit{ width:860px; padding:0 44px 0 76px; height:92px; border-bottom:1px solid #f2f2f2; line-height:93px;}
+.sgk-msg-tit a{ float:right; width:94px; height:33px; line-height:33px; border-radius:5px 5px 5px 5px; margin:30px 0 0 0;}
+.sgk-gerenzhuye-sixin-list{ width:920px; padding:0 30px;}
+.sgk-gerenzhuye-sixin-list li{ padding:30px 0; border-bottom:1px dashed #dfdfdf;}
+.sgk-gerenzhuye-sixin-list mark{ width:10px; height:10px; display:block; background-position:-85px -70px; margin:19px 26px 0 11px; float:left;}
+.sgk-gerenzhuye-sixin-list mark.unread{ background-position:-85px -84px;}
+.sgk-gerenzhuye-sixin-list dl{ float:left;}
+.sgk-gerenzhuye-sixin-list dl dt{ width:48px; height:48px; float:left;}
+.sgk-gerenzhuye-sixin-list dl dd{ width:650px; float:left; margin:0 0 0 15px;}
+.sixin-con{ margin:15px 0 0 0; line-height:22px;}
+.sixin-count{ float:right; margin:0 15px 0;}
+
+/**手工客写站内信**/
+.sgk-sixin-write{ padding-bottom:200px;background:white;}
+.sixin-write-tit{ width:898px; padding:0 41px; height:92px; border-bottom:1px solid #f2f2f2; line-height:93px;}
+.sixin-write-body{ width:828px; padding:0 76px;}
+.sixin-write-form{ margin:20px 0 34px 0;}
+.sgk-avatar{ width:48px; height:48px; float:left;}
+.write-textarea{ width:765px; float:right;}
+.write-textarea textarea{ width:743px; height:119px; padding:10px; border:1px solid #e0e0e0;}
+.sixin-write-btn{ text-align:right; margin:10px 0 0 0;}
+.sixin-write-btn a{ float:right; width:94px; height:33px; color:#555; line-height:33px; border-radius:5px 5px 5px 5px; margin:0; float:left;}
+.sixin-item{ width:579px; margin-bottom:20px; display:inline-block;}
+.sixin-item .sgk-avatar{ margin-right:15px;}
+.sixin-item-info{ width:484px; border:1px solid #e0e0e0; float:left; padding:7px 15px; line-height:23px; position:relative;}
+.obj{ float:right;}
+.obj .sgk-avatar{ float:right; margin:0;}
+.obj .sixin-item-info{ background:#fff;}
+.sixin-item-info mark{ width:9px; height:17px; display:block; position:absolute; top:10px;}
+.self{ background-position:-35px -114px; left:-9px;}
+.ta{ background-position:-44px -114px; right:-8px;}
+
+
+/***没有收藏教程的样式***/
+.icon-empty{ background:url(http://imgs.shougongke.com/Public/index/images/common/icon3.png) no-repeat; width:107px; height:107px; display:block; margin:0 auto;}
+.jc-shoucang-empty dl{ margin-top:60px;}
+.jc-shoucang-empty dl dd{ text-align:center; font-size:21px; color:#c5c5c5; margin:25px 0 0 0;}
+.sc-e dt i{ background-position:0 0;}
+.jc-e dt i{ background-position:-107px 0;}
+
+/***编辑个人资料弹层****/
+.edit-userinfo-layer{ width:698px; height:620px; background:rgba(208,208,208,0.5); *background:#d0d0d0; padding:9px 11px; border-radius:5px; position:absolute; display:none; z-index:4;}
+.edit-userinfo-body{ width:698px; height:620px; background:#f2f2f2;}
+.edit-userinfo-tit{ width:668px; padding:0 15px; height:57px; background:#e6e1e1; line-height:57px; font-size:14px; color:#555;}
+.icon-close{ width:13px; height:13px; display:block; background-position:-72px -114px; float:right; margin:22px 22px 0; cursor:pointer;}
+.edit-userinfo-form{ width:613px; padding:0 0 0 55px;}
+.edit-userinfo-form li{ margin:30px 0 0 0;}
+.edit-userinfo-form label{ width:80px; float:left;}
+.edit-userinfo-form textarea{ width:486px; height:94px; border:1px solid #abadb4; font-size:14px; color:#bbb; padding:10px;}
+.edit-userinfo-form a{ width:89px; height:41px; display:block; border-radius:5px; line-height:41px; background-color:#ff6699; color:white; text-align:center; border:1px solid #ea316e; background-image:linear-gradient(#f95d91, #ff6699); margin:0 0 0 80px;}
+.edit-userinfo-form .upload_avatar{width: 500px; float: left;}
+.clearfix:before,.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+#select_avatar{float:left; cursor:pointer; position: relative;}
+#select_avatar .avatar_show img{width: 160px; height: 160px;}
+#select_avatar .avatar_txt{ position: absolute; width: 100%; height: 24px; line-height: 24px; background: rgba(0,0,0,.5); color: #FFF; bottom: 0; text-align: center;}
+
+/********个人主页粉丝列表*********/
+.sgk-fensi-list{ padding:30px 0; border-bottom:1px dashed #dfdfdf;}
+.sgk-fensi-list dl{ width:445px; float:left; height:120px;}
+.sgk-fensi-list dl dt{ width:120px; float:left;}
+.sgk-fensi-list dl dd{ width:305px; float:right; position:relative;}
+.fensi-des{ position:absolute; top:26px; left:0;}
+.fensi-num{ position:absolute; top:64px; left:0;}
+.sgk-fensi-list ul{ width:525px; float:left;}
+.sgk-fensi-list ul li{ width:153px; height:116px; float:left; margin:0 0 0 22px;}
+.add-gz{ width:72px; height:29px; line-height:29px; display:block; margin:0; border-radius:5px; position:absolute; top:90px; left:0;}
+.del-gz{ width:72px; height:29px; line-height:29px; display:block; margin:0; border-radius:5px; position:absolute; top:90px; left:0; color:#999;}
+.icon-jia3{ width:10px; height:10px; display:inline-block; background-position:-48px -55px; margin-right:5px; *margin-top:-13px;}
+.icon-del{ width:12px; height:9px; display:inline-block; background-position:-55px -96px; margin-right:5px; *margin-top:-13px;}
+
+
+/***教程添加用户头像***/
+.sgk-jc-writer{ margin-top:22px;}
+.sgk-jc-writer dl{ float:right; margin-right:12px;}
+.sgk-jc-writer dl dt{ float:right;}
+.sgk-jc-writer dl dd a{ line-height:32px; padding-right:12px;}
+.sgk-jc-writer dl dd{ float:right; padding-right: 5px;}
+.sgk-jc-writer dl dd a{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 130px; display: inline-block;  color: #555;}
+.sgk-jc-writer dl dd.daren{ background:url(http://imgs.shougongke.com/Public/index/images/common/v.png) no-repeat left center; padding:0 5px 0 25px; max-width: 170px; box-sizing: border-box;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.sgk-jc-writer dl dd.daren a{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 100px; display: inline-block;}
+.sgk-jc-writer dl dd a.vip12{  padding:0 40px 0 0; background:url(/Public/images/vip/lv12.png) no-repeat right center; color: #ee554d;}
+.sgk-jc-writer dl dd a.vip1{  padding:0 40px 0 0; background:url(/Public/images/vip/lv1.png) no-repeat right center; color: #555;}
+
+
+/**消息页面***/
+.message_nav{ padding:45px 0 33px 25px; width:930px; border-bottom:1px solid #f2f2f2;}
+.message_nav ul li{ float:left; height:14px; border-right:1px solid #999999; padding:0 20px; font-size:14px; cursor:pointer;}
+.message_nav ul li.on{ color:#ff6699;}
+.scjc_list li{ padding:20px 0; border-bottom:1px dashed #dfdfdf;}
+.msg_mark{ width:10px; height:10px; float:left; margin:10px 0 0 40px; background-position:-85px -70px;}
+.scjc_list li mark.unread{ background-position:-85px -84px;}
+.scjc_list li dl{ width:810px; float:left; margin:0 0 0 20px;}
+.scjc_list li dl dt{ width:48px; height:48px; float:left;}
+.scjc_list li dl dd{ width:748px; float:right; color:#555; font-size:14px;}
+.scjc_list li dl dd span{ font-size:12px;}
+.systerm li dl dd{ line-height:20px; color:#222; width:615px; float:left; margin-left:8px;}
+
+
+.edit_msg{ width:523px; padding:5px 0 0 90px; color:#ef0000;}
+.edit-userinfo-form div.password_box{ height:68px; margin-top:0;}
+.edit-userinfo-form a.password_edit_btn{ width:150px; margin-left:90px;}
+
+
+
+.user_renzheng{ display:inline;}
+.user_renzheng img{ margin:10px 0 0 10px;}
+
+.userName{ font-size:20px; line-height:62px;}
+.userLogo{ width:112px; display:inline;}
+.lvLine{ width:570px; margin:55px 0 55px 225px;}
+.lvLine *{ float:left;}
+.lvLoding{ width:503px; height:15px; background:#c8c8c8; margin:0 5px; border-radius:7px;}
+.lvLoding p{ width:0%; height:15px; border-radius:7px; background:#ff6699; transition:width 1.5s ease-in-out 0s}
+
+.ruleCon{ margin-top:70px;}
+.expect{ text-align:center; font-size:18px; color:#ff0000;}
+
+.ruleTop span{ color: #ff6699;}

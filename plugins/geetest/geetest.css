@@ -1,0 +1,8 @@
+.gt_holder .gt_bottom a.gt_logo_button{display: none !important;
+    visibility: hidden !important;}
+.gt_holder .gt_bottom a.gt_help_button{display: none !important;
+    visibility: hidden !important;}
+.gt_holder .gt_bottom {
+    /*background: #F2ECE1;*/
+}
+#embed-captcha{margin-top:10px;}

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>教程分类浏览-手工客官网</title>
+		<link href="index/css/common.css?2" rel="stylesheet" type="text/css" />
+		<link href="index/css/gerenzhuye.css" rel="stylesheet" type="text/css" />
+		<link href="index/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/sgk_login.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="over"></div>
+		
+		<div style="width: 124px;height: 178px;position: fixed;right: 50px;bottom: 180px;background: url(images/fair/newewm.png) no-repeat;
+    z-index: 10;"></div>
+		<!---这是登录的弹出层，到时候加到公共页面，随时可以调用-->
+		<div class="login-layer">
+			<div class="login-body">
+				<p class="login-tit size14 hui-three"><i class="icon login-close"></i>登录手工客
+				</p>
+				<div class="login-area">
+					<div class="login-box" style="position:static; top:0; left:0;">
+						<div class="other-login">
+							<a href='javascript:login("qq");'><img src="http://imgs.shougongke.comimages/common/qq_login.jpg" /></a>
+							<a href='javascript:login("sina");'><img src="http://imgs.shougongke.comimages/common/sina_login.jpg" /></a>
+							<a href='/index.php?a=login'><img src="http://imgs.shougongke.comimages/common/wowsai_login.jpg" /></a>
+						</div>
+						<div class="login-form">
+							<form action='/index.php?m=Login&a=loginform' method='post'><input type="hidden" name="login_token" id="login_token" />
+								<div class="login-email"><label class="hui-four size14">帐号</label><input type="text" class="input-text" name='username' id='username' placeholder="支持手机号登录" onblur="check_email()" onfocus="check_email(1)" /></div>
+								<div class="login-pwd"><label class="hui-four size14">密码</label><input type="password" class="input-text" name='password' id='password' onblur="check_password()" onfocus="check_password(1)" /></div>
+								<div>
+									<!--<input type="checkbox" checked="checked" />&nbsp;下次自动登录-->
+									<a href="/index.php?m=Login&a=phoneback" class="fense" target="_blank" style="position:relative;top:10px;right:-220px;">忘记密码</a>
+								</div><input type='hidden' name='ret_url' id='ret_url'>
+								<div class="button-login"><input type='submit' value='登录' class="size14 login-btn">
+									<div class="hui-three login-register-tishi">
+										没有帐号，从
+										<a href="/index.php?a=newregister" target="_blank" class="fense">这里注册</a>
+									</div>
+								</div><span class="msg email-msg" id='lable_email' style='display:none'>请输入用户名或邮箱</span><span class="msg pwd-msg" id='lable_password' style='display:none'>请输入密码</span></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><input type='hidden' value='教程分类浏览-手工客官网' id='title'>
+		<div id="sgk-header">
+			<div class="header-box fixed">
+				<p class="logo">
+					<a href="/" title="手工客"><img src="http://imgs.shougongke.com/Public/index/images/common/logo.png" alt="手工客"></a>
+				</p>
+				<a href="index.html" class="header-nav" style="width:auto;">首页</a>
+				<div class="header_course">
+					教程分类
+					<span class="xiala"></span>
+					<ul class="course_tip fixed"><span class="tip"></span>
+						<ul class="course_tip_nav fixed">
+							<li>
+								<a href="Category.html" target="_blank" class="jc_pic on"><span class="course_icon"></span><span>图文教程</span></a>
+							</li>
+							<li>
+								<a href="Category.html" target="_blank" class="jc_video"><span class="course_icon"></span><span>视频教程</span></a>
+							</li>
+						</ul>
+						<div class="course_tip_body fixed">
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_1.png" width="30" height="30" /></dt>
+									<dd>布艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_2.png" width="30" height="30" /></dt>
+									<dd>皮艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_3.png" width="30" height="30" /></dt>
+									<dd>纸艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_4.png" width="30" height="30" /></dt>
+									<dd>木艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_5.png" width="30" height="30" /></dt>
+									<dd>饰品</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_6.png" width="30" height="30" /></dt>
+									<dd>编织</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_7.png" width="30" height="30" /></dt>
+									<dd>刺绣</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_8.png" width="30" height="30" /></dt>
+									<dd>雕塑雕刻</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_9.png" width="30" height="30" /></dt>
+									<dd>模型</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_10.png" width="30" height="30" /></dt>
+									<dd>橡皮章</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_11.png" width="30" height="30" /></dt>
+									<dd>羊毛毡</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_12.png" width="30" height="30" /></dt>
+									<dd>旧物改造</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_13.png" width="30" height="30" /></dt>
+									<dd>美食烘焙</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_14.png" width="30" height="30" /></dt>
+									<dd>粘土陶艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_15.png" width="30" height="30" /></dt>
+									<dd>手绘印染</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_16.png" width="30" height="30" /></dt>
+									<dd>滴胶热缩</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_17.png" width="30" height="30" /></dt>
+									<dd>金属工艺</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_18.png" width="30" height="30" /></dt>
+									<dd>电子科技</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_19.png" width="30" height="30" /></dt>
+									<dd>手工护肤</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_20.png" width="30" height="30" /></dt>
+									<dd>园艺多肉</dd>
+								</dl>
+							</a>
+							<a href="/" target="_blank">
+								<dl><dt><img src="http://imgs.shougongke.com/Public/images/mob_cate/new_cate_21.png" width="30" height="30" /></dt>
+									<dd>其他</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="all_cate">
+							<a href="cate.html" target="_blank" class="hui-four">查看全部分类</a>
+						</div>
+					</ul>
+				</div>
+				<a href="hangCircle.html" class="header-nav" target="_blank" style="width:61px;" title="手工圈">手工圈</a>
+				<a href="classify.html" target="_blank" class="header-nav" style="width:80px" title="课堂">材料商店</a>
+				<a href="classify.html" target="_blank" class="header-nav" title="市集" style="width:80px">手工市集</a>
+				<a href="tagTopic.html" class="header-nav" title="专题">专题</a>
+				<a href="competition.html" class="header-nav" title="活动">活动</a>
+				<a href="Dynamic.html" class="header-nav" title="动态" style="position:relative;" id='dynamic_btn'>动态<span id="dynamic_num"></span></a>
+				<!---搜索START-->
+				<dl class="search_box fixed"><dt>
+					<input type="text" id="sgk_word" name="key" placeholder="搜索教程" onkeypress="sgk_search_tab(event)"/></dt>
+					<dd>
+						<a href="search.html"></a>
+					</dd>
+				</dl>
+				<!---搜索END---->
+				<!--没有登录的部分START--->
+				<div class="noLogin" style="display:none;">
+					<a href="javascript:alert_login();" class="loga" style="margin-right:35px;">登录</a>
+					<a href="register.html" class="loga">注册</a>
+				</div>
+				<!----没有登录的部分END--->
+				<!---登录后的部分START-->
+				<ul class="haveLogin">
+					<li class="h">
+						<a href="handmade.html" target="_blank" class="upload"></a>
+					</li>
+					<li class="h" id='header_mypm'>
+						<a href="SMS.html" target="_blank" class="tongzhi"></a>
+						<p id='header_pm_count' style="display:none;">10</p>
+						<ul class="son"><span class="msg_tip"></span>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">我的消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_mypm_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">@我的</span><span class="fense msg_num" style="margin-right:20px;" id='header_at_num'>+0</span></a>
+							</li>
+							<li class="s">
+								<a href="SMS.html" target="_blank"><span class="s_text">私信</span><span class="fense msg_num" style="margin-right:20px;" id='header_sixin_num'>+0</span></a>
+							</li>
+							<li class="s last">
+								<a href="SMS.html" target="_blank"><span class="s_text">系统消息</span><span class="fense msg_num" style="margin-right:20px;" id='header_syspm_num'>+0</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="h">
+						<a href="information.html" target="_blank" class="avatar avatarlinkindex"><img src="" id='useravatar' /></a>
+						<ul class="son" style="left:-106px;"><span class="avatar_tip"></span>
+							<li class="s">
+								<a href="information.html" target="_blank" class="avatarlinkindex" id='header_uname' style=" width:150px; padding:0; text-align:center;"></a>
+							</li>
+							<li class="s level_me">
+								<a href="information.html" id="my_level" target="_blank">等级与积分</a>
+							</li>
+							<li class="s buyer_me orderNav">
+								<a href="information.html" target="_blank">我是买家</a>
+							</li>
+							<li class="s seller_me orderNav">
+								<a href="information.html" target="_blank">我是卖家</a>
+							</li>
+							<li class="s teacher_me orderNav">
+								<a href="information.html" target="_blank">我是老师</a>
+							</li>
+							<li class="s group" style="display:none;">
+								<a href="information.html" target="_blank">我的特训营</a>
+							</li>
+							<li class="s jc_by_me">
+								<a href="information.html" id="my_opus" target="_blank">我上传的教程</a>
+							</li>
+							<li class="s zp_by_me">
+								<a href="information.html" id="my_circle" target="_blank">我的手工圈</a>
+							</li>
+							<li class="s user_by_me">
+								<a href="information.html" target="_blank" id='myfollower_link'>我关注的人</a>
+							</li>
+							<li class="s pay_vip">
+								<a href="vip.html" target="_blank" id=''>开通会员</a>
+							</li>
+							<li class="s last" style="text-align:center;">
+								<a href="/index.php?m=Login&a=logout" style=" width:150px; padding:0; text-align:center;" target="_blank">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!---登录后的部分END-->
+			</div>
+		</div>
+		<p style="width:980px; margin:0 auto 20px;" class="springBanner">
+			<a href="" target="_blank"><img src="http://imgs.shougongke.com/Public/data/advance/pXN7xi38PA.jpg" /></a>
+		</p>
+		<link href="css/cate.css" rel="stylesheet" type="text/css" />
+		<div id="sgk-warp">
+			<h1>分类浏览</h1>
+			<div class="cate_con">
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						分类<br /><img src="images/cate/cate_1.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/1.html" target="_blank">布艺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/2.html" target="_blank">皮艺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/3.html" target="_blank">纸艺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/4.html" target="_blank">木艺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/5.html" target="_blank">饰品</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/6.html" target="_blank">编织</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/7.html" target="_blank">刺绣</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/8.html" target="_blank">雕塑雕刻</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/9.html" target="_blank">模型</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/10.html" target="_blank">橡皮章</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/11.html" target="_blank">羊毛毡</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/12.html" target="_blank">旧物改造</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/13.html" target="_blank">美食烘焙</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/14.html" target="_blank">粘土陶艺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/15.html" target="_blank">手绘印染</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/16.html" target="_blank">滴胶热缩</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/17.html" target="_blank">金属工艺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/18.html" target="_blank">电子科技</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/19.html" target="_blank">手工护肤</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/20.html" target="_blank">园艺多肉</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/21.html" target="_blank">其他</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						风格<br /><img src="images/cate/cate_2.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/style/1.html" target="_blank">可爱</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/2.html" target="_blank">复古</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/3.html" target="_blank">清新</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/4.html" target="_blank">森系</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/5.html" target="_blank">民族</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/6.html" target="_blank">摇滚朋克</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/7.html" target="_blank">原宿系</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/8.html" target="_blank">英伦</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/9.html" target="_blank">北欧</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/10.html" target="_blank">田园</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/11.html" target="_blank">欧美</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/style/56.html" target="_blank">简洁</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						场景<br /><img src="images/cate/cate_3.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/scene/26.html" target="_blank">办公室</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/27.html" target="_blank">教室</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/28.html" target="_blank">卧室</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/29.html" target="_blank">客厅</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/30.html" target="_blank">阳台</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/31.html" target="_blank">院子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/32.html" target="_blank">室外</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/33.html" target="_blank">车内</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/43.html" target="_blank">随处</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/45.html" target="_blank">厨房</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/49.html" target="_blank">聚会</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/scene/55.html" target="_blank">书房</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						人群<br /><img src="images/cate/cate_4.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/34.html" target="_blank">儿童</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/35.html" target="_blank">妈妈</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/36.html" target="_blank">老年人</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/37.html" target="_blank">森女</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/38.html" target="_blank">小清新</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/39.html" target="_blank">宅男</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/40.html" target="_blank">宅女</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/41.html" target="_blank">上班族</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/46.html" target="_blank">女孩子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/47.html" target="_blank">男孩子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/48.html" target="_blank">学生党</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/50.html" target="_blank">极客</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/53.html" target="_blank">爸爸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/crowd/54.html" target="_blank">创客</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						节日<br /><img src="images/cate/cate_5.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/festival/12.html" target="_blank">春节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/13.html" target="_blank">清明节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/14.html" target="_blank">端午节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/15.html" target="_blank">父亲节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/16.html" target="_blank">母亲节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/17.html" target="_blank">儿童节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/18.html" target="_blank">中秋节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/19.html" target="_blank">万圣节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/20.html" target="_blank">圣诞节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/21.html" target="_blank">情人节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/22.html" target="_blank">七夕</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/23.html" target="_blank">愚人节</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/24.html" target="_blank">生日</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/25.html" target="_blank">婚礼</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/42.html" target="_blank">日常</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/festival/52.html" target="_blank">感恩节</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						工具<br /><img src="images/cate/cate_6.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/tools/1.html" target="_blank">剪刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/7.html" target="_blank">打孔器</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/9.html" target="_blank">直尺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/10.html" target="_blank">刻刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/11.html" target="_blank">美工刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/12.html" target="_blank">水消笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/13.html" target="_blank">定位针</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/14.html" target="_blank">划粉</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/15.html" target="_blank">铅笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/16.html" target="_blank">刷子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/17.html" target="_blank">马克笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/18.html" target="_blank">水彩笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/19.html" target="_blank">热胶枪</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/20.html" target="_blank">锥子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/21.html" target="_blank">钳子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/22.html" target="_blank">砂纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/24.html" target="_blank">刨子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/25.html" target="_blank">3D打印机</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/26.html" target="_blank">锤子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/27.html" target="_blank">镊子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/28.html" target="_blank">502胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/29.html" target="_blank">UV胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/30.html" target="_blank">AB胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/31.html" target="_blank">白乳胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/32.html" target="_blank">硅胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/33.html" target="_blank">胶枪（胶棒）</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/34.html" target="_blank">酒精胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/35.html" target="_blank">中性笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/36.html" target="_blank">砧子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/37.html" target="_blank">冲子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/38.html" target="_blank">剁刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/39.html" target="_blank">测量工具</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/40.html" target="_blank">电烙铁</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/41.html" target="_blank">喷漆枪</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/42.html" target="_blank">笔刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/43.html" target="_blank">塑形橡皮</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/46.html" target="_blank">定画液</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/47.html" target="_blank">垫板</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/48.html" target="_blank">热风枪</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/49.html" target="_blank">彩色铅笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/50.html" target="_blank">水彩</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/52.html" target="_blank">硅胶模具</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/53.html" target="_blank">量杯</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/54.html" target="_blank">塑料杯</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/55.html" target="_blank">烧杯</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/56.html" target="_blank">搅拌棒</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/57.html" target="_blank">一次性手套</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/58.html" target="_blank">滴管</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/59.html" target="_blank">针筒</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/60.html" target="_blank">电子称</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/65.html" target="_blank">曲线锯</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/67.html" target="_blank">锉刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/71.html" target="_blank">锯子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/73.html" target="_blank">502胶水</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/77.html" target="_blank">热熔胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/80.html" target="_blank">炭笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/81.html" target="_blank">橡皮</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/82.html" target="_blank">工具刀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/83.html" target="_blank">水笔</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/85.html" target="_blank">彩铅</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/86.html" target="_blank">T针</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/88.html" target="_blank">圆头针</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/90.html" target="_blank">工艺锤</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/91.html" target="_blank">尖嘴钳</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/92.html" target="_blank">平口钳</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/93.html" target="_blank">打磨工具</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/98.html" target="_blank">熔焊机</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/100.html" target="_blank">拉丝板</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/101.html" target="_blank">小镊子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/106.html" target="_blank">方夹</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/107.html" target="_blank">弹簧夹</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/109.html" target="_blank">绣珠</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/111.html" target="_blank">绣绷</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/112.html" target="_blank">大头针</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/134.html" target="_blank">U型针/花叉</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/135.html" target="_blank">棒针</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/136.html" target="_blank">钩针</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/137.html" target="_blank">卷尺</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/165.html" target="_blank">针线</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/166.html" target="_blank">缝纫机</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/168.html" target="_blank">尺子</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/170.html" target="_blank">拉链</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/tools/171.html" target="_blank">纽扣</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						材料<br /><img src="images/cate/cate_7.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/material/1.html" target="_blank">羊毛毡</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/2.html" target="_blank">不织布</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/3.html" target="_blank">银</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/4.html" target="_blank">黄铜</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/5.html" target="_blank">铝</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/6.html" target="_blank">焊丝</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/7.html" target="_blank">焊锡浆</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/8.html" target="_blank">橡皮砖</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/9.html" target="_blank">硫酸纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/10.html" target="_blank">染料</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/11.html" target="_blank">印台</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/12.html" target="_blank">卡纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/13.html" target="_blank">木柄</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/14.html" target="_blank">软木垫</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/15.html" target="_blank">热缩片</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/16.html" target="_blank">光油</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/17.html" target="_blank">砂纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/18.html" target="_blank">橡皮</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/19.html" target="_blank">滴胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/21.html" target="_blank">水晶滴胶AB 胶</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/22.html" target="_blank">竹筷</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/23.html" target="_blank">竹签</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/24.html" target="_blank">牙签</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/25.html" target="_blank">竹片</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/26.html" target="_blank">A4纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/27.html" target="_blank">小叶紫檀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/28.html" target="_blank">紫光檀木</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/29.html" target="_blank">木板</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/30.html" target="_blank">黑檀</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/31.html" target="_blank">橡木</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/32.html" target="_blank">苏木</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/33.html" target="_blank">彩色玻璃</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/34.html" target="_blank">布料</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/35.html" target="_blank">皮料</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/36.html" target="_blank">木料</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/37.html" target="_blank">贝壳</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/38.html" target="_blank">特种纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/39.html" target="_blank">画纸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/40.html" target="_blank">T恤</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/41.html" target="_blank">麻布</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/42.html" target="_blank">棉布</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/43.html" target="_blank">丝绸</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/44.html" target="_blank">牛仔衣</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/45.html" target="_blank">泡沫球</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/46.html" target="_blank">湿毡网布</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/50.html" target="_blank">光纤</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/57.html" target="_blank">导线</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/62.html" target="_blank">电阻</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/material/69.html" target="_blank">电池</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed">
+					<div class="cate_con_list_l">
+						难度<br /><img src="images/cate/cate_8.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/difficulty/1.html" target="_blank">初学</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/difficulty/2.html" target="_blank">入门</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/difficulty/3.html" target="_blank">能手</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/difficulty/4.html" target="_blank">高手</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/difficulty/5.html" target="_blank">大师</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cate_con_list fixed" style="border-bottom:none;">
+					<div class="cate_con_list_l">
+						制作时间<br /><img src="images/cate/cate_9.jpg" style="margin:20px 0 0 20px;" /></div>
+					<ul class="cate_con_list_r">
+						<li>
+							<a href="http://www.shougongke.com/category/mtime/1.html" target="_blank">
+								< 1小时</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/mtime/2.html" target="_blank">
+								< 半天</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/mtime/3.html" target="_blank">
+								< 一天</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/mtime/4.html" target="_blank">
+								< 半星期</a>
+						</li>
+						<li>
+							<a href="http://www.shougongke.com/category/mtime/5.html" target="_blank">
+								< 一星期</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="sgk-footer">
+			<div style=" line-height:20px;padding-top:10px; border-top:1px dashed #999;">
+				<p class="center" style="color:#000; font-weight:bold; margin-bottom:10px;">
+					<a href="about-us.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="contact-us.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="guide.html" target="_blank">新手攻略</a>
+					<a href="map.html" target="_blank">网站地图</a>
+				</p>
+				<p class="center hui-four" id="sgk-footer">最专业的
+					<a href="/" target="_blank">手工</a>
+					<a href="/" target="_blank">DIY</a>论坛 在
+					<a href="/" target="_blank">手工客</a>您可以学习和分享
+					<a href="/" target="_blank">旧物改造</a>、
+					<a href="/" target="_blank">折纸</a>和
+					<a href="/" target="_blank">美容护肤</a>等精彩
+					<a href="/" target="_blank">手工教程</a>
+				</p>
+				<p class="center" style=" color:#a79999;">公司地址：北京市朝阳区酒仙桥路10号恒通商务园52号楼二层&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-64389245 / 010-64389527</p>
+				<p class="center" style=" color:#a79999;">北京光年创艺信息技术有限公司 Copyright shougongke.com&nbsp;京ICP备10020900-4号&nbsp;京公网安备11010502026419</p>
+			</div>
+			<style type="text/css">
+				#sgk-footer a {
+					margin: 0;
+				}
+			</style>
+			
+		</div>
+	</body>
+	<link href="css/page.css" rel="stylesheet" type="text/css" />
+	<script type="text/ecmascript" src="js/index.js"></script>
+	<script type="text/ecmascript" src="js/toTop.js"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.scrolltotop();
+		});
+	</script>
+
+
+</html>

@@ -1,0 +1,148 @@
+.circleIndexTop{ height: auto; background: #fff; width: 944px; padding: 0 0 30px 36px;}
+.circleCate{ width: 72px; float: left; margin: 25px 0 0 28px;}
+.circleCate dt{ width: 47px; height: 47px; position: relative; margin: 0 auto;}
+.circleCate dt img{ width: 47px; height: 47px;}
+.circleCate dt .up{ position: absolute; left: 0; top:0;}
+.circleCate dd{ text-align: center; line-height: 22px;}
+.circleCate dd a{ font-size: 14px; color: #696969;}
+
+.circleWarp{ margin-top: 30px;}
+.circleWarpL{ width: 593px; background: #fff; padding: 30px 0 0 0; padding-bottom: 100px;}
+.circleWarpR{ width: 357px;}
+.circleOrderNav{ border-bottom: 1px solid #ededed; padding-bottom: 30px;}
+.circleOrderNav ul{ width: 195px; float: left; margin: 0 0 0 23px;}
+.circleOrderNav ul li{ width: 64px; float: left; height: 14px; line-height: 14px; text-align: center; border-right: 1px solid #b9b9b9;}
+.circleOrderNav ul li.last{ border: none;}
+.circleOrderNav ul li a{ color: #222; font-size: 14px;}
+.circleOrderNav ul li.on a{ color: #ff6699;}
+.circleAddLink{ width: 95px; padding: 0 0 0 25px; line-height: 18px; float: right; height: 18px; display: block; background: url('../images/handCircle/addBg.png') no-repeat; font-size: 14px; color: #ff6699;}
+
+/*æ‰‹å·¥åœˆé¦–é¡µå·¦ä¾§*/
+.circleListL{ width: 80px; float: left;}
+.circleListL a{ width: 42px; height: 42px; display: block; border-radius: 21px; margin: 20px auto 0;}
+.circleListL a img{ border-radius: 21px;}
+.circleListR{ width: 513px; float: right; position: relative;}
+.circleList{ border-bottom: 1px solid #ededed; padding-bottom: 20px;
+    position: relative;}
+.jingpin{ position: absolute; top: 0; right: 90px;}
+.cUname{ color: #000; display: block; margin-top: 23px;}
+.cSubject{ width: 478px; line-height: 20px; color: #222; margin-top: 5px;}
+.sCirclePic{ width: 478px; margin-top: 15px;}
+.sCirclePic ul.picList{ width: 478px;}
+.sCirclePic ul.picList li{ width: 153px; height: 153px; overflow: hidden; float: left; margin: 0 6px 6px 0;}
+.sCirclePic ul.picList li:hover{cursor: url('http://img.t.sinajs.cn/t6/style/images/common/big.cur'), auto;}
+.cOtherinfo{ margin-top: 10px; width: 478px;}
+.cShare,.cInfo{ margin-left: 30px;}
+.cOtherinfo ul{ float: right; margin-right: -17px;}
+.cOtherinfo ul li{ padding: 0 17px; float: left; border-right: 1px solid #c7c7c7;}
+.cOtherinfo ul li.last{ border-right:none;}
+.cJubao{ width: 40px; height: 29px; background: url('../images/handCircle/icon.png') no-repeat right 6px; position: absolute; right: 26px; top: 16px; cursor: pointer;}
+.jubaoLe{ width: 114px; height: 183px; padding-top: 7px; background: url(../images/handCircle/jubao.png) no-repeat; position: absolute; right:0; top: 21px; display: none; z-index: 1;}
+.jubaoLe ul li{ height: 36px; text-align: center;}
+.jubaoLe ul li a{ color: #fff; height: 36px; display: inline-block; line-height: 36px;}
+
+.cMessageBox{ width: 486px; border:1px solid #e3d7d7; background: #f9f9f9; margin-top: 16px; position: relative;}
+.cMegInput{ display: block;}
+.InputBox{ width: 434px; padding: 0 5px; height: 28px; border:1px solid #ff6699; margin: 20px auto 0; display: block; border-radius: 5px;}
+.cMsgBtn{ width: 70px; height: 30px; background: #ff6699; color: #fff; text-align: center; line-height: 30px; color: #fff; display: inline-block; border-radius: 3px;}
+.msgMark{ width: 16px; height: 9px; display: inline-block; position: absolute; right: 12px; top: -9px;}
+.cMsgBtn01{ margin: 13px 0 13px 396px;}
+.cMessageList{ width: 446px; border-top: 1px solid #eee2e2; margin: 0 auto; padding: 22px 0;}
+.cMessAvatar{ width: 30px; height: 30px; display: inline-block;}
+.cMessAvatar img{ border-radius: 15px;}
+.cMessInfo{ width: 393px; margin: 0 0 0 10px;}
+.cMessInfo p{ line-height: 18px;}
+.cMessMan{ margin-top: 10px;}
+.cMessMan p{ float:right;}
+.cMessMan p a{ color: #222; width: 40px; text-align:center; display: inline-block; line-height: 14px;}
+.cMessMan p a.del{ border-right:1px solid #c7c7c7;}
+
+.cReplayBox{ width: 443px; height: 90px; border: 1px solid #eee2e2; margin-top: 12px; background: #fff; position: relative;}
+.cReplayBox span{ width:12px; height: 8px; display: inline-block; position: absolute; top: -8px; right: 25px;}
+.InputReplayBox{ width: 413px; margin-top: 10px;}
+.cMsgBtn02{ margin:10px 0 0 363px;}
+
+.picDetail{ width: 478px; background: #f0f0f0; padding-bottom: 20px;}
+.shouqi{ height: 34px; line-height: 34px; width: 40px; float: right; text-align: right; margin-right: 20px; cursor: pointer; background: url(../images/handCircle/shouqi.png) no-repeat 5px center;}
+.picBox{ text-align: center; margin-bottom: 11px;}
+.picBox li{ display: none;}
+.picBox li.on{ display: block;}
+.leftBtn,.rightBtn{ width: 16px; height: 58px; display: block; background: #c4c4c4;}
+.leftBtn{ float: left; border-radius: 3px 0 0 3px; background: url(../images/handCircle/left.png) center #c4c4c4 no-repeat;}
+.rightBtn{ float: right; border-radius: 0 3px 3px 0; background: url(../images/handCircle/right.png) center #c4c4c4 no-repeat;}
+.leftBtn:hover,.rightBtn:hover{ background-color: #a3a3a3;}
+.picListBox{ width: 440px; height: 58px; float:left; overflow: hidden; position: relative;}
+.picLitList{ width: 567px; position:absolute; z-index: 2; left: 0;}
+.picLitList li a{ float: left; width: 54px; height: 54px; overflow: hidden; margin: 0 0 0 5px; border:2px solid #f0f0f0; cursor: pointer;}
+.picLitList li a.on,.picLitList li a:hover{ border-color: #ff6699;}
+
+/*æ‰‹å·¥åœˆé¦–é¡µå³ä¾§*/
+.circleRTop{ width: 357px; background: #fff; padding-bottom: 30px;}
+.circleCateName{ margin-left: 143px; margin-top: 0; padding-top: 25px; float: none;}
+.circleDescription{ width: 306px; color: #999; margin: 10px auto 0; line-height: 20px;}
+.hr{ border-top:1px solid #ededed; width: 212px; height: 2px; margin: 15px auto;}
+.circleManageListBox{ width: 270px; margin: 0 auto;}
+.circleManageList{ width: 75px; margin: 23px 15px 0 0;}
+.circleManageList dt{ width: 70px;}
+.circleManageList dt img{ width: 42px; height: 42px; margin: 0 14px; border-radius: 21px;}
+.circleManageList dd{ line-height: 25px;}
+.circleManageList dd a{ color: #000; font-size: 12px;}
+
+/*æ‰‹å·¥åœˆé¦–é¡µç²¾å“*/
+.circleItem{ width: 357px; height: auto; margin-top: 30px; background: #fff;}
+.circleItemTit{ padding: 26px 0 0 22px;}
+.circleItemList dl{ border-bottom: 1px solid #ededed; padding: 14px 0;}
+.circleItemList dl.last{ border-bottom: none;}
+.circleItemList dl dt{ width: 253px; padding: 0 0 0 21px;}
+.circleItemList dl dt p{ line-height: 20px; margin-top: 5px;}
+
+/*æ‰‹å·¥åœˆè¯¦æƒ…*/
+.infoPicList{ text-align: center;}
+.infoPicList li{ margin-bottom: 10px;}
+.infoSubject{ padding: 10px 20px 10px 20px; font-size: 14px;}
+
+/*ç”³è¯·åœˆå­*/
+.apply_box{ background: #fff; width: 834px; padding: 0 0 100px 126px;}
+.apply_box h2{ font-size: 24px; font-weight: 400; line-height: 85px;}
+.apply_btn dl{ width: 450px; height: 57px; margin: 20px 0 0 80px;}
+.apply_btn dl dt{ width: 130px; padding-right: 10px; float: left; text-align: left; line-height: 57px;}
+.apply_btn dl dd{ width: 150px; height: 55px; float: left;}
+.apply_btn dl dd a{ width: 150px; height: 55px; display:inline-block; background: #ff6699; color: #fff; text-align: center; line-height: 55px; font-size: 14px; border-radius: 3px;}
+
+/*é¦–é¡µæ‰‹å·¥åœˆæ ·å¼*/
+.circleCon{ margin-top: 20px;}
+.circleConL{ float: left;}
+.circleConLBox{ width: 598px; background: #fff; height: auto;}
+.circleConR{ width: 360px; background: #fff; float: right;}
+.circleConR h3{ font-size: 16px; font-weight: 400; display: inline-block; margin:18px 0 0 18px;}
+.circleConR li{ border-bottom: 1px solid #eee;}
+.circleConR .circleCate{ margin-left: 10px; float: left; padding-bottom: 10px; padding-top: 15px;}
+.circleConR .circleCate dt img{ width: 52px; height: 52px;}
+.circleConR .circleCate dd{ line-height: 30px;}
+.circleConR .circleDes{ width: 235px; float: left; color: #858585; line-height: 20px; margin:25px 0 0 10px; padding-bottom: 20px;}
+.circleMore{ width: 598px; background:#fff; height: 40px; text-align: center; line-height: 40px; margin-top: 5px;}
+.circleMore a{ font-size: 14px; color: #ff6699;}
+/*cate_nameçš„æ ·å¼-start*/
+.lei_cate{color:#999;font-size: 12px;font-family: 'å¾®è½¯é›…é»‘';margin-top:10px;}
+.lei_cate a{color:#F69;font-size: 12px;font-family: 'å¾®è½¯é›…é»‘';}
+/*cate_nameçš„æ ·å¼-end*/
+/*ä¸ªäººä¸»é¡µæ‰‹å·¥åœˆæ ·å¼*/
+.circleEmpty{ text-align: center; font-size: 16px; padding-top: 50px;}
+
+/*ç§ä¿¡css*/
+.message-layer{width: 800px;height: 500px;padding: 8px;  background: rgba(208,208,208,0.5);  border-radius: 5px;  position: absolute;  display: none;  z-index: 4;}
+.message-close{width: 13px;height: 13px;display: block;background-position: -72px -114px;float: right; margin-top: 22px; cursor: pointer;}
+.message-tit{background: #e6e1e1 none repeat scroll 0 0;height: 50px; line-height: 50px; padding: 0 25px; width: 750px;}
+.message-area{width:800px;height:450px}
+
+/* åˆ†äº«æ˜¾ç¤º */
+.border_corl {margin-left:15px;margin-top:8px;width: 0;height: 0;border-style: solid;border-width: 15px 0 15px 20px;border-color: transparent transparent transparent #ffffff;}
+.share_tbItemDetail_title{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.share_title{line-height:20px;font-size:14px;padding:5px 10px 5px 10px;}
+.share_shop_yh_price{float:left;line-height:20px;padding-left:10px;font-size:14px;}
+.share_shop_price{text-decoration: line-through;font-size:12px;color:#B2B2B2;}
+.share_shop_sum{float:right;line-height:20px;padding-right:10px;font-size:12px;}
+.circle_share{width:312px;margin-top:10px;}
+.circlr_share_pic{width:312px;height:168px;}
+.circlr_share_pic img{width:312px;height:168px;}
+.circlr_share_open{width:45px;height:45px;border-radius:45px;border:1px solid #ffffff;z-index:100px;position:relative;top:-110px;left:130px;}
